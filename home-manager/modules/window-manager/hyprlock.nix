@@ -12,7 +12,7 @@
     };
 
     background = {
-      monitor =
+      monitor = "";
       path = "/home/lem0nbleach/.dotfiles/home-manager/modules/window-manager/hyprlock/EYE.jpg";
       blur_passes = 2;
       contrast = 0.8916;
@@ -22,7 +22,7 @@
     };
 
 
-    input-field {
+    input-field = {
       monitor = "";
       size = "250, 60";
       outline_thickness = 2;
@@ -40,58 +40,53 @@
       halign = "center";
       valign = "center";
     };
-
-    label {
-      monitor = "";
-      text = ''cmd[update:1000] echo -e "$(date +"%H")"'';
-      color = "rgba(255, 185, 0, .6)";
-      font_size = 180;
-      font_family = "AlfaSlabOne";
-      position = "0, 300";
-      halign = "center";
-      valign = "center";
-    };
-
-    label {
-      monitor = "";
-      text = ''cmd[update:1000] echo -e "$(date +"%M")"'';
-      color = "rgba(255, 255, 255, .6)";
-      font_size = 180;
-      font_family = "AlfaSlabOne";
-      position = "0, 75";
-      halign = "center";
-      valign = "center";
-    };
-
-    label {
-      monitor = "";
-      text = ''cmd[update:1000] echo "<span color='##ffffff99'>$(date '+%A, ')</span><span color='##ffb90099'>$(date '+%d %B')</span>"'';
-      font_size = 30;
-      font_family = "SF Pro Display Bold";
-      position = "0, -80";
-      halign = "center";
-      valign = "center";
-    };
-
-    label {
-      monitor = "";
-      text = "";
-      color = "rgba(255, 255, 255, .65)";
-      font_size = 100;
-      position = "0, -180";
-      halign = "center";
-      valign = "center";
-    };
-
-    label {
-      monitor = "";
-      text = ''cmd[update:1000] echo "$(~/.config/hypr/Scripts/songdetail.sh)"'';
-      color = "rgba(255, 255, 255, 0.7)";
-      font_size = 18;
-      font_family = "JetBrains Mono Nerd, SF Pro Display Bold";
-      position = "0, 60";
-      halign = "center";
-      valign = "bottom";
-    };
   };
+
+  programs.hyprlock.extraConfig = ''
+# Hour-Time
+label {
+    monitor =
+    text = cmd[update:1000] echo -e "$(date +"%H")"
+    color = rgba(255, 185, 0, .6)
+    font_size = 180
+    font_family = AlfaSlabOne 
+    position = 0, 300
+    halign = center
+    valign = center
+}
+
+# Minute-Time
+label {
+    monitor =
+    text = cmd[update:1000] echo -e "$(date +"%M")"
+    color = rgba(255, 255, 255, .6)
+    font_size = 180
+    font_family = "alfaslabone"
+    position = 0, 75
+    halign = center
+    valign = center
+}
+
+# Day-Date-Month
+label {
+    monitor =
+    text = cmd[update:1000] echo "<span color='##ffffff99'>$(date '+%A, ')</span><span color='##ffb90099'>$(date '+%d %B')</span>"
+    font_size = 30
+    font_family = sf-pro
+    position = 0, -80
+    halign = center
+    valign = center
+}
+
+# USER
+#label {
+#    monitor =
+#    text = 
+#    color = rgba(255, 255, 255, .65)
+#    font_size = 80
+#    position = 0, -180
+#    halign = center
+#    valign = center
+#}
+  '';
 }

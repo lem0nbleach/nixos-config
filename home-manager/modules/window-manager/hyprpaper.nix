@@ -7,7 +7,7 @@
     ipc = true;
     splash = true;
 
-    preload = ./wallpaper/EYE.jpg
-    wallpaper = ./wallpaper/EYE.jpg
+    preload = "./wallpaper/EYE.jpg";
+    wallpaper = "./wallpaper/EYE.jpg";
   };
 }

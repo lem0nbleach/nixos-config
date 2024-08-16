@@ -1,11 +1,15 @@
-{ pkgs, inputs, ... }:
+{ config, pkgs, pkgsStable, inputs, ... }:
 
 {
   # Allowing unfree software
   nixpkgs.config.allowUnfree = true;
+
+  _module.args.pkgsStable = import inputs.nixpkgs-stable {
+  inherit (pkgs.stdenv.hostPlatform) system;
+  inherit (config.nixpkgs) config;
+  };
   
   environment.systemPackages = with pkgs; [
-    vim
     wget
     kitty
     pipewire
@@ -23,8 +27,6 @@
     git
     mangohud
     protonup
-    hyprlock
-    hypridle
     swaynotificationcenter
     fastfetch
     zsh
@@ -44,6 +46,7 @@
     slurp
     wl-clipboard
     brightnessctl
+    pkgsStable.logseq
   ];
 
   programs.nix-ld.enable = true;

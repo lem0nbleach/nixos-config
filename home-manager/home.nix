@@ -18,5 +18,6 @@
     ./modules/nixvim.nix
     ./modules/window-manager/hyprpaper.nix
     ./modules/window-manager/hyprlock.nix
+    ./modules/window-manager/hypridle.nix
   ];
 }

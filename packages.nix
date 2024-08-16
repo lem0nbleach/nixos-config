@@ -43,6 +43,7 @@
     grim
     slurp
     wl-clipboard
+    brightnessctl
   ];
 
   programs.nix-ld.enable = true;

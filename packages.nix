@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 {
   # Allowing unfree software
@@ -59,5 +59,7 @@
     nerdfonts
     font-awesome
     jetbrains-mono
+    inputs.apple-fonts.packages.${pkgs.system}.sf-pro
+    inputs.apple-fonts.packages.${pkgs.system}.sf-pro-nerd
   ];
 }

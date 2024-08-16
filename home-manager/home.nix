@@ -16,5 +16,6 @@
     ./modules/theme.nix
     ./modules/git.nix
     ./modules/nixvim.nix
+    ./modules/window-manager/hyprpaper.nix
   ];
 }

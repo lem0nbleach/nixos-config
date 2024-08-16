@@ -62,6 +62,6 @@
     jetbrains-mono
     inputs.apple-fonts.packages.${pkgs.system}.sf-pro
     inputs.apple-fonts.packages.${pkgs.system}.sf-pro-nerd
-    alfaslabone
+    texlivePackages.alfaslabone
   ];
 }

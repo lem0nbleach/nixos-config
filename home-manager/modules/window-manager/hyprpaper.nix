@@ -7,7 +7,7 @@
     ipc = true;
     splash = true;
 
-    preload = "./wallpaper/EYE.jpg";
-    wallpaper = "./wallpaper/EYE.jpg";
+    preload = "/home/lem0nbleach/.dotfiles/home-manager/modules/window-manager/wallpaper/EYE.jpg";
+    wallpaper = ", /home/lem0nbleach/.dotfiles/home-manager/modules/window-manager/wallpaper/EYE.jpg";
   };
 }

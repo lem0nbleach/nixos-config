@@ -23,6 +23,12 @@
       #package = pkgs.orchis-theme.override {tweaks = [ "black" ]; };
       #name = "Orchis-Purple";
     #};
+    gtk4.extraConfig = {
+      gtk-im-module = "fcitx";
+    };
+    gtk3.extraConfig = {
+      gtk-im-module = "fcitx";
+    };
   };
 
   # QT Configs

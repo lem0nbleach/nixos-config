@@ -33,7 +33,7 @@
       inner_color = "rgba(100, 114, 125, 0.5)";
       font_color = "rgb(200, 200, 200)";
       fade_on_empty = false;
-      font_family = "SF Pro Display Bold";
+      font_family = "SF Pro Display";
       placeholder_text = ''<i><span foreground="##ffffff99">Hi, $USER</span></i>'';
       hide_input = false;
       position = "0, -290";
@@ -49,7 +49,7 @@ label {
     text = cmd[update:1000] echo -e "$(date +"%H")"
     color = rgba(255, 185, 0, .6)
     font_size = 180
-    font_family = AlfaSlabOne 
+    font_family = Alpha Slab One
     position = 0, 300
     halign = center
     valign = center
@@ -61,7 +61,7 @@ label {
     text = cmd[update:1000] echo -e "$(date +"%M")"
     color = rgba(255, 255, 255, .6)
     font_size = 180
-    font_family = "alfaslabone"
+    font_family = Alpha Slab One
     position = 0, 75
     halign = center
     valign = center
@@ -72,7 +72,7 @@ label {
     monitor =
     text = cmd[update:1000] echo "<span color='##ffffff99'>$(date '+%A, ')</span><span color='##ffb90099'>$(date '+%d %B')</span>"
     font_size = 30
-    font_family = sf-pro
+    font_family = SF Pro Display
     position = 0, -80
     halign = center
     valign = center

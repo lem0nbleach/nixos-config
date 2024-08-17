@@ -47,6 +47,7 @@
     wl-clipboard
     brightnessctl
     pkgsStable.logseq
+    lemurs
   ];
 
   programs.nix-ld.enable = true;

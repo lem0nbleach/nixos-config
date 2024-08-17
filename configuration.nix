@@ -36,6 +36,8 @@
     LC_TIME = "en_US.UTF-8";
   };
 
+
+
   # Configure keymap in X11
   # services.xserver = {
   #   layout = "us";
@@ -133,5 +135,4 @@
 
   programs.zsh.enable = true; 
   programs.waybar.enable = true;
-
 }

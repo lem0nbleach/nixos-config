@@ -2,26 +2,20 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
+    [ 
       ./packages.nix
       ./auto-login.nix
     ];
 
-  # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "nixos"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  networking.hostName = "nixos";
 
-  # Enable networking
   networking.networkmanager.enable = true;
 
-  # Set your time zone.
   time.timeZone = "America/New_York";
 
-  # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
 
   i18n.extraLocaleSettings = {
@@ -52,7 +46,6 @@
   #    xkbVariant = "";
   # };
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.lem0nbleach = {
     isNormalUser = true;
     description = "Feiyang Wu";
@@ -64,8 +57,6 @@
   programs.hyprland.portalPackage = pkgs.xdg-desktop-portal-hyprland;
   xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
 
-  # Aduio from pipewire
-  
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -75,24 +66,13 @@
     jack.enable = true;
   };
 
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
   programs.mtr.enable = true;
   programs.gnupg.agent = {
     enable = true;
     enableSSHSupport = true;
   };
 
-  # List services that you want to enable:
-
-  # Enable the OpenSSH daemon.
   services.openssh.enable = true;
-
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
 
   system.stateVersion = "24.05";
 
@@ -103,7 +83,6 @@
   };
 
   environment.sessionVariables = {
-    # WLR_NO_HARDWARE_CURSORS = "1";
     NIXOS_OZONE_WL = "1";
     STEAM_EXTRA_COMPAT_TOOLS_PATHS = "/home/user/.steam/root/compatibilitytools.d";
     XDG_CURRENT_DESKTOP = "Hyprland";
@@ -122,10 +101,8 @@
 
   services.xserver.videoDrivers = [ "nvidia" ];
 
-  # Flakes
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
-  # Garbage collector 
   nix.gc = {
     automatic = true;
     dates = "weekly";

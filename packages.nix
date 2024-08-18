@@ -48,6 +48,7 @@
     brightnessctl
     pkgsStable.logseq
     lemurs
+    vim
   ];
 
   programs.nix-ld.enable = true;

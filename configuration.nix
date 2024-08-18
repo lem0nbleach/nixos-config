@@ -2,7 +2,8 @@
 
 {
   imports =
-    [ 
+    [
+      ./hardware-configuration.nix
       ./packages.nix
       ./auto-login.nix
     ];

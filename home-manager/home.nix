@@ -10,6 +10,7 @@
 
   imports = [
     inputs.nixvim.homeManagerModules.nixvim
+    inputs.anyrun.homeManagerModules.anyrun
     ./modules/kitty.nix
     ./modules/zsh.nix
     ./modules/window-manager/waybar.nix
@@ -19,5 +20,6 @@
     ./modules/window-manager/hyprpaper.nix
     ./modules/window-manager/hyprlock.nix
     ./modules/window-manager/hypridle.nix
+    ./modules/anyrun.nix
   ];
 }

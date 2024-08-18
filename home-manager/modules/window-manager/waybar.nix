@@ -7,18 +7,19 @@
         position = "top";
         margin = "9 13 -10 18";
 
-        modules-left = ["hyprland/workspaces"];
+        modules-left = ["hyprland/workspaces" "hyprland/language"];
         modules-center = ["clock"];
         modules-right = ["custom/mem" "cpu" "temperature" "tray"];
 
         "hyprland/workspaces" = {
-          disable-scroll = true;
+          disable-scroll = false;
         };
 
         "hyprland/language" = {
           format-en = "US";
-	    min-length = 5;
-	    tooltip = false;
+	  min-length = 5;
+	  tooltip = false;
+	  format-cn = "CN";
         };
 
         "keyboard-state" = {

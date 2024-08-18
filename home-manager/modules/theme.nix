@@ -19,10 +19,10 @@
       package = pkgs.bibata-cursors;
       name = "Bibata-Modern-Ice";
     };
-    #iconTheme = {
-      #package = pkgs.orchis-theme.override {tweaks = [ "black" ]; };
-      #name = "Orchis-Purple";
-    #};
+    iconTheme = {
+      package = pkgs.libsForQt5.breeze-gtk;
+      name = "Breeze-Dark";
+    };
     gtk4.extraConfig = {
       gtk-im-module = "fcitx";
     };

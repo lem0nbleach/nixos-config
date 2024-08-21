@@ -48,7 +48,7 @@
     brightnessctl
     pkgsStable.logseq
     lemurs
-    vim
+    hyprpicker
   ];
 
   programs.nix-ld.enable = true;

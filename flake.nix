@@ -25,21 +25,17 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, stylix, ... } @ inputs :
-    let
-      system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
-    in {
-      nixosConfigurations = {
-        nixos = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
-          modules = [ 
-	  ./configuration.nix
+  outputs = { nixpkgs, home-manager, stylix, ... } @ inputs: {
+    nixosConfigurations = {
+      nixos = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [ 
+          ./configuration.nix
 	  home-manager.nixosModules.default
 	  stylix.nixosModules.stylix
-	  ];
-          specialArgs = { inherit inputs; };
-        };
+	];
+        specialArgs = { inherit inputs; };
       };
     };
+  };
 }

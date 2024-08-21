@@ -6,6 +6,7 @@
       ./hardware-configuration.nix
       ./packages.nix
       ./auto-login.nix
+      ./stylix.nix
     ];
 
   home-manager.users."lem0nbleach" = ./home.nix;

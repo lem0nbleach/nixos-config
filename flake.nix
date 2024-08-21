@@ -21,8 +21,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     stylix = {
-      url = "github:NixOS/nixpkgs/nixos-unstable";
-      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:danth/stylix";
     };
   };
 

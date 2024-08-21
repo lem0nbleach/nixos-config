@@ -7,7 +7,7 @@
         position = "top";
         margin = "9 13 -10 18";
 
-        modules-left = ["hyprland/workspaces" "hyprland/language"];
+        modules-left = ["hyprland/workspaces"];
         modules-center = ["clock"];
         modules-right = ["custom/mem" "cpu" "temperature" "tray"];
 

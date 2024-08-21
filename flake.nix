@@ -35,16 +35,10 @@
           system = "x86_64-linux";
           modules = [ 
 	  ./configuration.nix
+	  inputs.home-manager.nixosModules.default
 	  ];
           specialArgs = { inherit inputs; };
         };
-      };
-      homeConfigurations."lem0nbleach" = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        extraSpecialArgs = { inherit inputs; };
-        modules = [
-	./home.nix
-	];
       };
     };
 }

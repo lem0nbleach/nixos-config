@@ -13,7 +13,7 @@
 
     background = {
       monitor = "";
-      path = "/home/lem0nbleach/.dotfiles/home-manager/modules/window-manager/hyprlock/EYE.jpg";
+      path = "/home/lem0nbleach/.dotfiles/home-manager/window-manager/hyprlock/EYE.jpg";
       blur_passes = 2;
       contrast = 0.8916;
       brightness = 0.8172;

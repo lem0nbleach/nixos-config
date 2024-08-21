@@ -12,13 +12,9 @@
       name = "Breeze-Dark";
     };
     #cursorTheme = {
-      #package = pkgs.whitesur-cursors;
-      #name = "WhiteSur Cursors";
+      #package = pkgs.bibata-cursors;
+      #name = "Bibata-Modern-Ice";
     #};
-    cursorTheme = {
-      package = pkgs.bibata-cursors;
-      name = "Bibata-Modern-Ice";
-    };
     iconTheme = {
       package = pkgs.libsForQt5.breeze-gtk;
       name = "Breeze-Dark";

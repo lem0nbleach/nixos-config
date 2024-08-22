@@ -20,6 +20,7 @@
           };
         };
       };
+      nvim-colorizer.enable = true;
     };
   };
 }

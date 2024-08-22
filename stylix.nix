@@ -55,14 +55,14 @@
     base05 = "a3a7d4"; #a3a7d4
     base06 = "b2b7eb"; #b2b7eb
     base07 = "c7cdff"; #c7cdff
-    base08 = "39A8ED"; #39A8ED edit
+    base08 = "ff5757"; #ff5757
     base09 = "B4EF68"; #B4EF68
-    base0A = "A6F0E2"; #A6F0E2
-    base0B = "39A8ED"; #39A8ED edit
-    base0C = "8ec07c"; #8ec07c edit
+    base0A = "39A8ED"; #A6F0E2
+    base0B = "A6F0E2"; #39A8ED 
+    base0C = "D1F1B9"; #D1F1B9
     base0D = "F6FF69"; #F6FF69
     base0E = "E284F5"; #E284F5
-    base0F = "d65d0e"; #d65d0e edit
+    base0F = "FF61AF"; #FF61AF
   };
   stylix.polarity = "dark";
   stylix.image = ./home-manager/window-manager/wallpaper/EYE.jpg;

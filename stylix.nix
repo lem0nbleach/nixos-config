@@ -4,10 +4,10 @@
   stylix.enable = true;
 
   stylix.base16Scheme = {
-    base00 = "000000"; #000000
-    base01 = "37353b"; #37353b
-    base02 = "45424a"; #45424a
-    base03 = "5e5966"; #5e5966
+    base00 = "08090a"; #08090a
+    base01 = "16171a"; #16171a
+    base02 = "23232e"; #23232e
+    base03 = "322f4d"; #322f4d
     base04 = "9598b8"; #9598b8
     base05 = "a3a7d4"; #a3a7d4
     base06 = "b2b7eb"; #b2b7eb

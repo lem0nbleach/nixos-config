@@ -45,11 +45,12 @@
     ];
   };
 
-  # Configure keymap in X11
-  # services.xserver = {
-  #   layout = "us";
-  #    xkbVariant = "";
-  # };
+  /*# Configure keymap in X11
+  services.xserver.xkb = {
+    layout = "us, us";
+    variant = "workman, qwerty";
+    options = "grp:alt_shift_toggle";
+  };*/
 
   users.users.lem0nbleach = {
     isNormalUser = true;

@@ -49,6 +49,8 @@
     pkgsStable.logseq
     lemurs
     hyprpicker
+    kmonad
+    inputs.zen-browser.packages."${system}".specific
   ];
 
   programs.nix-ld.enable = true;

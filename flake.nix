@@ -23,6 +23,10 @@
     stylix = {
       url = "github:danth/stylix";
     };
+    zen-browser = {
+      url = "github:MarceColl/zen-browser-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { nixpkgs, home-manager, stylix, ... } @ inputs: {

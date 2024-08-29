@@ -51,6 +51,7 @@
     hyprpicker
     kmonad
     inputs.zen-browser.packages."${system}".specific
+    sbctl
   ];
 
   programs.nix-ld.enable = true;

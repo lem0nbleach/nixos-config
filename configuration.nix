@@ -12,7 +12,7 @@
   home-manager.users."lem0nbleach" = ./home.nix;
   home-manager.extraSpecialArgs = { inherit inputs; };
 
-  boot.loader.systemd-boot.enable = true;
+  boot.loader.systemd-boot.enable = false;
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "nixos";
@@ -126,4 +126,9 @@
 
   programs.zsh.enable = true; 
   programs.waybar.enable = true;
+
+  boot.lanzaboote = {
+    enable = true;
+    pkiBundle = "/etc/secureboot";
+  };
 }

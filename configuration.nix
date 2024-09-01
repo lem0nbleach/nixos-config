@@ -11,7 +11,6 @@
 
   home-manager.users."lem0nbleach" = ./home.nix;
   home-manager.extraSpecialArgs = { inherit inputs; };
-  home-manager.backupFileExtension = "hm-backup";
 
   boot.loader.systemd-boot.enable = false;
   boot.loader.efi.canTouchEfiVariables = true;

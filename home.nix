@@ -21,5 +21,6 @@
     ./home-manager/window-manager/hyprlock.nix
     ./home-manager/window-manager/hypridle.nix
     ./home-manager/anyrun.nix
+    ./home-manager/rofi.nix
   ];
 }

@@ -15,7 +15,6 @@
     pipewire
     wireplumber
     vesktop
-    rofi-wayland
     hyprcursor
     xdg-desktop-portal-hyprland
     xdg-desktop-portal-gtk
@@ -52,6 +51,7 @@
     kmonad
     inputs.zen-browser.packages."${system}".specific
     sbctl
+    obs-studio
   ];
 
   programs.nix-ld.enable = true;

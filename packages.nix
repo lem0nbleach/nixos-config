@@ -52,6 +52,7 @@
     inputs.zen-browser.packages."${system}".specific
     sbctl
     obs-studio
+    freecad
   ];
 
   programs.nix-ld.enable = true;

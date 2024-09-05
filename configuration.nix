@@ -96,6 +96,7 @@
     XDG_SESSION_TYPE = "wayland";
     GTK_USE_PORTAL = "1";
     ELECTRON_OZONE_PLATFORM_HINT = "auto";
+    EDITOR = "nvim";
   };
 
   hardware.nvidia.modesetting.enable = true;

@@ -52,6 +52,7 @@
     sbctl
     obs-studio
     freecad
+    blender
   ];
 
   programs.nix-ld.enable = true;

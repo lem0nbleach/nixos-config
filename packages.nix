@@ -38,7 +38,6 @@
     fzf
     zsh-autocomplete
     unzip
-    atlauncher
     prismlauncher
     jdk
     grim

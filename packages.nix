@@ -53,6 +53,7 @@
     obs-studio
     freecad
     blender
+    kicad
   ];
 
   programs.nix-ld.enable = true;

@@ -122,6 +122,8 @@
   };
   programs.gamemode.enable = true;
 
+  programs.zsh.enable = true;
+
   boot.lanzaboote = {
     enable = true;
     pkiBundle = "/etc/secureboot";

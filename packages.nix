@@ -55,6 +55,7 @@
     blender
     kicad
     chromium
+    pkgsStable.cura
   ];
 
   programs.nix-ld.enable = true;

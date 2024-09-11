@@ -122,15 +122,8 @@
   };
   programs.gamemode.enable = true;
 
-  programs.hyprlock.enable = true;
-  services.hypridle.enable = true;
-
-  programs.zsh.enable = true; 
-  programs.waybar.enable = true;
-
   boot.lanzaboote = {
     enable = true;
     pkiBundle = "/etc/secureboot";
   };
-
 }

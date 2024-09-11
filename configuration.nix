@@ -133,5 +133,4 @@
     pkiBundle = "/etc/secureboot";
   };
 
-  programs.ssh.startAgent = true;
 }

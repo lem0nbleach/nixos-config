@@ -54,6 +54,7 @@
     freecad
     blender
     kicad
+    chromium
   ];
 
   programs.nix-ld.enable = true;

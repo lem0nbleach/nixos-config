@@ -56,6 +56,7 @@
     kicad
     chromium
     pkgsStable.cura
+    libreoffice-qt
   ];
 
   programs.nix-ld.enable = true;

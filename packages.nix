@@ -55,7 +55,6 @@
     blender
     kicad
     chromium
-    pkgsStable.cura
     libreoffice-qt6-fresh
   ];
 

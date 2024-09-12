@@ -31,9 +31,12 @@
       url = "github:nix-community/lanzaboote/v0.4.1";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-flatpak = {
+      url = "github:gmodena/nix-flatpak";
+    };
   };
 
-  outputs = { nixpkgs, home-manager, stylix, lanzaboote, ... } @ inputs: {
+  outputs = { nixpkgs, home-manager, stylix, lanzaboote, nix-flatpak, ... } @ inputs: {
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -42,6 +45,7 @@
 	  home-manager.nixosModules.default
 	  stylix.nixosModules.stylix
 	  lanzaboote.nixosModules.lanzaboote
+	  nix-flatpak.nixosModules.nix-flatpak
 	];
         specialArgs = { inherit inputs; };
       };

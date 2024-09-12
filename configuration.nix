@@ -7,6 +7,7 @@
       ./packages.nix
       ./auto-login.nix
       ./stylix.nix
+      ./flatpak.nix
     ];
 
   home-manager.users."lem0nbleach" = ./home.nix;
@@ -100,6 +101,7 @@
   };
 
   hardware.nvidia.modesetting.enable = true;
+  hardware.nvidia.open = false;
 
   hardware.opengl = {
     enable = true;

@@ -44,7 +44,7 @@
     slurp
     wl-clipboard
     brightnessctl
-    pkgsStable.logseq
+    logseq
     lemurs
     hyprpicker
     kmonad

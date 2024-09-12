@@ -56,7 +56,7 @@
     kicad
     chromium
     pkgsStable.cura
-    libreoffice-qt
+    libreoffice-qt6-fresh
   ];
 
   programs.nix-ld.enable = true;

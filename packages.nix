@@ -44,7 +44,6 @@
     slurp
     wl-clipboard
     brightnessctl
-    logseq
     lemurs
     hyprpicker
     kmonad
@@ -57,6 +56,7 @@
     chromium
     libreoffice-qt6-fresh
     egl-wayland
+    logseq
   ];
 
   programs.nix-ld.enable = true;

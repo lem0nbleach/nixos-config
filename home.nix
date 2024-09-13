@@ -13,6 +13,7 @@
     inputs.anyrun.homeManagerModules.anyrun
     ./home-manager/kitty.nix
     ./home-manager/zsh.nix
+    ./home-manager/window-manager/hyprland.nix
     ./home-manager/window-manager/waybar.nix
     #./home-manager/theme.nix
     ./home-manager/git.nix

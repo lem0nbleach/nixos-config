@@ -100,12 +100,15 @@
     EDITOR = "nvim";
   };
 
-  hardware.nvidia.modesetting.enable = true;
-  hardware.nvidia.open = false;
-
-  hardware.opengl = {
-    enable = true;
-    driSupport32Bit = true;
+  hardware = {
+    nvidia = {
+      open = false;
+      modesetting.enable = true;
+    };
+    graphics = {
+      enable = true;
+      enable32Bit = true;
+    };
   };
 
   services.xserver.videoDrivers = [ "nvidia" ];

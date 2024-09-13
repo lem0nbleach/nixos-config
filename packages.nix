@@ -56,6 +56,7 @@
     kicad
     chromium
     libreoffice-qt6-fresh
+    egl-wayland
   ];
 
   programs.nix-ld.enable = true;

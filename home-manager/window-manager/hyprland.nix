@@ -17,7 +17,7 @@
     exec-once = [
       "hyprctl setcursor Bibata-Modern-Ice 24"
       "hyprlock & hyprpaper & hypridle & swaync & waybar"
-      "logseq & vesktop"
+      #"logseq & vesktop"
       "[workspace special:magic] logseq"
       "[workspace special:magic] vesktop"
       "fcitx5 -d -r"

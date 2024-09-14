@@ -57,6 +57,7 @@
     libreoffice-qt6-fresh
     egl-wayland
     logseq
+    appimage-run
   ];
 
   programs.nix-ld.enable = true;

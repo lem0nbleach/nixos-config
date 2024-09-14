@@ -18,7 +18,7 @@
       "hyprctl setcursor Bibata-Modern-Ice 24"
       "hyprlock & hyprpaper & hypridle & swaync & waybar"
       #"logseq & vesktop"
-      "[workspace special:magic] logseq"
+      "[workspace special:magic] appimage-run ~/Appimage/Logseq-linux-x64-0.10.9.AppImage"
       "[workspace special:magic] vesktop"
       "fcitx5 -d -r"
       "fcitx5-remote -r"
@@ -119,7 +119,7 @@
       "$mainMod, F, fullscreen"
       "$mainMod, K, exec, hyprctl kill"
       "$mainMod, L, exec, hyprlock"
-      "$mainMod, Z, exec, logseq"
+      "$mainMod, Z, exec, appimage-run ~/Appimage/Logseq-linux-x64-0.10.9.AppImage"
 
       "$mainMod, 1, workspace, 1"
       "$mainMod, 2, workspace, 2"

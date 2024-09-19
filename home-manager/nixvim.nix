@@ -20,6 +20,22 @@
           };
         };
       };
+      lsp = {
+        enable = true;
+	servers = {
+	  rust-analyzer = {
+	    enable = true;
+	    installCargo = false;
+	    installRustc = false;
+	  };
+	};
+      };
+      cmp = {
+        autoEnableSources = true;
+	settings.sources = [
+	  { name = "nvim_lsp"; }
+	];
+      };
       nvim-colorizer.enable = true;
     };
   };

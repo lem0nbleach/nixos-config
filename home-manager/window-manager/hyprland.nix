@@ -18,8 +18,8 @@
       "hyprctl setcursor Bibata-Modern-Ice 24"
       "hyprlock & hyprpaper & hypridle & swaync & waybar"
       #"logseq & vesktop"
-      "[workspace name:secondary] appimage-run ~/Appimage/Logseq-linux-x64-0.10.9.AppImage"
-      "[workspace name:secondary] vesktop"
+      "[workspace special:scratchPad] appimage-run ~/Appimage/Logseq-linux-x64-0.10.9.AppImage"
+      "[workspace special:scratchPad] vesktop"
       "fcitx5 -d -r"
       "fcitx5-remote -r"
     ];
@@ -42,7 +42,8 @@
     };
 
     workspace = [
-      "secondary, monitor:HDMI-A-1, default:true, persistent:true"
+      "name:Secondary, monitor:HDMI-A-1, default:true"
+      "1, monitor:DP-1, default:true"
     ];
 
     decoration = {
@@ -136,7 +137,7 @@
       #"$mainMod, 9, workspace, 9"
       #"$mainMod, 0, workspace, 10"
       "$mainMod, S, togglespecialworkspace, scratchPad"
-      "$mainMod, X, workspace, name:secondary"
+      "$mainMod, X, workspace, name:Secondary"
 
       "$mainMod SHIFT, 1, movetoworkspace, 1"
       "$mainMod SHIFT, 2, movetoworkspace, 2"
@@ -149,7 +150,7 @@
       "$mainMod SHIFT, 9, movetoworkspace, 9"
       "$mainMod SHIFT, 0, movetoworkspace, 10"
       "$mainMod SHIFT, S, movetoworkspace, special:scratchPad"
-      "$mainMod SHIFT, X, movetoworkspace, name:secondary"
+      "$mainMod SHIFT, X, movetoworkspace, name:Secondary"
 
       "$mainMod, mouse_down, workspace, e+1"
       "$mainMod, mouse_up, workspace, e-1"

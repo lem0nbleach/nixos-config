@@ -18,8 +18,8 @@
       "hyprctl setcursor Bibata-Modern-Ice 24"
       "hyprlock & hyprpaper & hypridle & swaync & waybar"
       #"logseq & vesktop"
-      "[workspace special:magic] appimage-run ~/Appimage/Logseq-linux-x64-0.10.9.AppImage"
-      "[workspace special:magic] vesktop"
+      "[workspace name:secondary] appimage-run ~/Appimage/Logseq-linux-x64-0.10.9.AppImage"
+      "[workspace name:secondary] vesktop"
       "fcitx5 -d -r"
       "fcitx5-remote -r"
     ];
@@ -40,6 +40,10 @@
       allow_tearing = true;
       layout = "deindle";
     };
+
+    workspace = [
+      "secondary, monitor:HDMI-A-1, default:true, persistent:true"
+    ];
 
     decoration = {
       rounding = 10;
@@ -110,12 +114,12 @@
     bind = [
       "$mainMod, Q, exec, $terminal"
       "$mainMod, C, killactive,"
-      "$mainMod, M, exit,"
+      #"$mainMod, M, exit,"
       "$mainMod, E, exec, $fileManager"
       "$mainMod, V, togglefloating,"
       "$mainMod, R, exec, $menu -show drun"
-      "$mainMod, P, pseudo, # dwindle"
-      "$mainMod, J, togglesplit, # dwindle"
+      #"$mainMod, P, pseudo, # dwindle"
+      #"$mainMod, J, togglesplit, # dwindle"
       "$mainMod, F, fullscreen"
       "$mainMod, K, exec, hyprctl kill"
       "$mainMod, L, exec, hyprlock"
@@ -127,10 +131,12 @@
       "$mainMod, 4, workspace, 4"
       "$mainMod, 5, workspace, 5"
       "$mainMod, 6, workspace, 6"
-      "$mainMod, 7, workspace, 7"
-      "$mainMod, 8, workspace, 8"
-      "$mainMod, 9, workspace, 9"
-      "$mainMod, 0, workspace, 10"
+      #"$mainMod, 7, workspace, 7"
+      #"$mainMod, 8, workspace, 8"
+      #"$mainMod, 9, workspace, 9"
+      #"$mainMod, 0, workspace, 10"
+      "$mainMod, S, togglespecialworkspace, scratchPad"
+      "$mainMod, X, workspace, name:secondary"
 
       "$mainMod SHIFT, 1, movetoworkspace, 1"
       "$mainMod SHIFT, 2, movetoworkspace, 2"
@@ -142,9 +148,8 @@
       "$mainMod SHIFT, 8, movetoworkspace, 8"
       "$mainMod SHIFT, 9, movetoworkspace, 9"
       "$mainMod SHIFT, 0, movetoworkspace, 10"
-
-      "$mainMod, S, togglespecialworkspace, magic"
-      "$mainMod SHIFT, S, movetoworkspace, special:magic"
+      "$mainMod SHIFT, S, movetoworkspace, special:scratchPad"
+      "$mainMod SHIFT, X, movetoworkspace, name:secondary"
 
       "$mainMod, mouse_down, workspace, e+1"
       "$mainMod, mouse_up, workspace, e-1"

@@ -15,6 +15,7 @@
 
   boot.loader.systemd-boot.enable = false;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.kernelPackages = pkgs.linuxPackages_zen;
 
   networking.hostName = "nixos";
 

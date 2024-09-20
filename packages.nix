@@ -59,6 +59,7 @@
     egl-wayland
     logseq
     appimage-run
+    prusa-slicer
   ];
 
   programs.nix-ld.enable = true;

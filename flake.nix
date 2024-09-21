@@ -36,7 +36,7 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, stylix, lanzaboote, nix-flatpak, ... } @ inputs: {
+  outputs = { nixpkgs, home-manager, stylix, lanzaboote, nix-flatpak, hyprpanel, ... } @ inputs: {
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";

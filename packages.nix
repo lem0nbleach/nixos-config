@@ -60,6 +60,8 @@
     logseq
     appimage-run
     prusa-slicer
+    ruby
+    postgresql
   ];
 
   programs.nix-ld.enable = true;
@@ -76,8 +78,6 @@
     nerdfonts
     font-awesome
     jetbrains-mono
-    inputs.apple-fonts.packages.${pkgs.system}.sf-pro
-    inputs.apple-fonts.packages.${pkgs.system}.sf-pro-nerd
     texlivePackages.alfaslabone
   ];
 }

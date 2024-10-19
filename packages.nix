@@ -62,6 +62,7 @@
     prusa-slicer
     ruby
     postgresql
+    super-slicer-beta
   ];
 
   programs.nix-ld.enable = true;

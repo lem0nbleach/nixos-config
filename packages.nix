@@ -63,6 +63,7 @@
     ruby
     postgresql
     super-slicer-beta
+    steamtinkerlaunch
   ];
 
   programs.nix-ld.enable = true;

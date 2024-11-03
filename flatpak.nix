@@ -5,5 +5,6 @@
 
   services.flatpak.packages = [
     "com.ultimaker.cura"
+    "com.github.Matoking.protontricks"
   ];
 }

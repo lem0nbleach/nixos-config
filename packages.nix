@@ -63,7 +63,12 @@
     ruby
     postgresql
     super-slicer-beta
-    steamtinkerlaunch
+    protonup-qt
+    xdotool
+    xorg.xprop
+    xxd
+    xorg.xwininfo
+    yad
   ];
 
   programs.nix-ld.enable = true;

@@ -100,6 +100,7 @@
     GTK_USE_PORTAL = "1";
     ELECTRON_OZONE_PLATFORM_HINT = "auto";
     EDITOR = "nvim";
+    PROTON_VERSION = "GE-Proton9-18";
   };
 
   hardware = {
@@ -126,8 +127,13 @@
   programs.steam = {
     enable = true;
     gamescopeSession.enable = true;
+    protontricks.enable = true;
   };
   programs.gamemode.enable = true;
+  nixpkgs.config.permittedInsecurePackages = [
+    "electron-27.3.11"
+  ];
+
 
   programs.zsh.enable = true;
 

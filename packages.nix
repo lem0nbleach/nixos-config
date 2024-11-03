@@ -64,6 +64,7 @@
     postgresql
     super-slicer-beta
     steamtinkerlaunch
+    protontricks
   ];
 
   programs.nix-ld.enable = true;

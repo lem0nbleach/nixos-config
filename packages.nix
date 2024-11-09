@@ -69,6 +69,7 @@
     xxd
     xorg.xwininfo
     yad
+    orca-slicer
   ];
 
   programs.nix-ld.enable = true;

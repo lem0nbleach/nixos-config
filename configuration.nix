@@ -57,7 +57,7 @@
   users.users.lem0nbleach = {
     isNormalUser = true;
     description = "Feiyang Wu";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker"];
     shell = pkgs.zsh;
   };
 
@@ -140,5 +140,13 @@
   boot.lanzaboote = {
     enable = true;
     pkiBundle = "/etc/secureboot";
+  };
+
+  virtualisation.docker = {
+    enable = true;
+    rootless = {
+      enable = true;
+      setSocketVariable = true;
+    };
   };
 }

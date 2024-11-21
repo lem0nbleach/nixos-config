@@ -22,6 +22,7 @@
       "[workspace special:scratchPad] vesktop"
       "fcitx5 -d -r"
       "fcitx5-remote -r"
+      "steam"
     ];
 
     env = [

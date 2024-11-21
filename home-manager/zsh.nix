@@ -13,6 +13,10 @@
     };
 
     initExtra = ''eval "$(zoxide init zsh)"'';
+
+    shellAliases = {
+      nrb = "sudo nixos-rebuild switch --flake .";
+    };
   };
 
 }

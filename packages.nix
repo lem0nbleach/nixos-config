@@ -70,6 +70,7 @@
     xorg.xwininfo
     yad
     orca-slicer
+    mumble
   ];
 
   programs.nix-ld.enable = true;

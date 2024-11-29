@@ -71,6 +71,7 @@
     yad
     orca-slicer
     mumble
+    brave
   ];
 
   programs.nix-ld.enable = true;

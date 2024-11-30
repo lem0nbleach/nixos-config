@@ -103,6 +103,7 @@
     PROTON_VERSION = "GE-Proton9-18";
   };
 
+/*
   hardware = {
     nvidia = {
       open = false;
@@ -113,8 +114,15 @@
       enable32Bit = true;
     };
   };
+*/
 
-  services.xserver.videoDrivers = [ "nvidia" ];
+  hardware = {
+    graphics = {
+      enable32Bit = true;
+    };
+  };
+
+  services.xserver.videoDrivers = [ "amdgpu" ];
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
 

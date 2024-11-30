@@ -44,7 +44,7 @@
 
     workspace = [
       "name:Secondary, monitor:HDMI-A-1, default:true"
-      "1, monitor:DP-1, default:true"
+      "1, monitor:DP-3, default:true"
     ];
 
     decoration = {

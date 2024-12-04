@@ -73,6 +73,7 @@
     mumble
     brave
     tor-browser
+    vlc
   ];
 
   programs.nix-ld.enable = true;

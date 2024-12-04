@@ -37,6 +37,7 @@
     LC_TIME = "en_US.UTF-8";
   };
 
+  # Input method for Chinese
   i18n.inputMethod = {
     enable = true;
     type = "fcitx5";
@@ -61,6 +62,7 @@
     shell = pkgs.zsh;
   };
 
+  # Enable portals between applications
   xdg.portal.enable = true;
   programs.hyprland.portalPackage = pkgs.xdg-desktop-portal-hyprland;
   xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
@@ -85,7 +87,6 @@
 
   system.stateVersion = "24.05";
 
-  # Enabling hyprland with Nvidia
   programs.hyprland = {
     enable = true;
     xwayland.enable = true;
@@ -156,5 +157,9 @@
       enable = true;
       setSocketVariable = true;
     };
+  };
+
+  services.tor = {
+    enable = true;
   };
 }

@@ -72,6 +72,7 @@
     orca-slicer
     mumble
     brave
+    tor-browser
   ];
 
   programs.nix-ld.enable = true;

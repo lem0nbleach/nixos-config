@@ -74,6 +74,7 @@
     brave
     tor-browser
     vlc
+    docker-compose
   ];
 
   programs.nix-ld.enable = true;

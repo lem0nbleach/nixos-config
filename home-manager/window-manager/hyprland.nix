@@ -45,6 +45,11 @@
     workspace = [
       "name:Secondary, monitor:HDMI-A-1, default:true"
       "1, monitor:DP-3, default:true"
+      "2, monitor:DP-3"
+      "3, monitor:DP-3"
+      "4, monitor:DP-3"
+      "5, monitor:DP-3"
+      "6, monitor:DP-3"
     ];
 
     decoration = {

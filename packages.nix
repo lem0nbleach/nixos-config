@@ -31,6 +31,7 @@
     fastfetch
     zsh
     oh-my-zsh
+    hyprland
     waybar
     pavucontrol
     htop
@@ -88,7 +89,8 @@
     noto-fonts-cjk-sans
     noto-fonts-cjk-serif
     noto-fonts-emoji
-    nerdfonts
+    nerd-fonts._0xproto
+    nerd-fonts.droid-sans-mono
     font-awesome
     jetbrains-mono
     texlivePackages.alfaslabone

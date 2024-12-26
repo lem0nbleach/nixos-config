@@ -1,4 +1,4 @@
-{ ... }:
+{ lib, ... }:
 
 {
   services.hyprpaper.enable = true;
@@ -7,7 +7,7 @@
     ipc = true;
     splash = true;
 
-    #preload = "/home/lem0nbleach/.dotfiles/home-manager/window-manager/wallpaper/EYE.jpg";
-    #wallpaper = ", /home/lem0nbleach/.dotfiles/home-manager/window-manager/wallpaper/EYE.jpg";
+    preload = lib.mkForce "/home/lem0nbleach/.dotfiles/home-manager/window-manager/wallpaper/EYE.jpg";
+    wallpaper = lib.mkForce ", /home/lem0nbleach/.dotfiles/home-manager/window-manager/wallpaper/EYE.jpg";
   };
 }

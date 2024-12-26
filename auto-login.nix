@@ -5,7 +5,7 @@
     enable = true;
     settings = rec {
       initial_session = {
-        command = "hyprland";
+        command = "Hyprland";
         user = "lem0nbleach";
       };
       default_session = initial_session;

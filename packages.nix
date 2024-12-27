@@ -21,6 +21,7 @@
     xdg-desktop-portal-gtk
     xdg-utils
     hyprpaper
+    hyprutils
     xfce.thunar
     home-manager
     firefox

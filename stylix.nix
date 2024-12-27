@@ -28,4 +28,5 @@
     name = "Bibata-Modern-Ice";
     size = 24;
   };
+  stylix.targets.hyprpaper.enable = true;
 }

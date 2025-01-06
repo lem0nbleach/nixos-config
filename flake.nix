@@ -1,6 +1,4 @@
 {
-  description = "Home Manager configuration of lem0nbleach";
-
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-24.11";

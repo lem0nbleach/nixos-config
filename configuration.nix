@@ -12,9 +12,6 @@
       ./configurations/boot.nix
     ];
 
-  home-manager.users."lem0nbleach" = ./home.nix;
-  home-manager.extraSpecialArgs = { inherit inputs; };
-
   networking.hostName = "nixos";
 
   networking.networkmanager.enable = true;

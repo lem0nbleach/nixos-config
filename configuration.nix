@@ -9,14 +9,11 @@
       ./stylix.nix
       ./flatpak.nix
       ./programs/obs.nix
+      ./configurations/boot.nix
     ];
 
   home-manager.users."lem0nbleach" = ./home.nix;
   home-manager.extraSpecialArgs = { inherit inputs; };
-
-  boot.loader.systemd-boot.enable = false;
-  boot.loader.efi.canTouchEfiVariables = true;
-  boot.kernelPackages = pkgs.linuxPackages_zen;
 
   networking.hostName = "nixos";
 
@@ -146,11 +143,6 @@
 
 
   programs.zsh.enable = true;
-
-  boot.lanzaboote = {
-    enable = true;
-    pkiBundle = "/etc/secureboot";
-  };
 
   virtualisation.docker = {
     enable = true;

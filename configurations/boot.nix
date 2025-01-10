@@ -10,6 +10,7 @@
     # Zen Kernel
     kernelPackages = pkgs.linuxPackages_zen;
 
+    # Secure boot utility
     lanzaboote = {
       enable = true;
       pkiBundle = "/etc/secureboot";

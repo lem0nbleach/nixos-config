@@ -52,7 +52,6 @@
     kmonad
     inputs.zen-browser.packages."${system}".specific
     sbctl
-    obs-studio
     freecad
     blender
     kicad
@@ -77,6 +76,7 @@
     tor-browser
     vlc
     docker-compose
+    v4l-utils
   ];
 
   programs.nix-ld.enable = true;

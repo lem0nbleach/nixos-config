@@ -8,6 +8,7 @@
       ./auto-login.nix
       ./stylix.nix
       ./flatpak.nix
+      ./programs/obs.nix
     ];
 
   home-manager.users."lem0nbleach" = ./home.nix;

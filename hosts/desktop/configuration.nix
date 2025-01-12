@@ -5,18 +5,10 @@
     [
       ./hardware-configuration.nix
       ./packages.nix
-      ./auto-login.nix
-      ./stylix.nix
-      ./flatpak.nix
-      ./programs/obs.nix
+      ./system/boot.nix
+      ./system/home-manager.nix
+      ../../modules/profiles/desktop/module.nix
     ];
-
-  home-manager.users."lem0nbleach" = ./home.nix;
-  home-manager.extraSpecialArgs = { inherit inputs; };
-
-  boot.loader.systemd-boot.enable = false;
-  boot.loader.efi.canTouchEfiVariables = true;
-  boot.kernelPackages = pkgs.linuxPackages_zen;
 
   networking.hostName = "nixos";
 
@@ -146,11 +138,6 @@
 
 
   programs.zsh.enable = true;
-
-  boot.lanzaboote = {
-    enable = true;
-    pkiBundle = "/etc/secureboot";
-  };
 
   virtualisation.docker = {
     enable = true;

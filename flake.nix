@@ -37,10 +37,10 @@
 
   outputs = { nixpkgs, home-manager, stylix, lanzaboote, nix-flatpak, ... } @ inputs: {
     nixosConfigurations = {
-      nixos = nixpkgs.lib.nixosSystem {
+      desktop = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [ 
-          ./configuration.nix
+          ./hosts/desktop/configuration.nix
 	  home-manager.nixosModules.default
 	  stylix.nixosModules.stylix
 	  lanzaboote.nixosModules.lanzaboote

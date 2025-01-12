@@ -5,11 +5,9 @@
     [
       ./hardware-configuration.nix
       ./packages.nix
-      ./auto-login.nix
-      ./stylix.nix
-      ./flatpak.nix
-      ./programs/obs.nix
-      ./configurations/boot.nix
+      ./system/boot.nix
+      ./system/home-manager.nix
+      ../../modules/profiles/desktop/module.nix
     ];
 
   networking.hostName = "nixos";

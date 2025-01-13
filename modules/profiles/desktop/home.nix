@@ -26,5 +26,6 @@
     ../../home-manager/anyrun.nix
     ../../home-manager/rofi.nix
     ../../home-manager/obs.nix
+    ../../home-manager/zoxide.nix
   ];
 }

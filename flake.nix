@@ -48,6 +48,14 @@
 	];
         specialArgs = { inherit inputs; };
       };
+      docker-host = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+	modules = [
+	  ./hosts/docker-host/configuration.nix
+	  home-manager.nixosModules.default
+	];
+	specialArgs = { inherit inputs; };
+      };
     };
   };
 }

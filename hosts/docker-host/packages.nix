@@ -6,5 +6,6 @@
     zsh
     neovim
     git
+    kitty
   ];
 }

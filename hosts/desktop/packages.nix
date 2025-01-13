@@ -60,10 +60,6 @@
     egl-wayland
     logseq
     appimage-run
-    prusa-slicer
-    ruby
-    postgresql
-    super-slicer-beta
     protonup-qt
     xdotool
     xorg.xprop

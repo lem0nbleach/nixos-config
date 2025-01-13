@@ -15,7 +15,8 @@
     initExtra = ''eval "$(zoxide init zsh)"'';
 
     shellAliases = {
-      nrb = "sudo nixos-rebuild switch --flake";
+      nrbd = "sudo nixos-rebuild switch --flake ./hosts/#desktop";
+      nrbs = "sudo nixos-rebuild switch --flake ./hosts/#server";
     };
   };
 

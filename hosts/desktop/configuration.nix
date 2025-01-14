@@ -136,17 +136,6 @@
     "electron-27.3.11"
   ];
 
-
-  programs.zsh.enable = true;
-
-  virtualisation.docker = {
-    enable = true;
-    rootless = {
-      enable = true;
-      setSocketVariable = true;
-    };
-  };
-
   services.tor = {
     enable = true;
   };

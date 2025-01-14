@@ -75,9 +75,6 @@
   #  enableSSHSupport = true;
   #};
 
-  services.openssh.enable = true;
-  programs.ssh.startAgent = true;
-
   system.stateVersion = "24.05";
 
   programs.hyprland = {

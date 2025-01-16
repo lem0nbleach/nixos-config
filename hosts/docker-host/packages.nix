@@ -7,5 +7,7 @@
     neovim
     git
     kitty
+    lsof
+    dig
   ];
 }

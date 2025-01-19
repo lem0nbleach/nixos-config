@@ -15,6 +15,6 @@
     ../../home-manager/zsh.nix
     ../../home-manager/zoxide.nix
     ../../home-manager/git.nix
-    ../../home-manager/nvf.nix
+    ../../home-manager/nixvim.nix
   ];
 }

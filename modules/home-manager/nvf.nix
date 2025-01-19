@@ -9,3 +9,5 @@
 	  lsp.enable = true;
 	};
     };
+  };
+}

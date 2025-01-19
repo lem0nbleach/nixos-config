@@ -57,7 +57,8 @@
 	modules = [
 	  ./hosts/docker-host/configuration.nix
 	  home-manager.nixosModules.default
-	];
+	  stylix.nixosModules.stylix
+	  ];
 	specialArgs = { inherit inputs; };
       };
     };

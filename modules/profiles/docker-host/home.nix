@@ -11,6 +11,7 @@
 
   imports = [
     # Home manager
+    inputs.nvf.homeManagerModules.default
     inputs.nixvim.homeManagerModules.nixvim
     ../../home-manager/zsh.nix
     ../../home-manager/zoxide.nix

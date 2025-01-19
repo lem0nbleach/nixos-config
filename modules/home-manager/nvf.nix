@@ -11,7 +11,7 @@
 	};
 
         filetree = {
-          eno-tree = {
+          neo-tree = {
             enable = true;
           };
         };

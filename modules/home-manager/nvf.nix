@@ -3,7 +3,7 @@
     enable = true;
     settings = {
       vim = {
-        lanaguages.nix = {
+        languages.nix = {
 	  enable = true;
 	  format.enable = true;
 	  lsp.enable = true;

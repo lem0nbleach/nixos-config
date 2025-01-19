@@ -18,9 +18,8 @@
     ../../home-manager/zsh.nix
     ../../home-manager/window-manager/hyprland.nix
     ../../home-manager/window-manager/waybar.nix
-    #./home-manager/theme.nix
     ../../home-manager/git.nix
-    ../../home-manager/nixvim.nix
+    ../../home-manager/nvf.nix
     ../../home-manager/window-manager/hyprpaper.nix
     ../../home-manager/window-manager/hyprlock.nix
     ../../home-manager/window-manager/hypridle.nix

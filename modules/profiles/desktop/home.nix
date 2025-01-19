@@ -13,6 +13,7 @@
     # Home manager
     inputs.nixvim.homeManagerModules.nixvim
     inputs.anyrun.homeManagerModules.anyrun
+    inputs.nvf.homeManagerModules.default
     ../../home-manager/kitty.nix
     ../../home-manager/zsh.nix
     ../../home-manager/window-manager/hyprland.nix

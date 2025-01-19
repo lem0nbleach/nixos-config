@@ -1,17 +1,25 @@
+{ config, ... }:
+
 {
   programs.nvf = {
     enable = true;
     settings = {
       vim = {
       
-        languages.nix = {
-	  enable = true;
-	  format.enable = true;
-	  lsp.enable = true;
+        languages = {
+
+          enableFormat = true;
+          enableLSP = true;
+          enableTreesitter = true;
+
+          nix.enable = true;
+
 	};
 
+        autocomplete.nvim-cmp.enable = true;
+
         filetree = {
-          eno-tree = {
+          neo-tree = {
             enable = true;
           };
         };
@@ -29,6 +37,37 @@
           lualine = {
             enable = true;
           };
+        };
+
+        visuals = {
+          nvim-scrollbar.enable = true;
+        };
+
+        theme = {
+          enable = true;
+          name = "base16";
+
+          base16-colors = 
+            let
+              inherit (config.lib.stylix) colors;
+            in
+            {
+            base00 = colors.base00;
+            base01 = colors.base01;
+            base02 = colors.base02;
+            base04 = colors.base04;
+            base05 = colors.base05;
+            base06 = colors.base06;                                     
+            base07 = colors.base07;
+            base08 = colors.base07;
+            base09 = colors.base07;
+            base0A = colors.base07;
+            base0B = colors.base07;
+            base0C = colors.base07;
+            base0D = colors.base07;
+            base0E = colors.base07;
+            base0F = colors.base07;
+            };
         };
       };
     };

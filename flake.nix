@@ -33,9 +33,13 @@
     nix-flatpak = {
       url = "github:gmodena/nix-flatpak";
     };
+    nvf = {
+     url = "github:notashelf/nvf";
+     inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { nixpkgs, home-manager, stylix, lanzaboote, nix-flatpak, ... } @ inputs: {
+  outputs = { nixpkgs, home-manager, stylix, lanzaboote, nix-flatpak, nvf, ... } @ inputs: {
     nixosConfigurations = {
       desktop = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";

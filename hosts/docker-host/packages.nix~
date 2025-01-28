@@ -9,6 +9,5 @@
     kitty
     lsof
     dig
-    iftop
   ];
 }

@@ -73,7 +73,6 @@
     vlc
     docker-compose
     v4l-utils
-    screen
   ];
 
   programs.nix-ld.enable = true;

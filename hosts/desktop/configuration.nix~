@@ -14,10 +14,6 @@
 
   networking.networkmanager.enable = true;
 
-  swapDevices = [ {
-    device = "/dev/nvme1n1p3";
-  } ];
-
   time.timeZone = "America/New_York";
 
   i18n.defaultLocale = "en_US.UTF-8";

@@ -22,7 +22,6 @@
     xdg-utils
     hyprpaper
     hyprutils
-    xfce.thunar
     home-manager
     firefox
     git
@@ -49,12 +48,9 @@
     brightnessctl
     lemurs
     hyprpicker
-    kmonad
-    inputs.zen-browser.packages."${system}".specific
     sbctl
     freecad
     blender
-    kicad
     chromium
     libreoffice-qt6-fresh
     egl-wayland

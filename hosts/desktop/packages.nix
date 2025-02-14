@@ -70,6 +70,7 @@
     docker-compose
     v4l-utils
     screen
+    element-desktop
   ];
 
   programs.nix-ld.enable = true;

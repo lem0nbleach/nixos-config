@@ -28,6 +28,5 @@
     ../../home-manager/rofi.nix
     ../../home-manager/obs.nix
     ../../home-manager/zoxide.nix
-    ../../home-manager/schizofox.nix
   ];
 }

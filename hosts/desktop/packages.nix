@@ -23,7 +23,6 @@
     hyprpaper
     hyprutils
     home-manager
-    firefox
     git
     mangohud
     protonup

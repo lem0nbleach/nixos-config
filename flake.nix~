@@ -37,9 +37,6 @@
      url = "github:notashelf/nvf";
      inputs.nixpkgs.follows = "nixpkgs";
     };
-    schizofox = {
-      url = "github:schizofox/schizofox";
-    };
   };
 
   outputs = { nixpkgs, home-manager, stylix, lanzaboote, nix-flatpak, nvf, ... } @ inputs: {

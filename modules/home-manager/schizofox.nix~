@@ -18,7 +18,7 @@
       darkreader.enable = true;
 
       extraExtensions = {
-        "webextension@bitwarden.com".install_url = "https://addons.mozilla.org/firefox/downloads/file/4410896/bitwarden_password_manager-2024.12.4.xpi";
+        "biwarden@bitwarden.com".install_url = "https://https://addons.mozilla.org/firefox/downloads/latest/bitwarden/bitwarden_password_manager-2024.12.4.xpi";
       };
     };
   };

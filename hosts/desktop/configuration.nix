@@ -136,4 +136,6 @@
   services.tor = {
     enable = true;
   };
+
+  services.teamviewer.enable = true;
 }

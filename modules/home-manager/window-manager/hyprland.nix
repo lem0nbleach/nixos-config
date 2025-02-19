@@ -18,11 +18,11 @@
       "hyprctl setcursor Bibata-Modern-Ice 24"
       "hyprlock & hyprpaper & hypridle & swaync & waybar"
       #"logseq & vesktop"
-      "[workspace special:scratchPad] logseq"
-      "[workspace special:scratchPad] vesktop"
+      "logseq"
+      "vesktop"
+      "steam"
       "fcitx5 -d -r"
       "fcitx5-remote -r"
-      "[workspace 1] steam"
     ];
 
     env = [
@@ -59,16 +59,20 @@
 
       shadow = {
         enabled = true;
-	range = 4;
+	range = 10;
 	render_power = 3;
 	color = lib.mkForce "rgba(1a1a1aee)";
       };
 
       blur = {
         enabled = true;
-	size = 3;
-	passes = 1;
-	vibrancy = 0.1696;
+	size = 5;
+	passes = 3;
+	vibrancy = 0.2;
+        contrast = 0.7;
+        brightness = 0.8;
+        xray = true;
+        special = true;
       };
     };
 

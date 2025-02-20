@@ -8,17 +8,24 @@
       searxUrl = "https://searx.be";
       searxQuery = "https://searx.be/search?q={searchTerms}&categories=general";
     };
+
     security = {
-      sanitizeOnShutdown.enable = true;
+      sanitizeOnShutdown.enable = false;
       sandbox.enable = true;
     };
     
     extensions = {
       darkreader.enable = true;
 
+      enableExtraExtensions = true;
       extraExtensions = {
-        "biwarden@bitwarden.com".install_url = "https://https://addons.mozilla.org/firefox/downloads/latest/bitwarden/bitwarden_password_manager-2024.12.4.xpi";
+        "biwarden@bitwarden.com".install_url = "https://addons.mozilla.org/firefox/downloads/latest/bitwarden-password-manager/latest.xpi";
       };
+    };
+    
+    misc = {
+      drm.enable = true;
+      drmFix = true;
     };
   };
 }

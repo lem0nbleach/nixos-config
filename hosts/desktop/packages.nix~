@@ -23,7 +23,6 @@
     hyprpaper
     hyprutils
     home-manager
-    firefox
     git
     mangohud
     protonup
@@ -71,6 +70,7 @@
     v4l-utils
     screen
     element-desktop
+    winbox
   ];
 
   programs.nix-ld.enable = true;

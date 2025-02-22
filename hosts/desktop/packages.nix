@@ -70,6 +70,8 @@
     v4l-utils
     screen
     element-desktop
+    wine-wayland
+    winbox4
   ];
 
   programs.nix-ld.enable = true;

@@ -13,6 +13,10 @@
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
 
+  boot.kernel.sysctl = {
+    "kernel.split_lock_mitigate" = 0;
+  };
+
   fileSystems."/" = {
     device = "/dev/disk/by-uuid/961e902c-2e74-41e0-a98b-ed35f13484cd";
     fsType = "ext4";

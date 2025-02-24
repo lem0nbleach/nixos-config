@@ -19,7 +19,7 @@
     };
 
   fileSystems."/mnt/general/home" = {
-    device = "192.168.88.11:/mnt/general/home";
+    device = "192.168.88.11:/mnt/gerneral/home";
     fsType = "nfs";
   };
 

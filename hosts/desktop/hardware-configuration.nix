@@ -24,8 +24,13 @@
     options = [ "fmask=0022" "dmask=0022" ];
   };
 
-  fileSystems."/mnt/general/home" = {
-    device = "192.168.88.11:/mnt/general/home";
+  fileSystems."/mnt/arr" = {
+    device = "192.168.88.10:/mnt/arr";
+    fsType = "nfs";
+  };
+
+  fileSystems."/mnt/home" = {
+    device = "192.168.88.10:/mnt/home";
     fsType = "nfs";
   };
 

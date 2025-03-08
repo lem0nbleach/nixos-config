@@ -48,7 +48,6 @@
     description = "Feiyang Wu";
     extraGroups = [ "networkmanager" "wheel" "docker"];
     shell = pkgs.zsh;
-    packages = with pkgs; [];
   };
 
   # Allow unfree packages

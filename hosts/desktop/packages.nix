@@ -72,6 +72,7 @@
     element-desktop
     wine-wayland
     winbox4
+    obsidian
   ];
 
   programs.nix-ld.enable = true;

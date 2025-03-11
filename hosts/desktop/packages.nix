@@ -10,6 +10,7 @@
   };
   
   environment.systemPackages = with pkgs; [
+    vscode
     wget
     kitty
     bash

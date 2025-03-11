@@ -136,4 +136,8 @@
   services.tor = {
     enable = true;
   };
+
+  services.teamviewer.enable = true;
+
+  programs.vscode.enable = true;
 }

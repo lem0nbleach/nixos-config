@@ -4,7 +4,7 @@
   programs.git.enable = true;
 
   programs.git = {
-    userName = "Feiyang Wu";
+    userName = "Lem0nbleach";
     userEmail = "feiyang.wu@fishstall.net";
     extraConfig = {
       init.defaultBranch = "main";

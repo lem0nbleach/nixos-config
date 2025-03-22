@@ -7,7 +7,7 @@
     ipc = true;
     splash = false;
 
-    preload = lib.mkForce "/home/lem0nbleach/.dotfiles/modules/home-manager/window-manager/hyprlock/EYE.jpg";
-    wallpaper = lib.mkForce ",/home/lem0nbleach/.dotfiles/modules/home-manager/window-manager/hyprlock/EYE.jpg";
+    preload = lib.mkForce "/home/lem0nbleach/.dotfiles/modules/home-manager/window-manager/hyprlock/background.png";
+    wallpaper = lib.mkForce ",/home/lem0nbleach/.dotfiles/modules/home-manager/window-manager/hyprlock/background.png";
   };
 }

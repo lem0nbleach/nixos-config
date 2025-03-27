@@ -46,6 +46,10 @@
     variant = "";
   };
 
+  environment.sessionVariables = {
+    EDITOR = "nvim";
+  };
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.lem0nbleach = {
     isNormalUser = true;

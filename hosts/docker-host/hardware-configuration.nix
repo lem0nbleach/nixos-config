@@ -12,6 +12,7 @@
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ ];
   boot.extraModulePackages = [ ];
+  boot.supportedFilesystems = [ "nfs" ];
 
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/212dfa9a-ff02-4772-8936-057471eeefba";
@@ -21,6 +22,11 @@
   swapDevices =
     [ { device = "/dev/disk/by-uuid/1ceb98f6-4412-4a39-a360-a7eec6f6ca43"; }
     ];
+
+  fileSystems."/mnt/ewaste/general" = {
+    device = "192.168.88.2:/mnt/ewaste//general";
+    fsType = "nfs";
+  };
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
   # (the default) this is the recommended approach. When using systemd-networkd it's

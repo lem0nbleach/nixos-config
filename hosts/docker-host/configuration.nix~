@@ -67,5 +67,14 @@
 
   services.nfs.server.enable = true;
 
+  services.prometheus = {
+    exporters = {
+      node = {
+        enable = true;
+        port = 9002;
+      };
+    };
+  };
+
   system.stateVersion = "24.11"; # Did you read the comment?
 }

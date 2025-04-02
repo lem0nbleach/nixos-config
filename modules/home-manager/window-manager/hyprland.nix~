@@ -18,8 +18,6 @@
       "hyprctl setcursor Bibata-Modern-Ice 24"
       "hyprlock & hyprpaper & hypridle & swaync & waybar"
       #"logseq & vesktop"
-      "[worksapce scratchPad silent] vesktop"
-      "steam"
       "fcitx5 -d -r"
       "fcitx5-remote -r"
     ];

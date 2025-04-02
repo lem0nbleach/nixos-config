@@ -117,8 +117,9 @@
     };
 
     device = {
-      name = "epic-mouse-v1";
-      sensitivity = -0.5;
+      name = "wacom-cintiq-16-pen";
+      transform = 0;
+      output = "HDMI-A-1";
     };
 
     bind = [

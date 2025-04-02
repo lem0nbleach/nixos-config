@@ -139,5 +139,5 @@
 
   services.teamviewer.enable = true;
 
-  programs.vscode.enable = true;
+  xserver.wacom.enable = true;
 }

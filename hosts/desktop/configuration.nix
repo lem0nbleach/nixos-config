@@ -138,4 +138,6 @@
   };
 
   services.teamviewer.enable = true;
+
+  services.xserver.wacom.enable = true;
 }

@@ -10,39 +10,25 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    apple-fonts = {
-      url = "github:Lyndeno/apple-fonts.nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    anyrun = {
-      url = "github:anyrun-org/anyrun";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     stylix = {
       url = "github:danth/stylix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    zen-browser = {
-      url = "github:MarceColl/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     lanzaboote = {
       url = "github:nix-community/lanzaboote/v0.4.1";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nix-flatpak = {
-      url = "github:gmodena/nix-flatpak";
-    };
     nvf = {
-     url = "github:notashelf/nvf";
-     inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:notashelf/nvf";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     schizofox = {
       url = "github:schizofox/schizofox";
+     inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { nixpkgs, home-manager, stylix, lanzaboote, nix-flatpak, nvf, ... } @ inputs: {
+  outputs = { nixpkgs, home-manager, stylix, lanzaboote, nvf, ... } @ inputs: {
     nixosConfigurations = {
       desktop = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -51,7 +37,6 @@
 	  home-manager.nixosModules.default
 	  stylix.nixosModules.stylix
 	  lanzaboote.nixosModules.lanzaboote
-	  nix-flatpak.nixosModules.nix-flatpak
 	];
         specialArgs = { inherit inputs; };
       };
@@ -61,7 +46,7 @@
 	  ./hosts/docker-host/configuration.nix
 	  home-manager.nixosModules.default
 	  stylix.nixosModules.stylix
-	  ];
+	];
 	specialArgs = { inherit inputs; };
       };
     };

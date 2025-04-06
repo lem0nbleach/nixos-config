@@ -12,7 +12,6 @@
   imports = [
     # Home manager
     inputs.nixvim.homeManagerModules.nixvim
-    inputs.anyrun.homeManagerModules.anyrun
     inputs.nvf.homeManagerModules.default
     inputs.schizofox.homeManagerModules.default
     ../../home-manager/kitty.nix
@@ -24,7 +23,6 @@
     ../../home-manager/window-manager/hyprpaper.nix
     ../../home-manager/window-manager/hyprlock.nix
     ../../home-manager/window-manager/hypridle.nix
-    ../../home-manager/anyrun.nix
     ../../home-manager/rofi.nix
     ../../home-manager/obs.nix
     ../../home-manager/zoxide.nix

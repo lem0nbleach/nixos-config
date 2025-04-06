@@ -139,5 +139,20 @@
 
   services.teamviewer.enable = true;
 
-  xserver.wacom.enable = true;
+  services.xserver.wacom.enable = true;
+
+  # configuration.nix
+  hjem = {
+    users.lem0nbleach = {
+      enable = true;
+      directory = "/home/lem0nbleach";
+      user = "lem0nbleach";
+      files = {
+        ".nvim" = {
+          
+        };
+      };
+    };
+    # You should probably also enable clobberByDefault at least for now.
+  };
 }

@@ -76,6 +76,7 @@
     obsidian
     krita
     yadm
+    rofi-wayland
   ];
 
   programs.nix-ld.enable = true;

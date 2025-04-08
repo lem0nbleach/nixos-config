@@ -15,7 +15,6 @@
     inputs.nixvim.homeManagerModules.nixvim
     ../../home-manager/zsh.nix
     ../../home-manager/zoxide.nix
-    ../../home-manager/git.nix
     ../../home-manager/nvf.nix
   ];
 }

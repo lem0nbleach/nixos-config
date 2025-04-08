@@ -74,6 +74,7 @@
     wine-wayland
     winbox4
     obsidian
+    krita
   ];
 
   programs.nix-ld.enable = true;

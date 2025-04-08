@@ -75,6 +75,7 @@
     winbox4
     obsidian
     krita
+    yadm
   ];
 
   programs.nix-ld.enable = true;

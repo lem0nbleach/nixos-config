@@ -5,7 +5,7 @@
 
   wayland.windowManager.hyprland.settings = {
     monitor = [
-      "DP-3, 2560x1440@160, 0x0, 1"
+      "DP-2, 2560x1440@144, 0x0, 1, vrr, 2"
       "HDMI-A-1, 1920x1080@60, -1100x1440, 1"
     ];
     
@@ -41,12 +41,12 @@
 
     workspace = [
       "name:Secondary, monitor:HDMI-A-1, default:true"
-      "1, monitor:DP-3, default:true"
-      "2, monitor:DP-3"
-      "3, monitor:DP-3"
-      "4, monitor:DP-3"
-      "5, monitor:DP-3"
-      "6, monitor:DP-3"
+      "1, monitor:DP-2, default:true"
+      "2, monitor:DP-2"
+      "3, monitor:DP-2"
+      "4, monitor:DP-2"
+      "5, monitor:DP-2"
+      "6, monitor:DP-2"
     ];
 
     decoration = {

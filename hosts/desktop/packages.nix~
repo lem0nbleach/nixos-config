@@ -26,6 +26,7 @@
     home-manager
     git
     mangohud
+    lm_sensors
     protonup
     swaynotificationcenter
     fastfetch

@@ -11,8 +11,6 @@
 
   imports = [
     # Home manager
-    inputs.nixvim.homeManagerModules.nixvim
-    inputs.nvf.homeManagerModules.default
     inputs.schizofox.homeManagerModules.default
     ../../home-manager/kitty.nix
     ../../home-manager/zsh.nix

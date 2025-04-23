@@ -6,10 +6,6 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixvim = {
-      url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     stylix = {
       url = "github:danth/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -18,17 +14,17 @@
       url = "github:nix-community/lanzaboote/v0.4.1";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nvf = {
-      url = "github:notashelf/nvf";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     schizofox = {
       url = "github:schizofox/schizofox";
-     inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    hjem = {
+      url = "github:feel-co/hjem";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { nixpkgs, home-manager, stylix, lanzaboote, nvf, ... } @ inputs: {
+  outputs = { nixpkgs, home-manager, stylix, lanzaboote, hjem, ... } @ inputs: {
     nixosConfigurations = {
       desktop = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -37,6 +33,7 @@
 	  home-manager.nixosModules.default
 	  stylix.nixosModules.stylix
 	  lanzaboote.nixosModules.lanzaboote
+	  hjem.nixosModules.default
 	];
         specialArgs = { inherit inputs; };
       };

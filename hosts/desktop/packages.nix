@@ -19,6 +19,8 @@
     bash
     pipewire
     wireplumber
+    ffmpeg-full
+    yt-dlp
     vesktop
     hyprcursor
     xdg-desktop-portal-hyprland

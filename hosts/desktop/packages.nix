@@ -10,6 +10,9 @@
   };
   
   environment.systemPackages = with pkgs; [
+    neovim
+    ripgrep
+    gcc
     vscode
     wget
     kitty

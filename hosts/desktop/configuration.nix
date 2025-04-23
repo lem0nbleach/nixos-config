@@ -8,6 +8,7 @@
       ./system/boot.nix
       ./system/home-manager.nix
       ../../modules/profiles/desktop/module.nix
+      ../../modules/profiles/desktop/hjem.nix
     ];
 
   networking.hostName = "nixos";

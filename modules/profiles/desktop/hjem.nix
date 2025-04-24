@@ -25,6 +25,10 @@
         source = ../../config/hypr/hyprpaper.conf;
         clobber = true;
       };
+      ".config/nvim" = {
+        source = ../../config/nvim;
+        clobber = true;
+      };
     };
   };
 }

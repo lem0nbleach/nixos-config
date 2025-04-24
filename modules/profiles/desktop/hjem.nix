@@ -13,6 +13,10 @@
         source = ../../config/hypr/hyprland.conf;
         clobber = true;
       };
+      ".config/hypr/hypridle.conf" = {
+        source = ../../config/hypr/hypridle.conf;
+        clobber = true;
+      };
     };
   };
 }

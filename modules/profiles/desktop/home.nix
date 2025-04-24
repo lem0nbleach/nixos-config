@@ -17,7 +17,6 @@
     ../../home-manager/window-manager/waybar.nix
     ../../home-manager/window-manager/hyprpaper.nix
     ../../home-manager/window-manager/hyprlock.nix
-    ../../home-manager/window-manager/hypridle.nix
     ../../home-manager/obs.nix
     ../../home-manager/zoxide.nix
     ../../home-manager/schizofox.nix

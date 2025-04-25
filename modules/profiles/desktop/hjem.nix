@@ -25,8 +25,20 @@
         source = ../../config/hypr/hyprpaper.conf;
         clobber = true;
       };
-      ".config/nvim" = {
-        source = ../../config/nvim;
+      ".config/nvim/init.lua" = {
+        source = ../../config/nvim/init.lua;
+        clobber = true;
+      };
+      ".config/nvim/.stylua.toml" = {
+        source = ../../config/nvim/.stylua.toml;
+        clobber = true;
+      };
+      ".config/nvim/lua" = {
+        source = ../../config/nvim/lua;
+        clobber = true;
+      };
+      ".config/nvim/doc" = {
+        source = ../../config/nvim/doc;
         clobber = true;
       };
     };

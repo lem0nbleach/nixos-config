@@ -24,16 +24,6 @@
     options = [ "fmask=0022" "dmask=0022" ];
   };
 
-  fileSystems."/mnt/arr" = {
-    device = "192.168.88.10:/mnt/arr";
-    fsType = "nfs";
-  };
-
-  fileSystems."/mnt/home" = {
-    device = "192.168.88.10:/mnt/home";
-    fsType = "nfs";
-  };
-
   swapDevices = [
     { device = "/dev/disk/by-uuid/21894ba4-e034-4af7-9c6a-d624cb77027c";
     } ];

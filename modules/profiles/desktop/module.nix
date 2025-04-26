@@ -7,7 +7,6 @@
     ../../nixos/core/stylix.nix
     ../../nixos/core/ssh.nix
     ../../nixos/extra/obs.nix
-    ../../nixos/extra/docker.nix
     ../../nixos/extra/screen.nix
   ];
 }

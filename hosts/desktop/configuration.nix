@@ -52,7 +52,7 @@
   users.users.lem0nbleach = {
     isNormalUser = true;
     description = "Feiyang Wu";
-    extraGroups = [ "networkmanager" "wheel" "docker"];
+    extraGroups = [ "networkmanager" "wheel" ];
     shell = pkgs.zsh;
   };
 

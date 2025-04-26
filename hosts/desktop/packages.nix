@@ -74,7 +74,6 @@
     brave
     tor-browser
     vlc
-    docker-compose
     v4l-utils
     screen
     element-desktop

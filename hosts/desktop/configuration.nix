@@ -85,6 +85,8 @@
 
   services.hypridle.enable = true;
 
+  programs.hyprlock.enable = true;
+
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
     STEAM_EXTRA_COMPAT_TOOLS_PATHS = "/home/user/.steam/root/compatibilitytools.d";

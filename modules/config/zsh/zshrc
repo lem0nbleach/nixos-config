@@ -57,8 +57,7 @@ fi
 
 
 # Aliases
-alias -- nrbd='sudo nixos-rebuild switch --flake ./hosts/#desktop'
-alias -- nrbs='sudo nixos-rebuild switch --flake ./hosts/#server'
+alias -- s='sudo nixos-rebuild switch --flake ./hosts/#desktop'
 
 # Named Directory Hashes
 

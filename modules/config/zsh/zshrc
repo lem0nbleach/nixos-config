@@ -45,8 +45,7 @@ unsetopt HIST_EXPIRE_DUPS_FIRST
 setopt SHARE_HISTORY
 unsetopt EXTENDED_HISTORY
 
-
-eval $(zoxide init zsh)
+eval "$(zoxide init zsh)"
 eval $(thefuck --alias)
 
 if test -n "$KITTY_INSTALLATION_DIR"; then

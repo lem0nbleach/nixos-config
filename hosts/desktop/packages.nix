@@ -17,6 +17,7 @@
     wget
     kitty
     bash
+    oh-my-zsh
     pipewire
     wireplumber
     ffmpeg-full
@@ -36,8 +37,6 @@
     protonup
     swaynotificationcenter
     fastfetch
-    zsh
-    oh-my-zsh
     hyprland
     waybar
     pavucontrol

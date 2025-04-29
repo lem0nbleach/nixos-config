@@ -13,7 +13,6 @@
     # Home manager
     inputs.schizofox.homeManagerModules.default
     ../../home-manager/kitty.nix
-    ../../home-manager/zsh.nix
     ../../home-manager/window-manager/waybar.nix
     ../../home-manager/obs.nix
     ../../home-manager/zoxide.nix

@@ -2,7 +2,6 @@
 
 {
   imports = [
-    ../../nixos/core/zsh.nix
     ../../nixos/core/auto-login.nix
     ../../nixos/core/stylix.nix
     ../../nixos/core/ssh.nix

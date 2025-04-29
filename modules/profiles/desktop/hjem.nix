@@ -41,6 +41,10 @@
         source = ../../config/nvim/doc;
         clobber = true;
       };
+      ".zshrc" = {
+        source = ../../config/zsh/zshrc;
+        clobber = true;
+      };
     };
   };
 }

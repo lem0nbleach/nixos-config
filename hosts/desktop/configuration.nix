@@ -142,4 +142,5 @@
 
   programs.zsh.enable = true;
   programs.thefuck.enable = true;
+
 }

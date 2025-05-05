@@ -16,6 +16,7 @@
     vscode
     wget
     kitty
+    foot
     bash
     oh-my-zsh
     pipewire

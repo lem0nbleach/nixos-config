@@ -45,6 +45,10 @@
         source = ../../config/zsh/zshrc;
         clobber = true;
       };
+      ".config/foot/foot.ini" = {
+        source = ../../config/foot/foot.ini;
+        clobber = true;
+      };
     };
   };
 }

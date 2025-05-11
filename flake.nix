@@ -14,10 +14,6 @@
       url = "github:nix-community/lanzaboote/v0.4.1";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    schizofox = {
-      url = "github:schizofox/schizofox";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     hjem = {
       url = "github:feel-co/hjem";
       inputs.nixpkgs.follows = "nixpkgs";

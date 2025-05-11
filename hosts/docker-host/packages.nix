@@ -11,5 +11,6 @@
     dig
     iftop
     gcc
+    foot
   ];
 }

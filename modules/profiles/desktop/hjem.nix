@@ -49,6 +49,10 @@
         source = ../../config/foot/foot.ini;
         clobber = true;
       };
+      ".mozilla/firefox/user.js" = {
+        source = ../../config/mozilla/firefox/user.js;
+        clobber = true;
+      };
     };
   };
 }

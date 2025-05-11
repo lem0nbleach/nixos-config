@@ -84,6 +84,9 @@
   programs.hyprlock.enable = true;
 
   environment.sessionVariables = {
+    TERM = "foot";
+    BROWSER = "firefox";
+    TERMINAL = "foot";
     NIXOS_OZONE_WL = "1";
     STEAM_EXTRA_COMPAT_TOOLS_PATHS = "/home/user/.steam/root/compatibilitytools.d";
     XDG_CURRENT_DESKTOP = "Hyprland";

@@ -10,5 +10,6 @@
     lsof
     dig
     iftop
+    gcc
   ];
 }

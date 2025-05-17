@@ -83,6 +83,7 @@
     krita
     yadm
     rofi-wayland
+    sqlitebrowser
   ];
 
   programs.nix-ld.enable = true;

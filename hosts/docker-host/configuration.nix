@@ -22,6 +22,8 @@
 
   networking.firewall.allowedTCPPorts = [ 2049 9002 3080 81 444];
 
+  networking.nameservers = [ "192.168.88.21" ];
+
   # Set your time zone.
   time.timeZone = "America/New_York";
 

@@ -84,6 +84,7 @@
     yadm
     rofi-wayland
     sqlitebrowser
+    lutris
   ];
 
   programs.nix-ld.enable = true;

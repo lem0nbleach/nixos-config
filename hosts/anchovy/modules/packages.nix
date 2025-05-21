@@ -12,5 +12,8 @@
     fd
     lua
     brightnessctl
+    zoxide
+    zsh
+    thefuck
   ];
 }

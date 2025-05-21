@@ -18,7 +18,6 @@
     kitty
     foot
     bash
-    oh-my-zsh
     pipewire
     wireplumber
     ffmpeg-full

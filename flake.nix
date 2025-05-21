@@ -42,6 +42,15 @@
 	];
 	specialArgs = { inherit inputs; };
       };
+      anchovy = nixpkgs.lib.nixosSystem {
+	system = "x86_64-linux";
+	modules = [
+	  ./hosts/anchovy/configuration.nix
+	  lanzaboote.nixosModules.lanzaboote
+	  hjem.nixosModules.default
+	];
+	specialArgs = { inherit inputs; };
+      };
     };
   };
 }

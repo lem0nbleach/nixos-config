@@ -72,6 +72,7 @@
 
   services.openssh.enable = true;
   services.tailscale.enable = true;
+  services.power-profiles-daemon.enable = true;
 
   system.stateVersion = "24.11";
 

@@ -13,6 +13,7 @@
 
   networking.hostName = "anchovy";
   networking.networkmanager.enable = true;
+  networking.nameservers = [ "192.168.88.50" ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
@@ -31,7 +32,6 @@
     LC_TIME = "en_US.UTF-8";
   };
 
-  
   environment.sessionVariables = {
     TERM = "foot";
     BROWSER = "firefox";
@@ -59,9 +59,19 @@
 
   services.xserver.videoDriver = [ "amdgpu" ];
 
+  security.rtkit.enable = true;
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+    jack.enable = true;
+  };
+
   nixpkgs.config.allowUnfree = true;
 
   services.openssh.enable = true;
+  services.tailscale.enable = true;
 
   system.stateVersion = "24.11";
 

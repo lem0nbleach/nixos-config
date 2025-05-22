@@ -49,7 +49,7 @@
     isNormalUser = true;
     description = "Feiyang Wu";
     extraGroups = [ "networkmanager" "wheel" ];
-    shell = pkgs.zsh;
+    shell = pkgs.fish;
   };
 
   # Enable portals between applications
@@ -147,4 +147,6 @@
   programs.thefuck.enable = true;
 
   programs.firefox.enable = true;
+
+  programs.fish.enable = true;
 }

@@ -25,5 +25,11 @@
     hyprcursor
     hyprpaper
     bibata-cursors
+    pavucontrol
+    logseq
+    obsidian
+  ];
+  nixpkgs.config.permittedInsecurePackages = [
+    "electron-27.3.11"
   ];
 }

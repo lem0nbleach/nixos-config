@@ -4,6 +4,7 @@
   imports =
     [
        ./modules
+       ../../modules/profiles/anchovy
     ];
 
   boot.loader.systemd-boot.enable = true;
@@ -30,6 +31,19 @@
     LC_TIME = "en_US.UTF-8";
   };
 
+  
+  environment.sessionVariables = {
+    TERM = "foot";
+    BROWSER = "firefox";
+    NIXOS_OZONE_WL = "1";
+    XDG_CURRENT_DESKTOP = "Hyprland";
+    XDG_SESSION_DESKTOP = "Hyprland";
+    XDG_SESSION_TYPE = "wayland";
+    GTK_USE_PORTAL = "1";
+    ELECTRON_OZONE_PLATFORM_HINT = "auto";
+    EDITOR = "nvim";
+  };
+
   services.xserver.xkb = {
     layout = "us";
     variant = "";
@@ -39,8 +53,11 @@
     isNormalUser = true;
     description = "Feiyang Wu";
     extraGroups = [ "networkmanager" "wheel" ];
+    shell = pkgs.zsh;
     packages = with pkgs; [];
   };
+
+  services.xserver.videoDriver = [ "amdgpu" ];
 
   nixpkgs.config.allowUnfree = true;
 

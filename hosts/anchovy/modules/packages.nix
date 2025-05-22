@@ -4,6 +4,7 @@
     neovim
     git
     dig
+    firefox
     gcc
     ripgrep
     gnumake
@@ -14,6 +15,15 @@
     brightnessctl
     zoxide
     zsh
+    zsh-autocomplete
     thefuck
+    foot
+    yazi
+    grim
+    wl-clipboard-rs
+    rofi-wayland
+    hyprcursor
+    hyprpaper
+    bibata-cursors
   ];
 }

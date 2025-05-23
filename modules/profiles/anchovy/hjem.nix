@@ -21,6 +21,10 @@
 	source = ../../config/foot/foot.ini;
 	clobber = true;
       };
+      ".config/fish/config.fish" = {
+	source = ../../config/fish/config.fish;
+	clobber = true;
+      };
     };
   };
 }

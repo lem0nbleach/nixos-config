@@ -53,7 +53,7 @@
     isNormalUser = true;
     description = "Feiyang Wu";
     extraGroups = [ "networkmanager" "wheel" ];
-    shell = pkgs.zsh;
+    shell = pkgs.fish;
     packages = with pkgs; [];
   };
 
@@ -73,6 +73,8 @@
   services.openssh.enable = true;
   services.tailscale.enable = true;
   services.power-profiles-daemon.enable = true;
+  
+  programs.fish.enable = true;
 
   system.stateVersion = "24.11";
 

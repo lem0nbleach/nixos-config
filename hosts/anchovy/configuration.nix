@@ -52,7 +52,7 @@
   users.users.lem0nbleach = {
     isNormalUser = true;
     description = "Feiyang Wu";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "video" ];
     shell = pkgs.fish;
     packages = with pkgs; [];
   };
@@ -74,6 +74,13 @@
   services.tailscale.enable = true;
   services.tlp.enable = true;
   services.logind.lidSwitch = "suspend";
+
+  services.udev.extraRules = ''
+    ACTION=="add", SUBSYSTEM=="backlight", RUN+="${pkgs.coreutils}/bin/chgrp video /sys/class/backlight/%k/brightness"
+    ACTION=="add", SUBSYSTEM=="backlight", RUN+="${pkgs.coreutils}/bin/chmod g+w /sys/class/backlight/%k/brightness"
+    ACTION=="add", SUBSYSTEM=="leds", RUN+="${pkgs.coreutils}/bin/chgrp video /sys/class/leds/%k/brightness"
+    ACTION=="add", SUBSYSTEM=="leds", RUN+="${pkgs.coreutils}/bin/chmod g+w /sys/class/leds/%k/brightness"
+  '';
 
   services.fprintd.enable = true;
   #security.pam.services.hyprlock = {};

@@ -10,20 +10,24 @@
         clobber = true;
       };
       ".config/hypr/hyprpaper.conf" = {
-	source = ../../config/hypr/hyprpaper.conf;
-	clobber = true;
+	      source = ../../config/hypr/hyprpaper.conf;
+	      clobber = true;
       };
       ".mozilla/firefox/nh8kebxc.default/user.js" = {
         source = ../../config/mozilla/firefox/user.js;
         clobber = true;
       };
       ".config/foot/foot.ini" = {
-	source = ../../config/foot/foot.ini;
-	clobber = true;
+	      source = ../../config/foot/foot.ini;
+	      clobber = true;
       };
       ".config/fish/config.fish" = {
-	source = ../../config/fish/config.fish;
-	clobber = true;
+	      source = ../../config/fish/config.fish;
+	      clobber = true;
+      };
+      ".config/helix/config.toml" = {
+        source = ../../config/helix/config.toml;
+        clobber = true;
       };
     };
   };

@@ -20,7 +20,7 @@
     foot
     yazi
     grim
-    wl-clipboard-rs
+    wl-clipboard
     rofi-wayland
     hyprcursor
     hyprpaper
@@ -32,6 +32,7 @@
     wluma
     vesktop
     easyeffects
+    slurp
   ];
   nixpkgs.config.permittedInsecurePackages = [
     "electron-27.3.11"

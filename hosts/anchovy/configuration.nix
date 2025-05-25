@@ -72,7 +72,8 @@
 
   services.openssh.enable = true;
   services.tailscale.enable = true;
-  services.power-profiles-daemon.enable = true;
+  services.tlp.enable = true;
+  services.logind.lidSwitch = "suspend";
 
   services.fprintd.enable = true;
   #security.pam.services.hyprlock = {};

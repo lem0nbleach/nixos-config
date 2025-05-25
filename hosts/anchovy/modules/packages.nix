@@ -29,6 +29,7 @@
     logseq
     obsidian
     powertop
+    wluma
   ];
   nixpkgs.config.permittedInsecurePackages = [
     "electron-27.3.11"

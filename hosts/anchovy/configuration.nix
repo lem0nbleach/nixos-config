@@ -42,6 +42,7 @@
     GTK_USE_PORTAL = "1";
     ELECTRON_OZONE_PLATFORM_HINT = "auto";
     EDITOR = "nvim";
+    MOZ_ENABLE_WAYLAND=1;
   };
 
   services.xserver.xkb = {

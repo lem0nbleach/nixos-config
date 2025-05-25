@@ -13,7 +13,7 @@
 	source = ../../config/hypr/hyprpaper.conf;
 	clobber = true;
       };
-      ".mozilla/firefox/user.js" = {
+      ".mozilla/firefox/nh8kebxc.default/user.js" = {
         source = ../../config/mozilla/firefox/user.js;
         clobber = true;
       };

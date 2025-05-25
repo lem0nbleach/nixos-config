@@ -32,6 +32,12 @@ user_pref("media.memory_cache_max_size", 65536);
 user_pref("media.cache_readahead_limit", 7200);
 user_pref("media.cache_resume_threshold", 3600);
 
+/** VA-API HARDWARE ACCEL **/
+user_pref("media.ffmpeg.vaapi.enabled", true);
+user_pref("media.ffvpx.enabled", false);
+user_pref("media.rdd-vpx.enabled", false);
+user_pref("media.navigator.mediadatadecoder_vpx_enabled", true);
+
 /** IMAGE CACHE ***/
 user_pref("image.mem.decode_bytes_at_a_time", 32768);
 

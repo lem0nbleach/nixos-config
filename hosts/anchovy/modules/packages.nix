@@ -31,6 +31,7 @@
     powertop
     wluma
     vesktop
+    easyeffects
   ];
   nixpkgs.config.permittedInsecurePackages = [
     "electron-27.3.11"

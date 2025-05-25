@@ -41,7 +41,7 @@
     XDG_SESSION_TYPE = "wayland";
     GTK_USE_PORTAL = "1";
     ELECTRON_OZONE_PLATFORM_HINT = "auto";
-    EDITOR = "nvim";
+    EDITOR = "hx";
     MOZ_ENABLE_WAYLAND=1;
   };
 

@@ -72,7 +72,8 @@
 
   services.openssh.enable = true;
   services.tailscale.enable = true;
-  services.tlp.enable = true;
+  #services.tlp.enable = true;
+  services.power-profiles-daemon.enable = true;
   services.logind.lidSwitch = "suspend";
 
   services.udev.extraRules = ''

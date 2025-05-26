@@ -10,6 +10,9 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.kernelParams = [
+    "amdgpu.sg_display=0"
+  ];
 
   networking.hostName = "anchovy";
   networking.networkmanager.enable = true;

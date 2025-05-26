@@ -29,6 +29,22 @@
         source = ../../config/helix/config.toml;
         clobber = true;
       };
+      ".config/gtk-3.0/settings.ini" = {
+        source = ../../config/gtk-3.0/settings.ini;
+        clobber = true;
+      };
+      ".gtkrc-2.0" = {
+        source = ../../config/gtkrc-2.0/gtkrc-2.0;
+        clobber = true;
+      };
+      ".icons/default/index.theme" = {
+        source = ../../config/icons/default/index.theme;
+        clobber = true;
+      };
+      ".config/xsettingsd/xsettingsd.conf" = {
+        source = ../../config/xsettingsd/xsettingsd.conf;
+        clobber = true;
+      };
     };
   };
 }

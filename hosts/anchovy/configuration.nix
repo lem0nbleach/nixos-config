@@ -43,11 +43,16 @@
     ELECTRON_OZONE_PLATFORM_HINT = "auto";
     EDITOR = "hx";
     MOZ_ENABLE_WAYLAND=1;
+    XCURSOR_THEME="Bibata-Modern-Ice";
   };
 
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "";
+  services.xserver = {
+    enable = true;
+    xkb = {
+      layout = "us";
+      variant = "";
+    };
+    videoDriver = "amdgpu";
   };
 
   users.users.lem0nbleach = {
@@ -57,8 +62,6 @@
     shell = pkgs.fish;
     packages = with pkgs; [];
   };
-
-  services.xserver.videoDriver = [ "amdgpu" ];
 
   security.rtkit.enable = true;
   services.pipewire = {

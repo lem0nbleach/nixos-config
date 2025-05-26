@@ -84,6 +84,10 @@
     rofi-wayland
     sqlitebrowser
     lutris
+    nwg-look
+    candy-icons
+    bibata-cursors
+    fluent-gtk-theme
   ];
 
   programs.nix-ld.enable = true;

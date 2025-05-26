@@ -53,6 +53,22 @@
         source = ../../config/mozilla/firefox/user.js;
         clobber = true;
       };
+      ".config/gtk-3.0/settings.ini" = {
+        source = ../../config/gtk-3.0/desktop.settings.ini;
+        clobber = true;
+      };
+      ".gtkrc-2.0" = {
+        source = ../../config/gtkrc-2.0/desktop-gtkrc-2.0;
+        clobber = true;
+      };
+      "./local/share/icons/default/index.theme" = {
+        source = ../../config/icons/default/desktop-index.theme;
+        clobber = true;
+      };
+      ".config/xsettingsd/xsettingsd.conf" = {
+        source = ../../config/xsettingsd/xsettingsd.conf;
+        clobber = true;
+      };
     };
   };
 }

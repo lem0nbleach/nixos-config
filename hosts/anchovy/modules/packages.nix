@@ -35,8 +35,10 @@
     mako
 
     # Rice
+    nwg-look
     bibata-cursors
     candy-icons
+    sweet
 
     # Audio
     pavucontrol

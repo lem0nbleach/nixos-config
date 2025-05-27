@@ -33,7 +33,7 @@
         source = ../../config/helix/config.toml;
         clobber = true;
       };
-      ".config/gtk-4.0/settings,ini" = {
+      ".config/gtk-4.0/settings.ini" = {
         source = ../../config/gtk-4.0/settings.ini;
         clobber = true;
       };

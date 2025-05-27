@@ -1,6 +1,10 @@
 {
   hjem.users = {
     lem0nbleach.files = {
+      ".config/hypr/hyprland.conf" = {
+        source = ../../config/hypr/anchovy-hyprland.conf;
+        clobber = true;
+      };
       ".config/hypr/hypridle.conf" = {
         source = ../../config/hypr/hypridle.conf;
         clobber = true;

@@ -41,6 +41,7 @@
     # Audio
     pavucontrol
     easyeffects
+    pamixer
     
     # System Management
     powertop

@@ -22,6 +22,7 @@
     obsidian
     vesktop
     du-dust
+    libreoffice
 
     # Hyprland Tools
     rofi-wayland

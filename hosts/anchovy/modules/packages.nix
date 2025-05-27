@@ -41,7 +41,7 @@
     candy-icons
     sweet
 
-    # Audio
+    # Media/Audio
     pavucontrol
     easyeffects
     pamixer

@@ -94,6 +94,8 @@
   #security.pam.services.hyprlock = {};
   security.pam.services.hyprlock.fprintAuth = true;
   
+  services.playerctld.enable = true;
+  
   programs.fish.enable = true;
 
   system.stateVersion = "24.11";

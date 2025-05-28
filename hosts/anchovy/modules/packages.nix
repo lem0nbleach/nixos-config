@@ -15,14 +15,15 @@
     gzip
     foot
     yazi
+    du-dust
 
     # GUI Apps
     firefox
     logseq
     obsidian
     vesktop
-    du-dust
     libreoffice
+    jellyfin-media-player
 
     # Hyprland Tools
     rofi-wayland

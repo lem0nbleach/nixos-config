@@ -24,6 +24,7 @@
     vesktop
     libreoffice
     jellyfin-media-player
+    bitwarden
 
     # Hyprland Tools
     rofi-wayland

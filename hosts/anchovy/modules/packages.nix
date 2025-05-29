@@ -16,6 +16,7 @@
     foot
     yazi
     du-dust
+    networkmanagerapplet
 
     # GUI Apps
     firefox

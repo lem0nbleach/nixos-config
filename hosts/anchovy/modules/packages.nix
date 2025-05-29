@@ -16,7 +16,6 @@
     foot
     yazi
     du-dust
-    networkmanagerapplet
 
     # GUI Apps
     firefox
@@ -26,6 +25,7 @@
     libreoffice
     jellyfin-media-player
     bitwarden
+    networkmanagerapplet
 
     # Hyprland Tools
     rofi-wayland

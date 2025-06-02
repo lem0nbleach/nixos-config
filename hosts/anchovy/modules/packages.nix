@@ -26,6 +26,7 @@
     jellyfin-media-player
     bitwarden
     networkmanagerapplet
+    prismlauncher
 
     # Hyprland Tools
     rofi-wayland

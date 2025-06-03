@@ -35,7 +35,6 @@
     mangohud
     goverlay
     lm_sensors
-    protonup
     swaynotificationcenter
     fastfetch
     hyprland
@@ -63,7 +62,6 @@
     egl-wayland
     logseq
     appimage-run
-    protonup-qt
     xdotool
     xorg.xprop
     xxd

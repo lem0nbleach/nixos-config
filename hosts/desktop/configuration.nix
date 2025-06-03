@@ -130,9 +130,10 @@
   programs.steam = {
     enable = true;
     gamescopeSession.enable = true;
-    protontricks.enable = true;
+    extraCompatPackages = [ pkgs.proton-ge-bin ];
   };
   programs.gamemode.enable = true;
+
   nixpkgs.config.permittedInsecurePackages = [
     "electron-27.3.11"
   ];

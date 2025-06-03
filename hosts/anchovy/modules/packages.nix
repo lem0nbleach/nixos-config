@@ -28,6 +28,9 @@
     networkmanagerapplet
     prismlauncher
 
+    # Gaming
+    mangohud
+
     # Hyprland Tools
     rofi-wayland
     grim

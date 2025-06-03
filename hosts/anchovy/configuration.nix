@@ -98,9 +98,12 @@
   
   programs.fish.enable = true;
 
-  programs.steam.enable = true;
-  programs.steam.gamescopeSession.enable = true;
+  programs.steam = {
+    enable = true;
+    gamescopeSession.enable = true;
+    extraCompatPackages = [ pkgs.proton-ge-bin ];
+  };
+  programs.gamemode.enable = true;
 
   system.stateVersion = "24.11";
-
 }

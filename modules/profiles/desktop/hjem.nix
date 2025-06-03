@@ -69,6 +69,10 @@
         source = ../../config/xsettingsd/xsettingsd.conf;
         clobber = true;
       };
+      ".config/helix/config.toml" = {
+        source = ../../config/helix/config.toml;
+        clobber = true;
+      };
     };
   };
 }

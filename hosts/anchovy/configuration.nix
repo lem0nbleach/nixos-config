@@ -99,6 +99,7 @@
   programs.fish.enable = true;
 
   programs.steam.enable = true;
+  programs.steam.gamescopeSession.enable = true;
 
   system.stateVersion = "24.11";
 

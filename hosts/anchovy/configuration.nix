@@ -105,5 +105,7 @@
   };
   programs.gamemode.enable = true;
 
+  services.cloudflare-warp.enable = true;
+
   system.stateVersion = "24.11";
 }

@@ -19,6 +19,7 @@
 
     # GUI Apps
     firefox
+    thunderbird
     logseq
     obsidian
     vesktop

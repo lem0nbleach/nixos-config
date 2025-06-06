@@ -94,8 +94,18 @@
   #security.pam.services.hyprlock = {};
   security.pam.services.hyprlock.fprintAuth = true;
   
+  services.playerctld.enable = true;
+  
   programs.fish.enable = true;
 
-  system.stateVersion = "24.11";
+  programs.steam = {
+    enable = true;
+    gamescopeSession.enable = true;
+    extraCompatPackages = [ pkgs.proton-ge-bin ];
+  };
+  programs.gamemode.enable = true;
 
+  services.cloudflare-warp.enable = true;
+
+  system.stateVersion = "24.11";
 }

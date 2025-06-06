@@ -18,38 +18,42 @@
       url = "github:feel-co/hjem";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    quickshell = {
+      url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
+      inputs.nixplgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { nixpkgs, home-manager, stylix, lanzaboote, hjem, ... } @ inputs: {
+  outputs = { nixpkgs, home-manager, stylix, lanzaboote, hjem, quickshell, ... } @ inputs: {
     nixosConfigurations = {
       desktop = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [ 
           ./hosts/desktop/configuration.nix
-	  home-manager.nixosModules.default
-	  stylix.nixosModules.stylix
-	  lanzaboote.nixosModules.lanzaboote
-	  hjem.nixosModules.default
-	];
+	        home-manager.nixosModules.default
+	        stylix.nixosModules.stylix
+	        lanzaboote.nixosModules.lanzaboote
+	        hjem.nixosModules.default
+	      ];
         specialArgs = { inherit inputs; };
       };
       docker-host = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-	modules = [
-	  ./hosts/docker-host/configuration.nix
-	  home-manager.nixosModules.default
-	  stylix.nixosModules.stylix
-	];
-	specialArgs = { inherit inputs; };
+	      modules = [
+	        ./hosts/docker-host/configuration.nix
+	        home-manager.nixosModules.default
+	        stylix.nixosModules.stylix
+	      ];
+	      specialArgs = { inherit inputs; };
       };
       anchovy = nixpkgs.lib.nixosSystem {
-	system = "x86_64-linux";
-	modules = [
-	  ./hosts/anchovy/configuration.nix
-	  lanzaboote.nixosModules.lanzaboote
-	  hjem.nixosModules.default
-	];
-	specialArgs = { inherit inputs; };
+	      system = "x86_64-linux";
+	      modules = [
+	        ./hosts/anchovy/configuration.nix
+	        lanzaboote.nixosModules.lanzaboote
+	        hjem.nixosModules.default
+	      ];
+	      specialArgs = { inherit inputs; };
       };
     };
   };

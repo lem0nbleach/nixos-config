@@ -1,43 +1,78 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
   environment.systemPackages = with pkgs; [
+    # CLI Tools
     neovim
     helix
     git
     dig
-    firefox
-    gcc
     ripgrep
-    gnumake
+    zoxide
+    fd
+    zsh
+    thefuck
     unzip
     gzip
-    fd
-    lua
-    brightnessctl
-    zoxide
-    zsh
-    zsh-autocomplete
-    thefuck
     foot
     yazi
-    grim
-    wl-clipboard
-    rofi-wayland
-    hyprcursor
-    hyprpaper
-    bibata-cursors
-    pavucontrol
+    du-dust
+
+    # GUI Apps
+    firefox
+    thunderbird
     logseq
     obsidian
-    powertop
-    wluma
     vesktop
-    easyeffects
+    libreoffice
+    jellyfin-media-player
+    bitwarden
+    networkmanagerapplet
+    prismlauncher
+    activitywatch
+
+    # Gaming
+    mangohud
+
+    # Hyprland Tools
+    rofi-wayland
+    grim
+    hyprcursor
+    hyprpaper
+    brightnessctl
+    wl-clipboard
     slurp
+    wluma
     mako
-    libnotify
+    inputs.quickshell.packages.x86_64-linux.default
+
+    # Rice
+    nwg-look
+    bibata-cursors
     candy-icons
+    sweet
+
+    # Media/Audio
+    pavucontrol
+    easyeffects
+    pamixer
+    
+    # System Management
+    powertop
+    libnotify
+
+    # Programming
+    gcc
+    lua
   ];
+
+  fonts.packages = with pkgs; [
+    noto-fonts
+    noto-fonts-cjk-sans
+    noto-fonts-emoji
+    nerd-fonts.jetbrains-mono
+  ];
+
+  # For Logseq
   nixpkgs.config.permittedInsecurePackages = [
     "electron-27.3.11"
   ];

@@ -1,6 +1,10 @@
 {
   hjem.users = {
     lem0nbleach.files = {
+      ".config/hypr/hyprland.conf" = {
+        source = ../../config/hypr/anchovy-hyprland.conf;
+        clobber = true;
+      };
       ".config/hypr/hypridle.conf" = {
         source = ../../config/hypr/hypridle.conf;
         clobber = true;
@@ -29,7 +33,7 @@
         source = ../../config/helix/config.toml;
         clobber = true;
       };
-      ".config/gtk-4.0/settings,ini" = {
+      ".config/gtk-4.0/settings.ini" = {
         source = ../../config/gtk-4.0/settings.ini;
         clobber = true;
       };

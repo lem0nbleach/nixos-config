@@ -446,6 +446,21 @@
         "type": "github"
       }
     },
+    "nixpkgs_3": {
+      "locked": {
+        "lastModified": 1736012469,
+        "narHash": "sha256-/qlNWm/IEVVH7GfgAIyP6EsVZI6zjAx1cV5zNyrs+rI=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "8f3e1f807051e32d8c95cd12b9b421623850a34d",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "ref": "nixos-unstable",
+        "type": "indirect"
+      }
+    },
     "nur": {
       "inputs": {
         "flake-parts": [
@@ -499,6 +514,24 @@
         "type": "github"
       }
     },
+    "quickshell": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_3"
+      },
+      "locked": {
+        "lastModified": 1748598934,
+        "narHash": "sha256-c8o4KJPda4HNj/jWwjrWip7QZmfnuOQxKiAadzu/Ibs=",
+        "ref": "refs/heads/master",
+        "rev": "aa547bad843439615bc0a7f97a55d81058b2e9c8",
+        "revCount": 565,
+        "type": "git",
+        "url": "https://git.outfoxxed.me/outfoxxed/quickshell"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://git.outfoxxed.me/outfoxxed/quickshell"
+      }
+    },
     "root": {
       "inputs": {
         "hjem": "hjem",
@@ -506,6 +539,7 @@
         "lanzaboote": "lanzaboote",
         "nixpkgs": "nixpkgs_2",
         "nixpkgs-stable": "nixpkgs-stable_2",
+        "quickshell": "quickshell",
         "stylix": "stylix"
       }
     },

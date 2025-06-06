@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
   environment.systemPackages = with pkgs; [
     # CLI Tools
@@ -28,6 +28,7 @@
     bitwarden
     networkmanagerapplet
     prismlauncher
+    activitywatch
 
     # Gaming
     mangohud
@@ -42,6 +43,7 @@
     slurp
     wluma
     mako
+    inputs.quickshell.packages.x86_64-linux.default
 
     # Rice
     nwg-look

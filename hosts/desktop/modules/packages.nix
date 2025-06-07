@@ -87,6 +87,7 @@
     candy-icons
     bibata-cursors
     fluent-gtk-theme
+    activitywatch
   ];
 
   programs.nix-ld.enable = true;

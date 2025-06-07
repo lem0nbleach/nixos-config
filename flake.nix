@@ -22,10 +22,10 @@
 
   outputs = { nixpkgs, home-manager, stylix, lanzaboote, hjem, ... } @ inputs: {
     nixosConfigurations = {
-      desktop = nixpkgs.lib.nixosSystem {
+      croaker = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [ 
-          ./hosts/desktop/configuration.nix
+          ./hosts/croaker/configuration.nix
 	  home-manager.nixosModules.default
 	  stylix.nixosModules.stylix
 	  lanzaboote.nixosModules.lanzaboote

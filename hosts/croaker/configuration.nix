@@ -4,10 +4,10 @@
   imports =
     [
       ./modules
-      ../../modules/profiles/desktop
+      ../../modules/profiles/croaker
     ];
 
-  networking.hostName = "nixos";
+  networking.hostName = "croaker";
 
   networking.networkmanager.enable = true;
 

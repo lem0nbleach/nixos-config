@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, lib, ... }:
+{ config, pkgs, pkgsStable, inputs, lib, ... }:
 
 {
   imports =
@@ -132,6 +132,10 @@
     gamescopeSession.enable = true;
     extraCompatPackages = [ pkgs.proton-ge-bin ];
   };
+  programs.gamescope = {
+    enable = true;
+    capSysNice = true;
+  };
   programs.gamemode.enable = true;
 
   nixpkgs.config.permittedInsecurePackages = [
@@ -145,7 +149,6 @@
   services.xserver.wacom.enable = true;
 
   programs.zsh.enable = true;
-  programs.thefuck.enable = true;
 
   programs.firefox.enable = true;
   programs.thunderbird.enable = true;

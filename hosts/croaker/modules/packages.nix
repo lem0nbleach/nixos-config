@@ -66,6 +66,7 @@
     xorg.xprop
     xxd
     xorg.xwininfo
+    xorg.xrandr
     yad
     orca-slicer
     mumble

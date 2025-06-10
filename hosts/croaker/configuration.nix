@@ -155,4 +155,6 @@
 
   programs.fish.enable = true;
   programs.starship.enable = true;
+
+  services.flatpak.enable = true;
 }

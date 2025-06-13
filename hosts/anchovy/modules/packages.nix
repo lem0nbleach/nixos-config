@@ -10,7 +10,6 @@
     zoxide
     fd
     zsh
-    thefuck
     unzip
     gzip
     foot

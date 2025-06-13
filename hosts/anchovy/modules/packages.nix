@@ -15,6 +15,7 @@
     foot
     yazi
     du-dust
+    lm_sensors
 
     # GUI Apps
     firefox

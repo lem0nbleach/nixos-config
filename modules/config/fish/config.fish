@@ -7,4 +7,3 @@ function fish_greeting
 end
 
 zoxide init fish | source
-thefuck --alias | source

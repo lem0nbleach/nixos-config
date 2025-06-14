@@ -89,6 +89,7 @@
     bibata-cursors
     fluent-gtk-theme
     activitywatch
+    rojo
   ];
 
   programs.nix-ld.enable = true;

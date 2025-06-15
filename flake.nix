@@ -22,9 +22,13 @@
       url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    watt = {
+      url = "github:NotAShelf/watt";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { nixpkgs, home-manager, stylix, lanzaboote, hjem, quickshell, ... } @ inputs: {
+  outputs = { nixpkgs, home-manager, stylix, lanzaboote, hjem, quickshell, watt, ... } @ inputs: {
     nixosConfigurations = {
       desktop = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -34,6 +38,7 @@
 	        stylix.nixosModules.stylix
 	        lanzaboote.nixosModules.lanzaboote
 	        hjem.nixosModules.default
+          watt.nixosModules.watt
 	      ];
         specialArgs = { inherit inputs; };
       };

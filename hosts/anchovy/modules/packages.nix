@@ -16,6 +16,7 @@
     yazi
     du-dust
     lm_sensors
+    microfetch
 
     # GUI Apps
     firefox

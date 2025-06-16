@@ -17,7 +17,6 @@
     du-dust
     lm_sensors
     microfetch
-    inputs.watt.packages.x86_64-linux.default
 
     # GUI Apps
     firefox

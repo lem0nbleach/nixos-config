@@ -53,6 +53,10 @@
         source = ../../config/xsettingsd/xsettingsd.conf;
         clobber = true;
       };
+      ".config/watt.toml" = {
+        source = ../../config/watt/watt.toml;
+        clobber = true;
+      };
     };
   };
 }

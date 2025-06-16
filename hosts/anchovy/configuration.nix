@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   imports =
@@ -90,8 +90,6 @@
 
   services.openssh.enable = true;
   services.tailscale.enable = true;
-  #services.tlp.enable = true;
-  services.power-profiles-daemon.enable = true;
   services.logind.lidSwitch = "suspend";
 
   services.udev.extraRules = ''
@@ -118,6 +116,8 @@
   programs.gamemode.enable = true;
 
   services.cloudflare-warp.enable = true;
+
+  services.watt.enable = true;
 
   system.stateVersion = "24.11";
 }

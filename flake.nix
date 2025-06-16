@@ -38,7 +38,6 @@
 	        stylix.nixosModules.stylix
 	        lanzaboote.nixosModules.lanzaboote
 	        hjem.nixosModules.default
-          watt.nixosModules.watt
 	      ];
         specialArgs = { inherit inputs; };
       };
@@ -57,6 +56,7 @@
 	        ./hosts/anchovy/configuration.nix
 	        lanzaboote.nixosModules.lanzaboote
 	        hjem.nixosModules.default
+          watt.nixosModules.default
 	      ];
 	      specialArgs = { inherit inputs; };
       };

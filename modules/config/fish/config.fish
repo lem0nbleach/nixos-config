@@ -6,4 +6,8 @@ function fish_greeting
     random choice "Hello mate!" "Hi there!" "G'day!" "Howdy!"
 end
 
+if uwsm check may-start
+    exec uwsm start default
+end
+
 zoxide init fish | source

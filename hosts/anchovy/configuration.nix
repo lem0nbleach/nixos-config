@@ -7,8 +7,11 @@
        ../../modules/profiles/anchovy
     ];
 
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader = {
+    systemd-boot.enable = true;
+    efi.canTouchEfiVariables = true;
+    timeout = 1;
+  };
   boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.kernelParams = [
     "amdgpu.sg_display=0"
@@ -76,6 +79,14 @@
   };
 
   nixpkgs.config.allowUnfree = true;
+
+  # Let lem0nbleach automatically be loggedin at boot up
+  services.getty.autologinUser = "lem0nbleach";
+  services.getty.autologinOnce = true;
+
+  services.xserver.displayManager.lightdm.enable = false;
+  programs.uwsm.enable = true;
+  services.displayManager.defaultSession = "hyprland-uwsm";
 
   services.openssh.enable = true;
   services.tailscale.enable = true;

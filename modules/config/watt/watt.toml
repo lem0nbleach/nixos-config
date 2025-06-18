@@ -6,7 +6,7 @@ turbo_auto_settings = { load_threshold_high = 80.0, load_threshold_low = 40.0, t
 epp = "power"
 epb = "power"
 platform_profile = "low-power"
-min_freq_mhz = 2000
+min_freq_mhz = 625
 max_freq_mhz = 4800
 
 [charger]

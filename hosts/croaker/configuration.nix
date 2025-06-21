@@ -74,9 +74,17 @@
 
   system.stateVersion = "24.05";
 
+  services.getty.autologinUser = "lem0nbleach";
+  services.getty.autologinOnce = true;
+
+  services.xserver.displayManager.lightdm.enable = false;
+  # for some reason lightdm is the display manager that is enabled by default
+  # looks like enabling xserver using the module would also enable lightdm
+  programs.uwsm.enable = true;
   programs.hyprland = {
     enable = true;
     xwayland.enable = true;
+    withUWSM = true;
   };
 
   services.hypridle.enable = true;

@@ -47,9 +47,30 @@
 
   users.users.lem0nbleach = {
     isNormalUser = true;
+    linger = true;
     description = "Feiyang Wu";
     extraGroups = [ "networkmanager" "wheel" ];
     shell = pkgs.fish;
+  };
+
+  systemd.user.timers."project-reminder" = {
+    wantedBy = [ "default.target" ];
+    timerConfig = {
+      OnBootSec = "10s";
+      OnUnitActiveSec = "60m";
+      Unit = "project-reminder.service";
+    };
+  };
+
+  systemd.user.services."project-reminder" = {
+    wantedBy = [ "default.target" ];
+    script = ''
+      set -eu
+      ${pkgs.libnotify}/bin/notify-send "Set up Wireguard"
+    '';
+    serviceConfig = {
+      Type = "oneshot";
+    };
   };
 
   # Enable portals between applications

@@ -91,6 +91,7 @@
 
   services.openssh.enable = true;
   services.tailscale.enable = true;
+  networking.firewall.checkReversePath = "loose"; # needed in order to use an exit node
   services.logind.lidSwitch = "suspend";
 
   services.udev.extraRules = ''

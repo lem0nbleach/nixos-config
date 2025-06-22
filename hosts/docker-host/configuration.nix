@@ -74,5 +74,8 @@
 
   services.nfs.server.enable = true;
 
+  services.tailscale.enable = true;
+  services.tailscale.useRoutingFeatures = "both";
+
   system.stateVersion = "24.11"; # Did you read the comment?
 }

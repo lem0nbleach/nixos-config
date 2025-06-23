@@ -25,22 +25,6 @@
         source = ../../config/hypr/hyprpaper.conf;
         clobber = true;
       };
-      ".config/nvim/init.lua" = {
-        source = ../../config/nvim/init.lua;
-        clobber = true;
-      };
-      ".config/nvim/.stylua.toml" = {
-        source = ../../config/nvim/.stylua.toml;
-        clobber = true;
-      };
-      ".config/nvim/lua" = {
-        source = ../../config/nvim/lua;
-        clobber = true;
-      };
-      ".config/nvim/doc" = {
-        source = ../../config/nvim/doc;
-        clobber = true;
-      };
       ".zshrc" = {
         source = ../../config/zsh/zshrc;
         clobber = true;
@@ -51,6 +35,30 @@
       };
       ".mozilla/firefox/user.js" = {
         source = ../../config/mozilla/firefox/user.js;
+        clobber = true;
+      };
+      ".config/gtk-3.0/settings.ini" = {
+        source = ../../config/gtk-3.0/desktop.settings.ini;
+        clobber = true;
+      };
+      ".gtkrc-2.0" = {
+        source = ../../config/gtkrc-2.0/desktop-gtkrc-2.0;
+        clobber = true;
+      };
+      "./local/share/icons/default/index.theme" = {
+        source = ../../config/icons/default/desktop-index.theme;
+        clobber = true;
+      };
+      ".config/xsettingsd/xsettingsd.conf" = {
+        source = ../../config/xsettingsd/xsettingsd.conf;
+        clobber = true;
+      };
+      ".config/helix/config.toml" = {
+        source = ../../config/helix/config.toml;
+        clobber = true;
+      };
+      ".config/fish/config.fish" = {
+        source = ../../config/fish/config.fish;
         clobber = true;
       };
     };

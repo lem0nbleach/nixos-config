@@ -11,6 +11,7 @@
   
   environment.systemPackages = with pkgs; [
     neovim
+    helix
     ripgrep
     gcc
     vscode
@@ -34,7 +35,6 @@
     mangohud
     goverlay
     lm_sensors
-    protonup
     swaynotificationcenter
     fastfetch
     hyprland
@@ -62,11 +62,11 @@
     egl-wayland
     logseq
     appimage-run
-    protonup-qt
     xdotool
     xorg.xprop
     xxd
     xorg.xwininfo
+    xorg.xrandr
     yad
     orca-slicer
     mumble
@@ -84,6 +84,12 @@
     rofi-wayland
     sqlitebrowser
     lutris
+    nwg-look
+    candy-icons
+    bibata-cursors
+    fluent-gtk-theme
+    activitywatch
+    rojo
   ];
 
   programs.nix-ld.enable = true;

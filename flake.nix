@@ -30,7 +30,7 @@
 
   outputs = { nixpkgs, home-manager, stylix, lanzaboote, hjem, quickshell, watt, ... } @ inputs: {
     nixosConfigurations = {
-      desktop = nixpkgs.lib.nixosSystem {
+      croaker = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [ 
           ./hosts/desktop/configuration.nix

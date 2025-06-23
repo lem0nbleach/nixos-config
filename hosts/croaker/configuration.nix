@@ -1,13 +1,13 @@
-{ config, pkgs, inputs, lib, ... }:
+{ config, pkgs, pkgsStable, inputs, lib, ... }:
 
 {
   imports =
     [
       ./modules
-      ../../modules/profiles/desktop
+      ../../modules/profiles/croaker
     ];
 
-  networking.hostName = "nixos";
+  networking.hostName = "croaker";
 
   networking.networkmanager.enable = true;
 
@@ -74,9 +74,17 @@
 
   system.stateVersion = "24.05";
 
+  services.getty.autologinUser = "lem0nbleach";
+  services.getty.autologinOnce = true;
+
+  services.xserver.displayManager.lightdm.enable = false;
+  # for some reason lightdm is the display manager that is enabled by default
+  # looks like enabling xserver using the module would also enable lightdm
+  programs.uwsm.enable = true;
   programs.hyprland = {
     enable = true;
     xwayland.enable = true;
+    withUWSM = true;
   };
 
   services.hypridle.enable = true;
@@ -130,9 +138,14 @@
   programs.steam = {
     enable = true;
     gamescopeSession.enable = true;
-    protontricks.enable = true;
+    extraCompatPackages = [ pkgs.proton-ge-bin ];
+  };
+  programs.gamescope = {
+    enable = true;
+    capSysNice = false;
   };
   programs.gamemode.enable = true;
+
   nixpkgs.config.permittedInsecurePackages = [
     "electron-27.3.11"
   ];
@@ -144,9 +157,12 @@
   services.xserver.wacom.enable = true;
 
   programs.zsh.enable = true;
-  programs.thefuck.enable = true;
 
   programs.firefox.enable = true;
+  programs.thunderbird.enable = true;
 
   programs.fish.enable = true;
+  programs.starship.enable = true;
+
+  services.flatpak.enable = true;
 }

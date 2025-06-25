@@ -90,6 +90,7 @@
     fluent-gtk-theme
     activitywatch
     rojo
+    osu-lazer-bin
   ];
 
   programs.nix-ld.enable = true;

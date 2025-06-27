@@ -92,6 +92,7 @@
     rojo
     osu-lazer-bin
     bat
+    fishPlugins.hydro
   ];
 
   programs.nix-ld.enable = true;

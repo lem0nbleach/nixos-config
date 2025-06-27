@@ -91,6 +91,7 @@
     activitywatch
     rojo
     osu-lazer-bin
+    bat
   ];
 
   programs.nix-ld.enable = true;

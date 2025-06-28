@@ -18,6 +18,7 @@
     lm_sensors
     microfetch
     inputs.watt.packages.x86_64-linux.default
+    fishPlugins.hydro
 
     # GUI Apps
     firefox

@@ -49,7 +49,6 @@
     isNormalUser = true;
     description = "Feiyang Wu";
     extraGroups = [ "networkmanager" "wheel" ];
-    shell = pkgs.fish;
   };
 
   # Enable portals between applications
@@ -75,7 +74,6 @@
   system.stateVersion = "24.05";
 
   services.getty.autologinUser = "lem0nbleach";
-  services.getty.autologinOnce = true;
 
   services.xserver.displayManager.lightdm.enable = false;
   # for some reason lightdm is the display manager that is enabled by default
@@ -155,8 +153,6 @@
   };
 
   services.xserver.wacom.enable = true;
-
-  programs.zsh.enable = true;
 
   programs.firefox.enable = true;
   programs.thunderbird.enable = true;

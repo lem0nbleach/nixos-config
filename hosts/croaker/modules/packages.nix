@@ -93,6 +93,7 @@
     osu-lazer-bin
     bat
     fishPlugins.hydro
+    atlauncher
   ];
 
   programs.nix-ld.enable = true;

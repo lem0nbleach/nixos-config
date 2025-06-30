@@ -62,8 +62,10 @@
     isNormalUser = true;
     description = "Feiyang Wu";
     extraGroups = [ "networkmanager" "wheel" "docker"];
-    shell = pkgs.zsh;
+    shell = pkgs.bash;
   };
+
+  programs.fish.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;

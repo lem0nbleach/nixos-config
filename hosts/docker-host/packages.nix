@@ -13,5 +13,6 @@
     iftop
     gcc
     foot
+    fishPlugins.hydro
   ];
 }

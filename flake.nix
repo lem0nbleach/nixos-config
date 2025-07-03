@@ -1,7 +1,7 @@
 {
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-24.11";
+    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-25.05";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -28,7 +28,7 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, stylix, lanzaboote, hjem, quickshell, watt, ... } @ inputs: {
+  outputs = { nixpkgs, nixpkgs-stable, home-manager, stylix, lanzaboote, hjem, quickshell, watt, ... } @ inputs: {
     nixosConfigurations = {
       croaker = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -41,7 +41,7 @@
 	      ];
         specialArgs = { inherit inputs; };
       };
-      docker-host = nixpkgs.lib.nixosSystem {
+      docker-host = nixpkgs-stable.lib.nixosSystem {
         system = "x86_64-linux";
 	      modules = [
 	        ./hosts/docker-host/configuration.nix

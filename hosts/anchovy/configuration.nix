@@ -66,7 +66,6 @@
     isNormalUser = true;
     description = "Feiyang Wu";
     extraGroups = [ "networkmanager" "wheel" "video" ];
-    shell = pkgs.fish;
     packages = with pkgs; [];
   };
 
@@ -83,7 +82,6 @@
 
   # Let lem0nbleach automatically be loggedin at boot up
   services.getty.autologinUser = "lem0nbleach";
-  services.getty.autologinOnce = true;
 
   services.xserver.displayManager.lightdm.enable = false;
   programs.uwsm.enable = true;

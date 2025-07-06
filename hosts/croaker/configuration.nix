@@ -5,6 +5,7 @@
     [
       ./modules
       ../../modules/profiles/croaker
+      ../../config/croaker.nix
     ];
 
   networking.hostName = "croaker";

@@ -3,8 +3,9 @@
 {
   imports =
     [
-       ./modules
-       ../../modules/profiles/anchovy
+      ./modules
+      ../../modules/profiles/anchovy
+      ../../config/anchovy.nix
     ];
 
   boot.loader = {

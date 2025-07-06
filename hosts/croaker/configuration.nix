@@ -102,7 +102,7 @@
     XDG_SESSION_TYPE = "wayland";
     GTK_USE_PORTAL = "1";
     ELECTRON_OZONE_PLATFORM_HINT = "auto";
-    EDITOR = "nvim";
+    EDITOR = "hx";
     PROTON_VERSION = "GE-Proton9-18";
   };
 

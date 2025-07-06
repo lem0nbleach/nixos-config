@@ -93,7 +93,7 @@
     osu-lazer-bin
     bat
     fishPlugins.hydro
-    atlauncher
+    zoxide
   ];
 
   programs.nix-ld.enable = true;

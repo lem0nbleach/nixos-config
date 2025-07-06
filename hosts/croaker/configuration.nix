@@ -4,7 +4,6 @@
   imports =
     [
       ./modules
-      ../../modules/profiles/croaker
       ../../config/croaker.nix
     ];
 
@@ -71,6 +70,8 @@
   #  enable = true;
   #  enableSSHSupport = true;
   #};
+  services.openssh.enable = true;
+  programs.ssh.startAgent = true;
 
   system.stateVersion = "24.05";
 

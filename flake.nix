@@ -34,7 +34,6 @@
         system = "x86_64-linux";
         modules = [ 
           ./hosts/croaker/configuration.nix
-	        home-manager.nixosModules.default
 	        stylix.nixosModules.stylix
 	        lanzaboote.nixosModules.lanzaboote
 	        hjem.nixosModules.default

@@ -6,7 +6,6 @@
       ./hardware-configuration.nix
       ./packages.nix
       ./system/home-manager.nix
-      ../../modules/profiles/docker-host/module.nix
     ];
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
@@ -78,6 +77,13 @@
 
   services.tailscale.enable = true;
   services.tailscale.useRoutingFeatures = "both";
+
+  services.qemuGuest.enable = true;
+
+  services.openssh.enable = true;
+  programs.ssh.startAgent = true;
+
+  virtualisation.docker.enable = true;
 
   system.stateVersion = "24.11"; # Did you read the comment?
 }

@@ -4,7 +4,6 @@
   imports =
     [
       ./modules
-      ../../modules/profiles/anchovy
       ../../config/anchovy.nix
     ];
 
@@ -121,6 +120,16 @@
   systemd.services.watt.environment = {
     WATT_CONFIG = "/home/lem0nbleach/.config/watt.toml";
   };
+
+  programs.hyprland = {
+    enable = true;
+    xwayland.enable = true;
+    withUWSM = true;
+  };
+
+  services.hypridle.enable = true;
+
+  programs.hyprlock.enable = true;
 
   system.stateVersion = "24.11";
 }

@@ -14,5 +14,6 @@
     gcc
     foot
     fishPlugins.hydro
+    zoxide
   ];
 }

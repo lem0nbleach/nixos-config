@@ -52,7 +52,7 @@
   };
 
   environment.sessionVariables = {
-    EDITOR = "nvim";
+    EDITOR = "hx";
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.

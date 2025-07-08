@@ -109,8 +109,8 @@
 
   programs.bash.interactiveShellInit = ''
   	if shopt -q login_shell; then
-  		if uswm check may-start; then
-      	exec uwsm start hyprland-uswm.desktop
+  		if uwsm check may-start; then
+      	exec uwsm start hyprland-uwsm.desktop
   	  fi
   	else
       if [[ $(${pkgs.procps}/bin/ps --no-header --pid=$PPID --format=comm) != "fish" && -z ''${BASH_EXECUTION_STRING} ]]; then

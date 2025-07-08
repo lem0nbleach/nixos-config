@@ -107,15 +107,18 @@
   
   programs.fish.enable = true;
 
-  programs.bash = {
-    interactiveShellInit = ''
-      if [[ $(${pkgs.procps}/bin/ps --no-header --pid=$PPID --format=comm) != "fish" && -z ''${BASH_EXECUTION_STRING} ]]
-      then
+  programs.bash.interactiveShellInit = ''
+  	if shopt -q login_shell; then
+  		if uswm check may-start; then
+      	exec uwsm start hyprland-uswm.desktop
+  	  fi
+  	else
+      if [[ $(${pkgs.procps}/bin/ps --no-header --pid=$PPID --format=comm) != "fish" && -z ''${BASH_EXECUTION_STRING} ]]; then
         shopt -q login_shell && LOGIN_OPTION='--login' || LOGIN_OPTION=""
         exec ${pkgs.fish}/bin/fish $LOGIN_OPTION
       fi
-    '';
-  };
+  	fi
+  '';
 
   programs.steam = {
     enable = true;

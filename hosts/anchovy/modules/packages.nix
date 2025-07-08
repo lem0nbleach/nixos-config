@@ -20,6 +20,7 @@
     inputs.watt.packages.x86_64-linux.default
     fishPlugins.hydro
     bat
+    zellij
 
     # GUI Apps
     firefox

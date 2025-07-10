@@ -18,6 +18,7 @@
       ".icons/default/index.theme".source = ./dots/icons/default/index.theme;
       ".config/xsettingsd/xsettingsd.conf".source = ./dots/xsettingsd/xsettingsd.conf;
       ".config/watt.toml".source = ./dots/watt/watt.toml;
+      ".config/walker".source = ./dots/walker;
     };
   };
 }

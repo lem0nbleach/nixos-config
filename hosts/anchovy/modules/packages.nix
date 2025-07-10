@@ -33,6 +33,7 @@
     networkmanagerapplet
     prismlauncher
     activitywatch
+    walker
 
     # Gaming
     mangohud

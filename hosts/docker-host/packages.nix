@@ -15,5 +15,6 @@
     foot
     fishPlugins.hydro
     zoxide
+    ripgrep
   ];
 }

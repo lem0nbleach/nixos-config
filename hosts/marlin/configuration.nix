@@ -5,6 +5,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./packages.nix
+      ../../config/marlin.nix
     ];
 
   nix.settings.experimental-features = ["nix-command" "flakes"];

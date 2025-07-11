@@ -35,6 +35,7 @@
         system = "x86_64-linux";
 	      modules = [
 	        ./hosts/marlin/configuration.nix
+	        hjem.nixosModules.default
 	      ];
 	      specialArgs = { inherit inputs; };
       };

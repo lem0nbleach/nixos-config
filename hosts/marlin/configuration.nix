@@ -13,7 +13,7 @@
   boot.loader.grub.device = "/dev/sda";
   boot.loader.grub.useOSProber = true;
 
-  networking.hostName = "docker-host"; # Define your hostname.
+  networking.hostName = "marlin"; # Define your hostname.
 
   # Enable networking
   networking.networkmanager.enable = true;

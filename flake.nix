@@ -31,10 +31,10 @@
 	      ];
         specialArgs = { inherit inputs; };
       };
-      docker-host = nixpkgs-stable.lib.nixosSystem {
+      marlin = nixpkgs-stable.lib.nixosSystem {
         system = "x86_64-linux";
 	      modules = [
-	        ./hosts/docker-host/configuration.nix
+	        ./hosts/marlin/configuration.nix
 	      ];
 	      specialArgs = { inherit inputs; };
       };

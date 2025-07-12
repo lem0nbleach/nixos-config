@@ -94,6 +94,7 @@
     bat
     fishPlugins.hydro
     zoxide
+    zellij
   ];
 
   programs.nix-ld.enable = true;

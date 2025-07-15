@@ -7,7 +7,6 @@
     git
     dig
     ripgrep
-    zoxide
     fd
     zsh
     unzip
@@ -18,7 +17,6 @@
     lm_sensors
     microfetch
     inputs.watt.packages.x86_64-linux.default
-    fishPlugins.hydro
     bat
     zellij
 

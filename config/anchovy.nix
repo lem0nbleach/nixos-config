@@ -10,7 +10,6 @@
       ".config/hypr/hyprpaper.conf".source = ./dots/hypr/hyprpaper.conf;
       ".mozilla/firefox/nh8kebxc.default/user.js".source = ./dots/mozilla/firefox/user.js;
       ".config/foot/foot.ini".source = ./dots/foot/foot.ini;
-      ".config/fish/config.fish".source = ./dots/fish/config.fish;
       ".config/helix/config.toml".source = ./dots/helix/config.toml;
       ".config/gtk-4.0/settings.ini".source = ./dots/gtk-4.0/settings.ini;
       ".config/gtk-3.0/settings.ini".source = ./dots/gtk-3.0/settings.ini;

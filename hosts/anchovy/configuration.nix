@@ -5,6 +5,7 @@
     [
       ./modules
       ../../config/anchovy.nix
+      ../../modules
     ];
 
   boot.loader = {
@@ -105,21 +106,6 @@
   
   services.playerctld.enable = true;
   
-  programs.fish.enable = true;
-
-  programs.bash.interactiveShellInit = ''
-  	if shopt -q login_shell; then
-  		if uwsm check may-start; then
-      	exec uwsm start hyprland-uwsm.desktop
-  	  fi
-  	else
-      if [[ $(${pkgs.procps}/bin/ps --no-header --pid=$PPID --format=comm) != "fish" && -z ''${BASH_EXECUTION_STRING} ]]; then
-        shopt -q login_shell && LOGIN_OPTION='--login' || LOGIN_OPTION=""
-        exec ${pkgs.fish}/bin/fish $LOGIN_OPTION
-      fi
-  	fi
-  '';
-
   programs.steam = {
     enable = true;
     gamescopeSession.enable = true;

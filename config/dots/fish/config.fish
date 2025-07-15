@@ -1,3 +1,4 @@
+# Depreciated; Replaced by NixOS options for a more graceful method
 function fish_greeting
     random choice "Hello mate!" "Hi there!" "G'day!" "Howdy!"
 end

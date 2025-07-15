@@ -33,9 +33,6 @@
     activitywatch
     walker
 
-    # Gaming
-    mangohud
-
     # Hyprland Tools
     rofi-wayland
     grim

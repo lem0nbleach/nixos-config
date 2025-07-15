@@ -105,13 +105,6 @@
   security.pam.services.hyprlock.fprintAuth = true;
   
   services.playerctld.enable = true;
-  
-  programs.steam = {
-    enable = true;
-    gamescopeSession.enable = true;
-    extraCompatPackages = [ pkgs.proton-ge-bin ];
-  };
-  programs.gamemode.enable = true;
 
   services.cloudflare-warp.enable = true;
 

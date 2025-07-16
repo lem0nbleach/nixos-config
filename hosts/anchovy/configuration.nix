@@ -3,7 +3,8 @@
 {
   imports =
     [
-      ./modules
+      ./packages.nix
+      ./hardware-configuration.nix
       ../../config/anchovy.nix
       ../../modules
     ];

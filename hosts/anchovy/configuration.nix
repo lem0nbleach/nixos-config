@@ -85,25 +85,9 @@
   # Let lem0nbleach automatically be loggedin at boot up
   services.getty.autologinUser = "lem0nbleach";
 
-  services.xserver.displayManager.lightdm.enable = false;
-  programs.uwsm.enable = true;
-  services.displayManager.defaultSession = "hyprland-uwsm";
-
   services.openssh.enable = true;
   services.tailscale.enable = true;
   networking.firewall.checkReversePath = "loose"; # needed in order to use an exit node
-  services.logind.lidSwitch = "suspend";
-
-  services.udev.extraRules = ''
-    ACTION=="add", SUBSYSTEM=="backlight", RUN+="${pkgs.coreutils}/bin/chgrp video /sys/class/backlight/%k/brightness"
-    ACTION=="add", SUBSYSTEM=="backlight", RUN+="${pkgs.coreutils}/bin/chmod g+w /sys/class/backlight/%k/brightness"
-    ACTION=="add", SUBSYSTEM=="leds", RUN+="${pkgs.coreutils}/bin/chgrp video /sys/class/leds/%k/brightness"
-    ACTION=="add", SUBSYSTEM=="leds", RUN+="${pkgs.coreutils}/bin/chmod g+w /sys/class/leds/%k/brightness"
-  '';
-
-  services.fprintd.enable = true;
-  #security.pam.services.hyprlock = {};
-  security.pam.services.hyprlock.fprintAuth = true;
   
   services.playerctld.enable = true;
 
@@ -113,16 +97,6 @@
   systemd.services.watt.environment = {
     WATT_CONFIG = "/home/lem0nbleach/.config/watt.toml";
   };
-
-  programs.hyprland = {
-    enable = true;
-    xwayland.enable = true;
-    withUWSM = true;
-  };
-
-  services.hypridle.enable = true;
-
-  programs.hyprlock.enable = true;
 
   system.stateVersion = "24.11";
 }

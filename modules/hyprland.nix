@@ -1,7 +1,5 @@
-{ lib, config, pkgs, ... }:
-let
-  hostname = config.networking.hostName;
-in
+{ lib, config, pkgs, inputs, ... }:
+
 lib.mkMerge [
   {
     programs.hyprland = {
@@ -12,8 +10,21 @@ lib.mkMerge [
     programs.hyprlock.enable = true;
     programs.uwsm.enable = true;
     services.displayManager.defaultSession = "hyprland-uwsm";
+
+    environment.systemPackages = [
+      pkgs.hyprpaper
+      pkgs.hyprcursor
+      pkgs.walker
+      pkgs.grim
+      pkgs.slurp
+      pkgs.wluma
+      pkgs.mako
+      pkgs.brightnessctl
+      pkgs.wl-clipboard
+      inputs.quickshell.packages.x86_64-linux.default
+    ];
   }
-  (lib.mkIf (hostname == "anchovy") {
+  (lib.mkIf config.anchovy {
     services.fprintd.enable = true;
     security.pam.services.hyprlock.fprintAuth = true;
     services.logind.lidSwitch = "suspend";

@@ -31,22 +31,9 @@
     networkmanagerapplet
     prismlauncher
     activitywatch
-    walker
 
     # Games
     prismlauncher
-
-    # Hyprland Tools
-    rofi-wayland
-    grim
-    hyprcursor
-    hyprpaper
-    brightnessctl
-    wl-clipboard
-    slurp
-    wluma
-    mako
-    inputs.quickshell.packages.x86_64-linux.default
 
     # Rice
     nwg-look

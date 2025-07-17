@@ -33,6 +33,9 @@
     activitywatch
     walker
 
+    # Games
+    prismlauncher
+
     # Hyprland Tools
     rofi-wayland
     grim

@@ -66,7 +66,6 @@
     nixpkgs.config.allowUnfree = true;
 
     services.openssh.enable = true;
-    services.playerctld.enable = true;
 
     services.cloudflare-warp.enable = true;
 

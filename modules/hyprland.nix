@@ -11,7 +11,7 @@ lib.mkMerge [
     services.displayManager.defaultSession = "hyprland-uwsm";
     # Let lem0nbleach automatically be loggedin at boot up
     services.getty.autologinUser = "lem0nbleach";
-
+    services.playerctld.enable = true;
 
     environment.systemPackages = [
       pkgs.hyprpaper

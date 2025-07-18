@@ -56,14 +56,6 @@
       XCURSOR_THEME="Bibata-Modern-Ice";
     };
 
-    services.xserver = {
-      xkb = {
-        layout = "us";
-        variant = "";
-      };
-      videoDriver = "amdgpu";
-    };
-
     users.users.lem0nbleach = {
       isNormalUser = true;
       description = "Feiyang Wu";

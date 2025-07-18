@@ -57,7 +57,6 @@
     };
 
     services.xserver = {
-      enable = true;
       xkb = {
         layout = "us";
         variant = "";
@@ -82,9 +81,6 @@
     };
 
     nixpkgs.config.allowUnfree = true;
-
-    # Let lem0nbleach automatically be loggedin at boot up
-    services.getty.autologinUser = "lem0nbleach";
 
     services.openssh.enable = true;
     services.tailscale.enable = true;

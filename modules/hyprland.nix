@@ -6,10 +6,12 @@ lib.mkMerge [
       enable = true;
       withUWSM = true;
     };
-    services.xserver.displayManager.lightdm.enable = false;
     programs.hyprlock.enable = true;
     programs.uwsm.enable = true;
     services.displayManager.defaultSession = "hyprland-uwsm";
+    # Let lem0nbleach automatically be loggedin at boot up
+    services.getty.autologinUser = "lem0nbleach";
+
 
     environment.systemPackages = [
       pkgs.hyprpaper

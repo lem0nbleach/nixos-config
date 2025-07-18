@@ -28,6 +28,7 @@
           ./hosts/croaker/configuration.nix
 	        lanzaboote.nixosModules.lanzaboote
 	        hjem.nixosModules.default
+          watt.nixosModules.default
 	      ];
         specialArgs = { inherit inputs; };
       };

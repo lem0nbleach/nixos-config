@@ -24,11 +24,9 @@
     ffmpeg-full
     yt-dlp
     vesktop
-    hyprcursor
     xdg-desktop-portal-hyprland
     xdg-desktop-portal-gtk
     xdg-utils
-    hyprpaper
     hyprutils
     home-manager
     git
@@ -37,21 +35,15 @@
     lm_sensors
     swaynotificationcenter
     fastfetch
-    hyprland
     waybar
     pavucontrol
     htop
     yazi
-    zoxide
     fzf
     zsh-autocomplete
     unzip
     prismlauncher
     jdk
-    grim
-    slurp
-    wl-clipboard
-    brightnessctl
     lemurs
     hyprpicker
     sbctl
@@ -60,7 +52,6 @@
     chromium
     libreoffice-qt6-fresh
     egl-wayland
-    logseq
     appimage-run
     xdotool
     xorg.xprop
@@ -92,9 +83,6 @@
     rojo
     osu-lazer-bin
     bat
-    fishPlugins.hydro
-    zoxide
-    zellij
   ];
 
   programs.nix-ld.enable = true;

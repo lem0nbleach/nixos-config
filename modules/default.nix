@@ -19,5 +19,8 @@
     ./tailscale.nix
     ./sound.nix
     ./ssh.nix
+    ./network-tools.nix
+    ./mozilla.nix
+    ./input.nix
   ];
 }

@@ -54,7 +54,6 @@
       EDITOR = "hx";
       MOZ_ENABLE_WAYLAND=1;
       XCURSOR_THEME="Bibata-Modern-Ice";
-      WATT_CONFIG="/home/lem0nbleach/.config/watt.toml";
     };
 
     services.xserver = {
@@ -94,11 +93,6 @@
     services.playerctld.enable = true;
 
     services.cloudflare-warp.enable = true;
-
-    services.watt.enable = true;
-    systemd.services.watt.environment = {
-      WATT_CONFIG = "/home/lem0nbleach/.config/watt.toml";
-    };
 
     system.stateVersion = "24.11";
   };

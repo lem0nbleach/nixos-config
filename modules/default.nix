@@ -5,6 +5,10 @@
     type = lib.types.bool;
     default = false;
   };
+  options.croaker = lib.mkOption {
+    type = lib.types.bool;
+    default = false;
+  };
 
   imports = [
     ./fish.nix
@@ -13,5 +17,6 @@
     ./nh.nix
     ./watt.nix
     ./tailscale.nix
+    ./sound.nix
   ];
 }

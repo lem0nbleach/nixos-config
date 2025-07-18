@@ -12,5 +12,6 @@
     ./hyprland.nix
     ./nh.nix
     ./watt.nix
+    ./tailscale.nix
   ];
 }

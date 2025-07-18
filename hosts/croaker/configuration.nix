@@ -47,7 +47,7 @@
 
   users.users.lem0nbleach = {
     isNormalUser = true;
-    description = "Feiyang Wu";
+    description = "It's me aye";
     extraGroups = [ "networkmanager" "wheel" ];
   };
 

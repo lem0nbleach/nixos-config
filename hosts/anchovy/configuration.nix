@@ -65,8 +65,6 @@
 
     nixpkgs.config.allowUnfree = true;
 
-    services.openssh.enable = true;
-
     services.cloudflare-warp.enable = true;
 
     system.stateVersion = "24.11";

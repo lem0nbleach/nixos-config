@@ -18,5 +18,6 @@
     ./watt.nix
     ./tailscale.nix
     ./sound.nix
+    ./ssh.nix
   ];
 }

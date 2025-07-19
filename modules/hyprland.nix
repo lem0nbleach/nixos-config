@@ -1,7 +1,7 @@
 { lib, config, pkgs, inputs, ... }:
 
 lib.mkMerge [
-  {
+  (lib.mkIf (config.anchovy || config.croaker) {
     programs.hyprland = {
       enable = true;
       withUWSM = true;
@@ -25,7 +25,8 @@ lib.mkMerge [
       pkgs.wl-clipboard
       inputs.quickshell.packages.x86_64-linux.default
     ];
-  }
+  })
+
   (lib.mkIf config.anchovy {
     services.fprintd.enable = true;
     security.pam.services.hyprlock.fprintAuth = true;

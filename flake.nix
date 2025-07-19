@@ -37,6 +37,7 @@
 	      modules = [
 	        ./hosts/marlin/configuration.nix
 	        hjem.nixosModules.default
+          watt.nixosModules.default
 	      ];
 	      specialArgs = { inherit inputs; };
       };

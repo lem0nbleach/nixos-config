@@ -9,6 +9,10 @@
     type = lib.types.bool;
     default = false;
   };
+  options.marlin = lib.mkOption {
+    type = lib.types.bool;
+    default = false;
+  };
 
   imports = [
     ./fish.nix

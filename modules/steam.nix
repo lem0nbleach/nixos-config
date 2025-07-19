@@ -1,9 +1,6 @@
-{
-  pkgs,
-  ...
-}:
+{ lib, config, pkgs, ... }:
 
-{
+lib.mkIf (config.anchovy || config.croaker) {
   programs.steam = {
     enable = true;
     gamescopeSession.enable = true;

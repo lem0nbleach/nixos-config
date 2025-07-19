@@ -83,6 +83,7 @@
     rojo
     osu-lazer-bin
     bat
+    mpv
   ];
 
   programs.nix-ld.enable = true;

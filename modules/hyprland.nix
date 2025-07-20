@@ -25,6 +25,12 @@ lib.mkMerge [
       pkgs.wl-clipboard
       inputs.quickshell.packages.x86_64-linux.default
     ];
+
+    programs.bash.loginShellInit = ''
+  		if uwsm check may-start; then
+      	exec uwsm start hyprland-uwsm.desktop
+  	  fi
+    '';
   })
 
   (lib.mkIf config.anchovy {

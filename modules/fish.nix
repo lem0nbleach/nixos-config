@@ -1,12 +1,25 @@
-{
-  pkgs,
-  ...
-}:
+{ lib, config, pkgs, ... }:
 
-{
-  programs.fish = {
-    enable = true;
-    interactiveShellInit = ''
+lib.mkMerge [
+  {
+    programs.fish.enable = true;
+
+    programs.zoxide.enable = true;
+
+    environment.systemPackages = [
+      pkgs.fishPlugins.hydro
+    ];
+
+    programs.bash.interactiveShellInit = ''
+      if [[ $(${pkgs.procps}/bin/ps --no-header --pid=$PPID --format=comm) != "fish" && -z ''${BASH_EXECUTION_STRING} ]]; then
+        shopt -q login_shell && LOGIN_OPTION='--login' || LOGIN_OPTION=""
+        exec ${pkgs.fish}/bin/fish $LOGIN_OPTION
+      fi
+    '';
+  }
+
+  (lib.mkIf (config.anchovy || config.croaker){
+    programs.fish.interactiveShellInit = ''
       # Greetings with lovely Aussie accent
       function fish_greeting
         random choice "Hello mate!" "Hi there!" "G'day!" "Howdy!"
@@ -22,27 +35,18 @@
 
       set -U hydro_color_prompt blue
     '';
-  };
+    environment.systemPackages = with pkgs; [
+      zellij
+    ];
+  })
 
-  # Dependancies
-  programs.zoxide.enable = true;
+  (lib.mkIf config.marlin {
+    programs.fish.interactiveShellInit = ''
+      function fish_greeting
+        random choice "Hello mate!" "Hi there!" "G'day!" "Howdy!"
+      end
 
-  environment.systemPackages = with pkgs; [
-    fishPlugins.hydro
-    zellij
-  ];
-
-    # Bash profile to start UWSM(Hyprland) at login and auto launch fish for all other interactive shell sessions.
-  programs.bash.interactiveShellInit = ''
-  	if shopt -q login_shell; then
-  		if uwsm check may-start; then
-      	exec uwsm start hyprland-uwsm.desktop
-  	  fi
-  	else
-      if [[ $(${pkgs.procps}/bin/ps --no-header --pid=$PPID --format=comm) != "fish" && -z ''${BASH_EXECUTION_STRING} ]]; then
-        shopt -q login_shell && LOGIN_OPTION='--login' || LOGIN_OPTION=""
-        exec ${pkgs.fish}/bin/fish $LOGIN_OPTION
-      fi
-  	fi
-  '';
-}
+      set -U hydro_color_prompt blue
+    '';
+  })
+]

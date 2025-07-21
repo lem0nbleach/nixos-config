@@ -19,6 +19,7 @@
     inputs.watt.packages.x86_64-linux.default
     bat
     zellij
+    ansible
 
     # GUI Apps
     firefox

@@ -16,6 +16,5 @@
     fishPlugins.hydro
     zoxide
     ripgrep
-    ansible
   ];
 }

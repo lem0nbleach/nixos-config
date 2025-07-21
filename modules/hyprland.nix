@@ -16,6 +16,7 @@ lib.mkMerge [
     environment.systemPackages = [
       pkgs.hyprpaper
       pkgs.hyprcursor
+      pkgs.hyprsunset
       pkgs.walker
       pkgs.grim
       pkgs.slurp

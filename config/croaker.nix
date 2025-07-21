@@ -10,6 +10,7 @@
       ".config/hypr/hypridle.conf".source = ./dots/hypr/hypridle.conf;
       ".config/hypr/hyprlock.conf".source = ./dots/hypr/hyprlock.conf;
       ".config/hypr/hyprpaper.conf".source = ./dots/hypr/hyprpaper.conf;
+      ".config/hypr/hyprsunset.conf".source = ./dots/hypr/hyprsunset.conf;
       ".zshrc".source = ./dots/zsh/zshrc;
       ".config/foot/foot.ini".source = ./dots/foot/foot.ini;
       ".mozilla/firefox/user.js".source = ./dots/mozilla/firefox/user.js;

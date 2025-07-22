@@ -32,6 +32,27 @@ lib.mkMerge [
       	exec uwsm start hyprland-uwsm.desktop
   	  fi
     '';
+
+    systemd.user.services.hyprsunset = {
+      description = "Run hyprsunset check";
+      serviceConfig = {
+        Type = "oneshot";
+        ExecStart ="${pkgs.bash}/bin/bash /home/lem0nbleach/nixos/modules/scripts/auto-sunset.sh";
+      };
+      path = [
+        pkgs.hyprsunset
+        pkgs.procps
+      ];
+    };
+    systemd.user.timers.hyprsunset = {
+      description = "Run hyprsunset check every minute";
+      wantedBy = [ "timers.target" ];
+      after = [ "graphical-session.target" ];
+      timerConfig = {
+        OnCalendar = "*:0/1";  # Every minute
+        Persistent = true;
+      };
+    };
   })
 
   (lib.mkIf config.anchovy {

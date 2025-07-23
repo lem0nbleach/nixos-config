@@ -3,7 +3,6 @@
   environment.systemPackages = with pkgs; [
     # CLI Tools
     neovim
-    helix
     git
     dig
     ripgrep

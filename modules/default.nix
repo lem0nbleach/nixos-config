@@ -28,5 +28,6 @@
     ./input.nix
     ./docker.nix
     ./battery-notification.nix
+    ./helix.nix
   ];
 }

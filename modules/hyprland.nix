@@ -1,9 +1,18 @@
-{ lib, config, pkgs, inputs, ... }:
+{
+  lib,
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
 
 let
   hyprsunsetScript = pkgs.writeShellApplication {
     name = "sunset-checker";
-    runtimeInputs = [ pkgs.hyprland pkgs.procps ];
+    runtimeInputs = [
+      pkgs.hyprland
+      pkgs.procps
+    ];
     text = ''
       # Get current time in minutes
       current_hour=$(date +%H)
@@ -53,9 +62,9 @@ lib.mkMerge [
     ];
 
     programs.bash.loginShellInit = ''
-  		if uwsm check may-start; then
+      if uwsm check may-start; then
       	exec uwsm start hyprland-uwsm.desktop
-  	  fi
+      fi
     '';
 
     systemd.user.services.hyprsunset = {
@@ -72,7 +81,7 @@ lib.mkMerge [
       partOf = [ "graphical-session.target" ];
       timerConfig = {
         AccuracySec = "1s";
-        OnCalendar = "*:0/1";  # Every minute
+        OnCalendar = "*:0/1"; # Every minute
       };
     };
   })

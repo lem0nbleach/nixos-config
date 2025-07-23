@@ -15,8 +15,8 @@ let
       morning_end=270     # 4:30 AM
 
       if [[ "$current_time_minutes" -ge "$evening_start" ]] || [[ "$current_time_minutes" -le "$morning_end" ]]; then
-        echo "Changing to nighttime hyprsunset"
-        hyprctl hyprsunset temperature 4500
+        echo "Changing to night time hyprsunset"
+        hyprctl hyprsunset temperature 3400
       else
         echo "Changing to default hyprsunset"
         hyprctl hyprsunset identity

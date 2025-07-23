@@ -1,4 +1,4 @@
-{ config, lib, pkgs, inputs, ... }:
+{ config, lib, pkgs, ... }:
 
 {
   imports =
@@ -43,7 +43,6 @@
     };
 
     environment.sessionVariables = {
-      TERM = "foot";
       BROWSER = "firefox";
       NIXOS_OZONE_WL = "1";
       XDG_CURRENT_DESKTOP = "Hyprland";
@@ -60,7 +59,7 @@
       isNormalUser = true;
       description = "Feiyang Wu";
       extraGroups = [ "networkmanager" "wheel" "video" ];
-      packages = with pkgs; [];
+      packages = [];
     };
 
     nixpkgs.config.allowUnfree = true;

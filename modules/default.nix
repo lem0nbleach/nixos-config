@@ -26,5 +26,6 @@
     ./network-tools.nix
     ./mozilla.nix
     ./input.nix
+    ./docker.nix
   ];
 }

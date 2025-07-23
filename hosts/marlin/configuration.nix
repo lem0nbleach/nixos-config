@@ -14,9 +14,11 @@
 
     nix.settings.experimental-features = ["nix-command" "flakes"];
 
-    boot.loader.grub.enable = true;
-    boot.loader.grub.device = "/dev/sda";
-    boot.loader.grub.useOSProber = true;
+    boot.loader = {
+      grub.device = "/dev/sda";
+      grub.useOSProber = true;
+      timeout = 1;
+    };
 
     networking.hostName = "marlin"; # Define your hostname.
 
@@ -47,7 +49,7 @@
     users.users.lem0nbleach = {
       isNormalUser = true;
       description = "Feiyang Wu";
-      extraGroups = [ "networkmanager" "wheel" "docker"];
+      extraGroups = [ "networkmanager" "wheel" ];
       shell = pkgs.bash;
     };
 
@@ -56,8 +58,6 @@
     services.nfs.server.enable = true;
 
     services.tailscale.useRoutingFeatures = "both";
-
-    virtualisation.docker.enable = true;
 
     system.stateVersion = "24.11"; # Did you read the comment?
   };

@@ -51,8 +51,6 @@
 
     nixpkgs.config.allowUnfree = true;
 
-    services.tailscale.useRoutingFeatures = "both";
-
     system.stateVersion = "24.11"; # Did you read the comment?
   };
 }

@@ -3,8 +3,8 @@
 {
   imports =
     [
-      ./modules
       ../../config/croaker.nix
+      ../../modules
       ./packages.nix
       ./hardware-configuration.nix
     ];
@@ -12,13 +12,17 @@
   config = {
     croaker = true;
 
-    boot.loader.efi.canTouchEfiVariables = true;
+    boot = {
+      loader.efi.canTouchEfiVariables = true;
 
-    kernel.sysctl = { "kernel.spli_lock_mitigate" = 0; };
+      kernel.sysctl = { "kernel.split_lock_mitigate" = 0; };
 
-    lanzaboote = {
-      enable = true;
-      pkiBundle = "/etc/secureboot";
+      kernelPackages = pkgs.linuxPackages_zen;
+
+      lanzaboote = {
+        enable = true;
+        pkiBundle = "/etc/secureboot";
+      };
     };
     
     networking.hostName = "croaker";

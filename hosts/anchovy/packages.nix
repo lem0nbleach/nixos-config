@@ -21,7 +21,6 @@
     ansible
 
     # GUI Apps
-    firefox
     thunderbird
     obsidian
     vesktop

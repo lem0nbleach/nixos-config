@@ -8,7 +8,6 @@
       ".config/hypr/hypridle.conf".source = ./dots/hypr/hypridle.conf;
       ".config/hypr/hyprlock.conf".source = ./dots/hypr/hyprlock.conf;
       ".config/hypr/hyprpaper.conf".source = ./dots/hypr/hyprpaper.conf;
-      ".mozilla/firefox/nh8kebxc.default/user.js".source = ./dots/mozilla/firefox/user.js;
       ".config/foot/foot.ini".source = ./dots/foot/foot.ini;
       ".config/helix/config.toml".source = ./dots/helix/config.toml;
       ".config/gtk-4.0/settings.ini".source = ./dots/gtk-4.0/settings.ini;

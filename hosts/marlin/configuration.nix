@@ -42,10 +42,6 @@
       LC_TIME = "en_US.UTF-8";
     };
 
-    environment.sessionVariables = {
-      EDITOR = "hx";
-    };
-
     users.users.lem0nbleach = {
       isNormalUser = true;
       description = "Feiyang Wu";

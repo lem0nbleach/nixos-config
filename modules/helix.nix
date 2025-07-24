@@ -6,4 +6,8 @@
     pkgs.nixd
     pkgs.nil
   ];
+
+  environment.sessionVariables = {
+    EDITOR = "hx";
+  };
 }

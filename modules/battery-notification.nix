@@ -6,6 +6,7 @@
 }:
 
 let
+  # To check for the battery level on Anchovy and notify when it is low 
   battery-notification = pkgs.writeShellApplication {
     name = "battery-notification";
     runtimeInputs = [ pkgs.libnotify ];
@@ -24,7 +25,9 @@ let
         if [[ ! -f "$flag/battery_critical_sent" ]]; then
           notify-send "Battery Critical: Less Than 5%"
           touch "$flag/battery_critical_sent"
-          rm -f "$flag/battery_low_sent"
+          # not remvoing the low flag to prevent duplicate
+          # notification when recharged to 10%
+          # rm -f "$flag/battery_low_sent"
         fi
       else
         rm -f "$flag/battery_low_sent" "$flag/battery_critical_sent"

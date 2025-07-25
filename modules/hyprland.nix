@@ -58,6 +58,8 @@ lib.mkMerge [
       pkgs.mako
       pkgs.brightnessctl
       pkgs.wl-clipboard
+      # for the systemd service below
+      pkgs.killall
       inputs.quickshell.packages.x86_64-linux.default
     ];
 
@@ -90,6 +92,15 @@ lib.mkMerge [
     services.fprintd.enable = true;
     security.pam.services.hyprlock.fprintAuth = true;
     services.logind.lidSwitch = "suspend";
+    systemd.services.kill-printd = {
+      description = "Kill fprintd before sleep";
+      before = [ "sleep.target" ]; 
+      wantedBy = [ "sleep.target" ];
+      serviceConfig = {
+        ExecStart = "${lib.getExe pkgs.killall} fprintd";
+      };
+    };
+
     services.udev.extraRules = ''
       ACTION=="add", SUBSYSTEM=="backlight", RUN+="${pkgs.coreutils}/bin/chgrp video /sys/class/backlight/%k/brightness"
       ACTION=="add", SUBSYSTEM=="backlight", RUN+="${pkgs.coreutils}/bin/chmod g+w /sys/class/backlight/%k/brightness"

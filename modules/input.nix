@@ -1,6 +1,6 @@
 { lib, config, pkgs, ... }:
 
-lib.mkIf config.croaker {
+lib.mkIf (config.anchovy || config.croaker) {
   i18n.inputMethod = {
     enable = true;
     type = "fcitx5";

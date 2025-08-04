@@ -30,5 +30,6 @@
     ./battery-notification.nix
     ./helix.nix
     ./bluetooth.nix
+    ./winbox.nix
   ];
 }

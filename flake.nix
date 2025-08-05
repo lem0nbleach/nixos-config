@@ -35,7 +35,7 @@
       system = "x86_64-linux";
       modules = [
         ./hosts/billfish/configuration.nix  # Shared configuration
-        ./hosts/billfish/${hostname}/hardware-configuration.nix  # Host-specific hardware config
+        ./hosts/billfish/${hostname}/hardware-configuration.nix
         hjem.nixosModules.default
         watt.nixosModules.default
         { networking.hostName = hostname; }
@@ -43,12 +43,6 @@
       specialArgs = { inherit inputs; };
     };
   in {
-    # The billfish (service VM) fleet
-    marlin = mkBillfish "marlin";
-    sailfish = mkBillfish "sailfish";
-    swordfish = mkBillfish "swordfish";
-    spearfish = mkBillfish "spearfish";
-  
     nixosConfigurations = {
       croaker = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -70,6 +64,11 @@
         ];
         specialArgs = { inherit inputs; };
       };
+      # The billfish (service VM) fleet
+      marlin = mkBillfish "marlin";
+      sailfish = mkBillfish "sailfish";
+      swordfish = mkBillfish "swordfish";
+      spearfish = mkBillfish "spearfish";
     };
   };
 }

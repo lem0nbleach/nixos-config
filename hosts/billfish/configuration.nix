@@ -20,8 +20,6 @@
       timeout = 1;
     };
 
-    networking.hostName = "marlin"; # Define your hostname.
-
     networking.networkmanager.enable = true;
 
     networking.firewall.allowedTCPPorts = [ 2049 9002 3080 81 444];

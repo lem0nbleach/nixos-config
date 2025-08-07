@@ -31,5 +31,6 @@
     ./helix.nix
     ./bluetooth.nix
     ./winbox.nix
+    ./qemuguest.nix
   ];
 }

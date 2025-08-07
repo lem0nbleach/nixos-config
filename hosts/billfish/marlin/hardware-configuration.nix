@@ -18,6 +18,11 @@
       fsType = "ext4";
     };
 
+  fileSystems."/mnt/ewaste" = {
+    device = "192.168.88.2:/mnt/ewaste/general";
+    fsType = "nfs";
+  };
+
   swapDevices =
     [ { device = "/dev/disk/by-uuid/87f67812-a8b6-4bc0-a593-bab436d09ad6"; }
     ];

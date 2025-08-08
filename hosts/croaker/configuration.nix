@@ -54,7 +54,6 @@
     system.stateVersion = "24.05";
 
     environment.sessionVariables = {
-      TERM = "foot";
       BROWSER = "firefox";
       TERMINAL = "foot";
       NIXOS_OZONE_WL = "1";

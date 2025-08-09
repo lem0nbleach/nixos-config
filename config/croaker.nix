@@ -5,7 +5,6 @@
     clobberFiles = lib.mkForce true;
     files = {
       ".config/MangoHud/MangoHud.conf".source = ./dots/MangoHud/MangoHud.conf;
-      ".config/rofi/config.rasi".source = ./dots/rofi/config.rasi;
       ".config/hypr/hyprland.conf".source = ./dots/hypr/hyprland.conf;
       ".config/hypr/hypridle.conf".source = ./dots/hypr/hypridle.conf;
       ".config/hypr/hyprlock.conf".source = ./dots/hypr/hyprlock.conf;

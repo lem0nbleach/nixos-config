@@ -65,10 +65,13 @@
         specialArgs = { inherit inputs; };
       };
       # The billfish (service VM) fleet
-      marlin = mkBillfish "marlin";
-      sailfish = mkBillfish "sailfish";
-      swordfish = mkBillfish "swordfish";
-      spearfish = mkBillfish "spearfish";
+      infrastructure = mkBillfish "infrastructure";
+      game = mkBillfish "game";
+      authentication = mkBillfish "authentication";
+      non-data = mkBillfish "non-data";
+      data = mkBillfish "data";
+      media = mkBillfish "media";
+      monitorization = mkBillfish "monitorization";
     };
   };
 }

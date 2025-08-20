@@ -18,6 +18,11 @@
       fsType = "ext4";
     };
 
+  fileSystems."/home/lem0nbleach/gamesaves" = {
+    device = "/dev/disk/by-uuid/431e3b55-4f1e-4442-921c-f6dc0de97f10";
+    fsType = "ext4";
+  };
+    
   swapDevices =
     [ { device = "/dev/disk/by-uuid/6d41773c-5912-47a5-b320-e957c6331963"; }
     ];

@@ -21,7 +21,7 @@
 
       lanzaboote = {
         enable = true;
-        pkiBundle = "/etc/secureboot";
+        pkiBundle = "/var/lib/sbctl";
       };
     };
     
@@ -63,7 +63,10 @@
       ELECTRON_OZONE_PLATFORM_HINT = "auto";
     };
 
-    services.xserver.videoDrivers = [ "amdgpu" ];
+    hardware.graphics = {
+      enable = true;
+      enable32Bit = true;
+    };
 
     nix.settings.experimental-features = ["nix-command" "flakes"];
   };

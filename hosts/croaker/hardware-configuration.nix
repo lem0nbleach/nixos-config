@@ -24,8 +24,8 @@
     options = [ "fmask=0022" "dmask=0022" ];
   };
 
-  fileSystems."/mnt/ewaste/general" = {
-    device = "192.168.88.2:/mnt/ewaste//general";
+  fileSystems."/mnt/cheapstuff" = {
+    device = "192.168.88.2:/mnt/cheapstuff";
     fsType = "nfs";
   };
 

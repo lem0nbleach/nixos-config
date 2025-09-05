@@ -30,6 +30,7 @@
     networkmanagerapplet
     prismlauncher
     todoist-electron
+    qalculate-qt
 
     # Games
     prismlauncher

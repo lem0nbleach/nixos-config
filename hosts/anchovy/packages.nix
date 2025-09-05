@@ -29,7 +29,7 @@
     bitwarden
     networkmanagerapplet
     prismlauncher
-    activitywatch
+    todoist-electron
 
     # Games
     prismlauncher

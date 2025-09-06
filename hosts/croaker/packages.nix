@@ -83,6 +83,8 @@
     osu-lazer-bin
     bat
     mpv
+    gale
+    todoist-electron
   ];
 
   programs.nix-ld.enable = true;

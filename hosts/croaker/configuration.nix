@@ -17,8 +17,6 @@
 
       kernel.sysctl = { "kernel.split_lock_mitigate" = 0; };
 
-      kernelPackages = pkgs.linuxPackages_zen;
-
       lanzaboote = {
         enable = true;
         pkiBundle = "/var/lib/sbctl";

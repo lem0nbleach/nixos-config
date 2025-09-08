@@ -31,6 +31,7 @@
     prismlauncher
     todoist-electron
     qalculate-qt
+    kicad
 
     # Games
     prismlauncher

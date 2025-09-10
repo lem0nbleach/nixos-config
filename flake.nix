@@ -18,6 +18,10 @@
       url = "github:NotAShelf/watt";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    stash = {
+      url = "github:notashelf/stash";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -27,6 +31,7 @@
     hjem,
     quickshell,
     watt,
+    stash,
     ...
   }@inputs:
 

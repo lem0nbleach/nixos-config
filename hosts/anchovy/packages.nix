@@ -1,4 +1,8 @@
 { pkgs, inputs, ... }:
+let
+  stashPKG = inputs.stash.packages.x86_64-linux.default;
+
+in
 {
   environment.systemPackages = with pkgs; [
     # CLI Tools
@@ -19,6 +23,7 @@
     bat
     zellij
     ansible
+    stashPKG
 
     # GUI Apps
     thunderbird

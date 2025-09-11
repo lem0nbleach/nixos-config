@@ -2,23 +2,24 @@
 governor = "powersave"
 turbo = "auto"
 enable_auto_turbo = true
-turbo_auto_settings = { load_threshold_high = 80.0, load_threshold_low = 40.0, temp_threshold_high = 70.0, initial_turbo_state = true }
+turbo_auto_settings = { load_threshold_high = 80.0, load_threshold_low = 40.0, temp_threshold_high = 70.0, initial_turbo_state = false }
 epp = "power"
-epb = "power"
+epb = "balance_power"
 platform_profile = "low-power"
 min_freq_mhz = 625
-max_freq_mhz = 4800
+max_freq_mhz = 2400
 
 [charger]
 governor = "performance"
 turbo = "auto"
 enable_auto_turbo = true
-turbo_auto_settings = { load_threshold_high = 70.0, load_threshold_low = 30.0, temp_threshold_high = 75.0, initial_turbo_state = false }
+turbo_auto_settings = { load_threshold_high = 70.0, load_threshold_low = 30.0, temp_threshold_high = 75.0, initial_turbo_state = true }
 epp = "performance"
 epb = "performance"
 platform_profile = "performance"
 min_freq_mhz = 2000
 max_freq_mhz = 4800
+battery_charge_thresholds = [40, 80]
 
 [daemon]
 # Base polling interval in seconds
@@ -28,7 +29,7 @@ adaptive_interval = true
 # Minimum polling interval for adaptive polling (seconds)
 min_poll_interval_sec = 1
 # Maximum polling interval for adaptive polling (seconds)
-max_poll_interval_sec = 10
+max_poll_interval_sec = 30
 # Double the polling interval when on battery to save power
 throttle_on_battery = true
 # Logging level: Error, Warning, Info, Debug

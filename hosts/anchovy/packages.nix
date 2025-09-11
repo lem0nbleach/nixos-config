@@ -54,7 +54,6 @@ in
     pamixer
     
     # System Management
-    powertop
     libnotify
 
     # Programming

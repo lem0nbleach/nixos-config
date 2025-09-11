@@ -24,6 +24,7 @@ in
     zellij
     ansible
     stashPKG
+    typst
 
     # GUI Apps
     thunderbird

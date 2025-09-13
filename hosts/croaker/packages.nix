@@ -85,6 +85,7 @@
     mpv
     gale
     todoist-electron
+    typst
   ];
 
   programs.nix-ld.enable = true;

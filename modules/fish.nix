@@ -6,6 +6,12 @@ lib.mkMerge [
 
     programs.zoxide.enable = true;
 
+    programs.direnv.enable = true;
+    programs.direnv.enableFishIntegration = true;
+
+    programs.nix-index.enable = true;
+    programs.nix-index.enableFishIntegration = true;
+
     environment.systemPackages = [
       pkgs.fishPlugins.hydro
     ];
@@ -34,6 +40,15 @@ lib.mkMerge [
       eval (zellij setup --generate-auto-start fish | string collect)
 
       set -U hydro_color_prompt blue
+      function fish_mode_prompt; end;
+      function update_nshell_indicator --on-variable IN_NIX_SHELL
+        if test -n "$IN_NIX_SHELL";
+          set -g hydro_symbol_start "impure "
+        else
+          set -g hydro_symbol_start
+        end
+      end
+      update_nshell_indicator
     '';
     environment.systemPackages = with pkgs; [
       zellij

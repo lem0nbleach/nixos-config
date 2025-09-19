@@ -66,6 +66,8 @@ in
     noto-fonts-cjk-sans
     noto-fonts-emoji
     nerd-fonts.jetbrains-mono
+    dejavu_fonts
+    liberation_ttf
   ];
 
   # For Logseq

@@ -32,5 +32,6 @@
     ./bluetooth.nix
     ./winbox.nix
     ./qemuguest.nix
+    ./qmkUdev.nix
   ];
 }

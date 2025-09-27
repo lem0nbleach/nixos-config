@@ -7,6 +7,7 @@
 }:
 
 let
+  stashPKG = inputs.stash.packages.x86_64-linux.default;
   hyprsunsetScript = pkgs.writeShellApplication {
     name = "sunset-checker";
     runtimeInputs = [
@@ -58,7 +59,7 @@ lib.mkMerge [
       pkgs.wluma
       pkgs.mako
       pkgs.brightnessctl
-      pkgs.wl-clipboard
+      stashPKG
       # for the systemd service below
       pkgs.killall
       inputs.quickshell.packages.x86_64-linux.default

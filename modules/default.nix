@@ -33,5 +33,6 @@
     ./winbox.nix
     ./qemuguest.nix
     ./qmkUdev.nix
+    ./downloads-cleanup.nix
   ];
 }

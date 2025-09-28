@@ -86,6 +86,7 @@
     gale
     todoist-electron
     typst
+    openscad
   ];
 
   programs.nix-ld.enable = true;

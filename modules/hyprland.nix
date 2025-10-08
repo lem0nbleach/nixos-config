@@ -47,7 +47,6 @@ lib.mkMerge [
     # Let lem0nbleach automatically be loggedin at boot up
     services.getty.autologinUser = "lem0nbleach";
     services.playerctld.enable = true;
-    systemd.services.NetworkManager-wait-online.enable = false;
 
     environment.systemPackages = [
       pkgs.hyprpaper

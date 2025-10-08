@@ -87,6 +87,7 @@
     todoist-electron
     typst
     openscad
+    ansible
   ];
 
   programs.nix-ld.enable = true;

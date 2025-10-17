@@ -31,5 +31,8 @@ lib.mkIf (config.anchovy || config.croaker) {
 
   environment.systemPackages = [
     pkgs.mangohud
+    # steamtinkerlaunch does not have a steamcompattool output so it has to be installed imperatively
+    # instead of being able to be added using extracompatpackages
+    pkgs.steamtinkerlaunch
   ];
 }

@@ -31,7 +31,6 @@ in
     obsidian
     vesktop
     libreoffice
-    jellyfin-media-player
     bitwarden
     networkmanagerapplet
     prismlauncher

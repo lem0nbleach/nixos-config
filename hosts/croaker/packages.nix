@@ -88,6 +88,7 @@
     typst
     openscad
     ansible
+    atlauncher
   ];
 
   programs.nix-ld.enable = true;

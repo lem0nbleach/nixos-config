@@ -71,7 +71,7 @@
     obsidian
     krita
     yadm
-    rofi-wayland
+    rofi
     sqlitebrowser
     lutris
     nwg-look

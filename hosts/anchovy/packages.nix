@@ -25,6 +25,7 @@ in
     ansible
     stashPKG
     typst
+    nix-tree
 
     # GUI Apps
     thunderbird

@@ -22,6 +22,10 @@
       url = "github:notashelf/stash";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    narnia = {
+      url = "github:NotAShelf/narnia";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {

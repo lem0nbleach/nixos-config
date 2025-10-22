@@ -1,6 +1,8 @@
 { pkgs, inputs, ... }:
 let
+  wattPKG = inputs.watt.packages.x86_64-linux.default;
   stashPKG = inputs.stash.packages.x86_64-linux.default;
+  narniaPKG = inputs.narnia.packages.x86_64-linux.default;
 
 in
 {
@@ -19,13 +21,14 @@ in
     du-dust
     lm_sensors
     microfetch
-    inputs.watt.packages.x86_64-linux.default
+    wattPKG
     bat
     zellij
     ansible
     stashPKG
     typst
     nix-tree
+    narniaPKG
 
     # GUI Apps
     thunderbird

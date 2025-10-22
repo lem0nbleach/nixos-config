@@ -170,6 +170,26 @@
         "type": "github"
       }
     },
+    "narnia": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1758706793,
+        "narHash": "sha256-8hPbbrHNGpHisdt4g/Sd+uyL2nhmNR/rg09EoWL58+w=",
+        "owner": "NotAShelf",
+        "repo": "narnia",
+        "rev": "789c7239722edc029a3d494ef6f33098a881a329",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NotAShelf",
+        "repo": "narnia",
+        "type": "github"
+      }
+    },
     "ndg": {
       "inputs": {
         "flake-compat": "flake-compat",
@@ -307,6 +327,7 @@
       "inputs": {
         "hjem": "hjem",
         "lanzaboote": "lanzaboote",
+        "narnia": "narnia",
         "nixpkgs": "nixpkgs",
         "nixpkgs-stable": "nixpkgs-stable_2",
         "quickshell": "quickshell",

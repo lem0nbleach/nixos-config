@@ -34,5 +34,6 @@
     ./qemuguest.nix
     ./qmkUdev.nix
     ./downloads-cleanup.nix
+    ./fwupd.nix
   ];
 }

@@ -9,6 +9,7 @@ lib.mkMerge [
     programs.direnv.enable = true;
     programs.direnv.enableFishIntegration = true;
 
+    programs.command-not-found.enable = false;
     programs.nix-index.enable = true;
     programs.nix-index.enableFishIntegration = true;
 

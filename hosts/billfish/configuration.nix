@@ -23,6 +23,34 @@
 
     networking.firewall.allowedTCPPorts = [ 2049 9002 3080 81 444];
 
+    networking.hosts = {
+      "192.168.88.10" = [
+        "actual.fishstall.net"
+        "authentik.fishstall.net"
+        "bazarr.fishstall.net"
+        "forgejo.fishstall.net"
+        "jellyfin.fishstall.net"
+        "kavita.fishstall.net"
+        "lidarr.fishstall.net"
+        "matrix.fishstall.net"
+        "netbox.fishstall.net"
+        "pbs.fishstall.net"
+        "pihole.fishstall.net"
+        "prowlarr.fishstall.net"
+        "pve.fishstall.net"
+        "qbittorrent.fishstall.net"
+        "radarr.fishstall.net"
+        "sabnzbd.fishstall.net"
+        "searxng.fishstall.net"
+        "sonarr.fishstall.net"
+        "speedtest.fishstall.net"
+        "start.fishstall.net"
+        "sv07.fishstall.net"
+        "uptime-kuma.fishstall.net"
+        "vaultwarden.fishstall.net"
+      ];
+    };
+    
     time.timeZone = "America/New_York";
 
     i18n.defaultLocale = "en_US.UTF-8";

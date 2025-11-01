@@ -35,6 +35,5 @@
     ./qmkUdev.nix
     ./downloads-cleanup.nix
     ./fwupd.nix
-    ./sleep.nix
   ];
 }

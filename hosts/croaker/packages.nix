@@ -86,7 +86,7 @@
     gale
     todoist-electron
     typst
-    openscad
+    openscad-unstable
     ansible
     atlauncher
   ];

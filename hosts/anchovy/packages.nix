@@ -3,7 +3,7 @@ let
   wattPKG = inputs.watt.packages.x86_64-linux.default;
   stashPKG = inputs.stash.packages.x86_64-linux.default;
   narniaPKG = inputs.narnia.packages.x86_64-linux.default;
-
+  matugenPKG = inputs.matugen.packages.x86_64-linux.default;
 in
 {
   environment.systemPackages = with pkgs; [
@@ -52,6 +52,7 @@ in
     bibata-cursors
     candy-icons
     sweet
+    matugenPKG
 
     # Media/Audio
     pavucontrol

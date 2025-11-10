@@ -26,6 +26,10 @@
       url = "github:NotAShelf/narnia";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    matugen = {
+      url = "github:InioX/Matugen";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -33,9 +37,8 @@
     nixpkgs-stable,
     lanzaboote,
     hjem,
-    quickshell,
     watt,
-    stash,
+    matugen,
     ...
   }@inputs:
 
@@ -70,6 +73,7 @@
           lanzaboote.nixosModules.lanzaboote
           hjem.nixosModules.default
           watt.nixosModules.default
+          matugen.nixosModules.default
         ];
         specialArgs = { inherit inputs; };
       };

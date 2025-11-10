@@ -29,6 +29,7 @@ in
     typst
     nix-tree
     narniaPKG
+    openscad-lsp
 
     # GUI Apps
     thunderbird
@@ -41,6 +42,7 @@ in
     todoist-electron
     qalculate-qt
     kicad
+    openscad-unstable
 
     # Games
     prismlauncher

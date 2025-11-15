@@ -1,0 +1,7 @@
+[[language]]
+name = "typst"
+soft-wrap.enable = true
+
+[[language]]
+name = "markdown"
+soft-wrap.enable = true

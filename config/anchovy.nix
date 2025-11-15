@@ -11,6 +11,7 @@
         ".config/hypr/hyprpaper.conf".source = ./dots/hypr/hyprpaper.conf;
         ".config/foot/foot.ini".source = ./dots/foot/foot.ini;
         ".config/helix/config.toml".source = ./dots/helix/config.toml;
+        ".config/helix/languages.toml".source = ./dots/helix/languages.toml;
         ".config/gtk-4.0/settings.ini".source = ./dots/gtk-4.0/settings.ini;
         ".config/gtk-3.0/settings.ini".source = ./dots/gtk-3.0/settings.ini;
         ".gtkrc-2.0".source = ./dots/gtkrc-2.0/gtkrc-2.0;

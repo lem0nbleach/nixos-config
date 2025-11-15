@@ -17,6 +17,7 @@
       "./local/share/icons/default/index.theme".source = ./dots/icons/default/desktop-index.theme;
       ".config/xsettingsd/xsettingsd.conf".source = ./dots/xsettingsd/xsettingsd.conf;
       ".config/helix/config.toml".source = ./dots/helix/config.toml;
+      ".config/helix/languages.toml".source = ./dots/helix/languages.toml;
       ".config/fish/config.fish".source = ./dots/fish/config.fish;
     };
   };

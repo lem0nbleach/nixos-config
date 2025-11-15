@@ -64,6 +64,15 @@ lib.mkMerge [
       inputs.quickshell.packages.x86_64-linux.default
     ];
 
+    environment.variables = {
+      NIXOS_OZONE_WL = "1";
+      XDG_CURRENT_DESKTOP = "Hyprland";
+      XDG_SESSION_DESKTOP = "Hyprland";
+      XDG_SESSION_TYPE = "wayland";
+      GTK_USE_PORTAL = "1";
+      ELECTRON_OZONE_PLATFORM_HINT = "auto";
+    };
+
     programs.bash.loginShellInit = ''
       if uwsm check may-start; then
       	exec uwsm start hyprland-uwsm.desktop

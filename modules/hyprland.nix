@@ -101,7 +101,10 @@ lib.mkMerge [
   (lib.mkIf config.anchovy {
     services.fprintd.enable = true;
     security.pam.services.hyprlock.fprintAuth = true;
-    services.logind.lidSwitch = "suspend";
+    services.logind.settings.Login = {
+      HandleLidSwitch = "pidof hyprlock || hyprlock";
+      KillUserProcesses = false;
+    };
     systemd.services.kill-printd = {
       description = "Kill fprintd before sleep";
       before = [ "sleep.target" ]; 

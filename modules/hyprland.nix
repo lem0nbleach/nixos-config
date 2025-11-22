@@ -102,7 +102,7 @@ lib.mkMerge [
     services.fprintd.enable = true;
     security.pam.services.hyprlock.fprintAuth = true;
     services.logind.settings.Login = {
-      HandleLidSwitch = "pidof hyprlock || hyprlock";
+      HandleLidSwitch = "lock";
       KillUserProcesses = false;
     };
     systemd.services.kill-printd = {

@@ -30,6 +30,7 @@ in
     nix-tree
     narniaPKG
     openscad-lsp
+    marksman
 
     # GUI Apps
     thunderbird

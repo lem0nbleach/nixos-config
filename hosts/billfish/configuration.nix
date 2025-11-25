@@ -70,7 +70,7 @@
     users.users.lem0nbleach = {
       isNormalUser = true;
       description = "Feiyang Wu";
-      extraGroups = [ "networkmanager" "wheel" ];
+      extraGroups = [ "networkmanager" "wheel" "video" ];
       shell = pkgs.bash;
     };
 

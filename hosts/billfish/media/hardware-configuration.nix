@@ -18,8 +18,13 @@
       fsType = "ext4";
     };
 
+  fileSystems."/mnt/cheapstuff/media" = {
+    device = "192.168.88.2:/mnt/cheapstuff/media";
+    fsType = "nfs";
+  };  
+
   swapDevices =
-    [ { device = "/dev/disk/by-uuid/6d41773c-5912-47a5-b320-e957c6331963"; }
+    [ { device = "/dev/disk/by-uuid/f1cecb73-4eb8-4999-b90f-8f1c8a871694"; }
     ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking

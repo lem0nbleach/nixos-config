@@ -40,7 +40,7 @@
   }@inputs:
 
   let
-    mkBillfish = hostname: nixpkgs-stable.lib.nixosSystem {
+    mkBillfish = hostname: nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
         ./hosts/billfish/configuration.nix  # Shared configuration

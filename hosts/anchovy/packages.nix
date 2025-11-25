@@ -31,6 +31,7 @@ in
     narniaPKG
     openscad-lsp
     marksman
+    bws
 
     # GUI Apps
     thunderbird

@@ -31,6 +31,7 @@ in
     narniaPKG
     openscad-lsp
     marksman
+    bitwarden-cli
     bws
 
     # GUI Apps

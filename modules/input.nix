@@ -7,7 +7,7 @@ lib.mkIf (config.anchovy || config.croaker) {
     fcitx5.waylandFrontend = true;
     fcitx5.addons = [
       pkgs.fcitx5-gtk
-      pkgs.fcitx5-chinese-addons
+      pkgs.qt6Packages.fcitx5-chinese-addons
     ];
   };
 }

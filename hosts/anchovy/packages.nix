@@ -18,7 +18,7 @@ in
     gzip
     foot
     yazi
-    du-dust
+    dust
     lm_sensors
     microfetch
     wattPKG
@@ -39,10 +39,8 @@ in
     obsidian
     vesktop
     libreoffice
-    bitwarden
     networkmanagerapplet
     prismlauncher
-    todoist-electron
     qalculate-qt
     kicad
     openscad-unstable
@@ -72,7 +70,7 @@ in
   fonts.packages = with pkgs; [
     noto-fonts
     noto-fonts-cjk-sans
-    noto-fonts-emoji
+    noto-fonts-color-emoji
     nerd-fonts.jetbrains-mono
     dejavu_fonts
     liberation_ttf

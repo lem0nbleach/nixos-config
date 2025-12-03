@@ -84,7 +84,6 @@
     bat
     mpv
     gale
-    todoist-electron
     typst
     openscad-unstable
     ansible
@@ -98,10 +97,9 @@
 
   fonts.packages = with pkgs; [
     noto-fonts
-    noto-fonts-extra
     noto-fonts-cjk-sans
     noto-fonts-cjk-serif
-    noto-fonts-emoji
+    noto-fonts-color-emoji
     nerd-fonts._0xproto
     nerd-fonts.droid-sans-mono
     font-awesome

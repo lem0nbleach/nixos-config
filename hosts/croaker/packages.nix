@@ -88,6 +88,7 @@
     openscad-unstable
     ansible
     atlauncher
+    talosctl
   ];
 
   programs.nix-ld.enable = true;

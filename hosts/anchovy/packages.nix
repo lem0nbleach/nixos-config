@@ -33,6 +33,8 @@ in
     marksman
     bitwarden-cli
     bws
+    talosctl
+    kubectl
 
     # GUI Apps
     thunderbird

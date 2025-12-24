@@ -89,6 +89,7 @@
     ansible
     atlauncher
     talosctl
+    kubectl
   ];
 
   programs.nix-ld.enable = true;

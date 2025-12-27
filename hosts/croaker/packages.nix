@@ -90,6 +90,7 @@
     atlauncher
     talosctl
     kubectl
+    onlyoffice-desktopeditors
   ];
 
   programs.nix-ld.enable = true;

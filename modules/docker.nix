@@ -1,5 +1,5 @@
 { lib, config, pkgs, ... }:
 
-lib.mkIf config.marlin {
+lib.mkIf (config.croaker || config.marlin) {
   virtualisation.docker.enable = true;
 }

@@ -26,6 +26,10 @@
       url = "github:NotAShelf/narnia";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    librepods = {
+      url = "github:demenik/librepods";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -36,6 +40,7 @@
     quickshell,
     watt,
     stash,
+    librepods,
     ...
   }@inputs:
 

@@ -1,5 +1,9 @@
 { config, pkgs, pkgsStable, inputs, ... }:
 
+let 
+  librepodsPKG = inputs.librepods.packages.x86_64-linux.default;
+
+in
 {
   # Allowing unfree software
   nixpkgs.config.allowUnfree = true;
@@ -8,6 +12,7 @@
   inherit (pkgs.stdenv.hostPlatform) system;
   inherit (config.nixpkgs) config;
   };
+
   
   environment.systemPackages = with pkgs; [
     neovim
@@ -91,6 +96,7 @@
     talosctl
     kubectl
     onlyoffice-desktopeditors
+    librepodsPKG
   ];
 
   programs.nix-ld.enable = true;

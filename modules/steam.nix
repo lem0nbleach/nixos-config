@@ -35,4 +35,8 @@ lib.mkIf (config.anchovy || config.croaker) {
     # instead of being able to be added using extracompatpackages
     pkgs.steamtinkerlaunch
   ];
+
+  environment.sessionVariables = {
+    PROTON_ENABLE_WAYLAND=1;
+  };
 }

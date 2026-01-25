@@ -19,7 +19,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     stash = {
-      url = "github:notashelf/stash";
+      url = "github:NotAShelf/stash/65a8eebd46e1c95be1135721addbe1331def0a71";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     narnia = {

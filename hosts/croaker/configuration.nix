@@ -63,5 +63,7 @@
     };
 
     nix.settings.experimental-features = ["nix-command" "flakes"];
+    nix.settings.max-jobs = 4;
+    nix.settings.cores = 4;
   };
 }

@@ -26,6 +26,8 @@
     networking.nameservers = [ "192.168.88.50" ];
 
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
+    nix.settings.cores = 4;
+    nix.settings.max-jobs = 3;
 
     time.timeZone = "America/New_York";
 

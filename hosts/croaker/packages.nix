@@ -97,6 +97,7 @@ in
     kubectl
     onlyoffice-desktopeditors
     librepodsPKG
+    todoist-electron
   ];
 
   programs.nix-ld.enable = true;

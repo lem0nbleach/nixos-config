@@ -29,7 +29,7 @@ lib.mkMerge [
     programs.fish.interactiveShellInit = ''
       # Greetings with lovely Aussie accent
       function fish_greeting
-        random choice "Hello mate!" "Hi there!" "G'day!" "Howdy!"
+        random choice "Hello mate!" "Hi there!" "G'day!" "Howdy!" "How ja doing matey?" "How is it going my dude?" "Good work mate" "Good on ya mate"
       end
 
       # Since this declared by `programs.fish.interactiveShellInit`,
@@ -42,14 +42,14 @@ lib.mkMerge [
 
       set -U hydro_color_prompt blue
       function fish_mode_prompt; end;
-      function update_nshell_indicator --on-variable IN_NIX_SHELL
-        if test -n "$IN_NIX_SHELL";
-          set -g hydro_symbol_start "impure "
-        else
-          set -g hydro_symbol_start
-        end
-      end
-      update_nshell_indicator
+      # function update_nshell_indicator --on-variable IN_NIX_SHELL
+      #   if test -n "$IN_NIX_SHELL";
+      #     set -g hydro_symbol_start "impure "
+      #   else
+      #     set -g hydro_symbol_start
+      #   end
+      # end
+      # update_nshell_indicator
     '';
     environment.systemPackages = with pkgs; [
       zellij
@@ -59,7 +59,7 @@ lib.mkMerge [
   (lib.mkIf config.marlin {
     programs.fish.interactiveShellInit = ''
       function fish_greeting
-        random choice "Hello mate!" "Hi there!" "G'day!" "Howdy!"
+        random choice "Hello mate!" "Hi there!" "G'day!" "Howdy!" "How ja doing matey?" "How is it going my dude?" "Good work mate" "Good on ya mate"
       end
 
       set -U hydro_color_prompt blue

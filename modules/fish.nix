@@ -32,7 +32,7 @@ lib.mkMerge [
     programs.fish.interactiveShellInit = ''
       # Greetings with lovely Aussie accent
       function fish_greeting
-        random choice "Hello mate!" "Hi there!" "G'day!" "Howdy!" "How ja doing?" "How is it going?" "Good work mate" "Good on ya mate"
+        random choice "Hello mate!" "Hi there!" "G'day!" "Howdy!"
       end
 
       # Since this declared by `programs.fish.interactiveShellInit`,

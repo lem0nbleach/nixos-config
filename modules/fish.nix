@@ -2,26 +2,32 @@
 
 lib.mkMerge [
   {
-    programs.fish.enable = true;
+    documentation.man.generateCaches = false;
 
-    programs.zoxide.enable = true;
-
-    programs.direnv.enable = true;
-    programs.direnv.enableFishIntegration = true;
-
-    programs.command-not-found.enable = false;
-    programs.nix-index.enable = true;
-    programs.nix-index.enableFishIntegration = true;
+    programs = {
+      fish.enable = true;
+      zoxide.enable = true;
+      direnv = {
+        enable = true;
+        enableFishIntegration = true;
+      };
+      command-not-found.enable = false;
+      nix-index = {
+        enable = true;
+        enableFishIntegration = true;
+      };
+    };
 
     environment.systemPackages = [
       pkgs.fishPlugins.hydro
     ];
 
     programs.bash.interactiveShellInit = ''
-      if [[ $(${pkgs.procps}/bin/ps --no-header --pid=$PPID --format=comm) != "fish" && -z ''${BASH_EXECUTION_STRING} ]]; then
-        shopt -q login_shell && LOGIN_OPTION='--login' || LOGIN_OPTION=""
-        exec ${pkgs.fish}/bin/fish $LOGIN_OPTION
-      fi
+      # if [[ $(${pkgs.procps}/bin/ps --no-header --pid=$PPID --format=comm) != "fish" && -z ''${BASH_EXECUTION_STRING} ]]; then
+      #   shopt -q login_shell && LOGIN_OPTION='--login' || LOGIN_OPTION=""
+      #   exec ${pkgs.fish}/bin/fish $LOGIN_OPTION
+      # fi
+      echo 'eval "$(zellij setup --generate-auto-start bash)"'
     '';
   }
 
@@ -38,18 +44,23 @@ lib.mkMerge [
       # Configure auto-attach/exit to your likings (default is off).
       set ZELLIJ_AUTO_ATTACH true
       set ZELLIJ_AUTO_EXIT true
-      eval (zellij setup --generate-auto-start fish | string collect)
+      # eval (zellij setup --generate-auto-start fish | string collect)
+      if set -q ZELLIJ
+      else
+        zellij
+      end
+
 
       set -U hydro_color_prompt blue
       function fish_mode_prompt; end;
-      # function update_nshell_indicator --on-variable IN_NIX_SHELL
-      #   if test -n "$IN_NIX_SHELL";
-      #     set -g hydro_symbol_start "impure "
-      #   else
-      #     set -g hydro_symbol_start
-      #   end
-      # end
-      # update_nshell_indicator
+      function update_nshell_indicator --on-variable IN_NIX_SHELL
+        if test -n "$IN_NIX_SHELL";
+          set -g hydro_symbol_start "impure "
+        else
+          set -g hydro_symbol_start
+        end
+      end
+      update_nshell_indicator
     '';
     environment.systemPackages = with pkgs; [
       zellij

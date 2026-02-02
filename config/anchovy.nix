@@ -20,6 +20,7 @@
         ".config/watt.toml".source = ./dots/watt/watt.toml;
         ".config/walker/config.toml".source = ./dots/walker/config.toml;
         ".config/walker/themes/theme.toml".source = ./dots/walker/themes/theme.toml;
+        ".config/zellij/config.kdl".source = ./dots/zellij/config.kdl;
       };
     };
   };

@@ -21,14 +21,6 @@ lib.mkMerge [
     environment.systemPackages = [
       pkgs.fishPlugins.hydro
     ];
-
-    programs.bash.interactiveShellInit = ''
-      # if [[ $(${pkgs.procps}/bin/ps --no-header --pid=$PPID --format=comm) != "fish" && -z ''${BASH_EXECUTION_STRING} ]]; then
-      #   shopt -q login_shell && LOGIN_OPTION='--login' || LOGIN_OPTION=""
-      #   exec ${pkgs.fish}/bin/fish $LOGIN_OPTION
-      # fi
-      echo 'eval "$(zellij setup --generate-auto-start bash)"'
-    '';
   }
 
   (lib.mkIf (config.anchovy || config.croaker){
@@ -44,12 +36,10 @@ lib.mkMerge [
       # Configure auto-attach/exit to your likings (default is off).
       set ZELLIJ_AUTO_ATTACH true
       set ZELLIJ_AUTO_EXIT true
-      # eval (zellij setup --generate-auto-start fish | string collect)
       if set -q ZELLIJ
       else
         zellij
       end
-
 
       set -U hydro_color_prompt blue
       function fish_mode_prompt; end;

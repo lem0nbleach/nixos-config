@@ -264,7 +264,7 @@ show_startup_tips false
 // Choose the path to the default shell that zellij will use for opening new panes
 // Default: $SHELL
 //
-default_shell "fish"
+// default_shell "fish"
 
 // Choose the path to override cwd that zellij will use for opening new panes
 //
@@ -336,7 +336,7 @@ default_shell "fish"
 // Default: "default"
 // (Requires restart)
 //
-default_layout "compact"
+// default_layout "compact"
 
 // Choose the mode that zellij uses when starting up.
 // Default: normal

@@ -73,11 +73,11 @@ lib.mkMerge [
       ELECTRON_OZONE_PLATFORM_HINT = "auto";
     };
 
-    programs.bash.loginShellInit = ''
-      if uwsm check may-start; then
-      	exec uwsm start hyprland-uwsm.desktop
-      fi
-    '';
+    programs.fish.loginShellInit = ''
+        if uwsm check may-start; and uwsm select
+            exec uwsm start hyprland-uwsm.desktop
+        end
+      '';
 
     systemd.user.services.hyprsunset = {
       description = "Run hyprsunset check";

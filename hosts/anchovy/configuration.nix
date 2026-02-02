@@ -62,6 +62,7 @@
       description = "Feiyang Wu";
       extraGroups = [ "networkmanager" "wheel" "video" ];
       packages = [];
+      shell = pkgs.fish;
     };
 
     nixpkgs.config.allowUnfree = true;

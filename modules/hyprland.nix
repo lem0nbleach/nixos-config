@@ -74,7 +74,7 @@ lib.mkMerge [
     };
 
     programs.fish.loginShellInit = ''
-        if uwsm check may-start; and uwsm select
+        if uwsm check may-start
             exec uwsm start hyprland-uwsm.desktop
         end
       '';

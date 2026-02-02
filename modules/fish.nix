@@ -8,7 +8,7 @@ lib.mkMerge [
       fish = {
         enable = true;
         shellAbbrs = {
-          ns = "nix-shell --run $SHELL -p";
+          ns = "nix-shell --run fish -p";
         };
       };
       zoxide.enable = true;
@@ -31,7 +31,7 @@ lib.mkMerge [
   (lib.mkIf (config.anchovy || config.croaker){
     programs.fish.interactiveShellInit = ''
       # Greetings with lovely Aussie accent
-      function fish_greetingA
+      function fish_greeting
         random choice "Hello mate!" "Hi there!" "G'day!" "Howdy!" "How ja doing?" "How is it going?" "Good work mate" "Good on ya mate"
       end
 
@@ -39,12 +39,10 @@ lib.mkMerge [
       # there is no need to check if this is interactive like the doc.
 
       # Configure auto-attach/exit to your likings (default is off).
-      set ZELLIJ_AUTO_ATTACH true
       set ZELLIJ_AUTO_EXIT true
-      if set -q ZELLIJ
-      else
-        zellij
-      end
+      set ZELLIJ_AUTO_ATTACH true
+      # For some reason I have to use this script instead of the if condition one from fish's doc
+      eval (zellij setup --generate-auto-start fish | string collect)
 
       set -U hydro_color_prompt blue
       function fish_mode_prompt; end;

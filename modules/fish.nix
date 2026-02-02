@@ -5,7 +5,12 @@ lib.mkMerge [
     documentation.man.generateCaches = false;
 
     programs = {
-      fish.enable = true;
+      fish = {
+        enable = true;
+        shellAbbrs = {
+          ns = "nix-shell --run $SHELL -p";
+        };
+      };
       zoxide.enable = true;
       direnv = {
         enable = true;
@@ -26,8 +31,8 @@ lib.mkMerge [
   (lib.mkIf (config.anchovy || config.croaker){
     programs.fish.interactiveShellInit = ''
       # Greetings with lovely Aussie accent
-      function fish_greeting
-        random choice "Hello mate!" "Hi there!" "G'day!" "Howdy!" "How ja doing matey?" "How is it going my dude?" "Good work mate" "Good on ya mate"
+      function fish_greetingA
+        random choice "Hello mate!" "Hi there!" "G'day!" "Howdy!" "How ja doing?" "How is it going?" "Good work mate" "Good on ya mate"
       end
 
       # Since this declared by `programs.fish.interactiveShellInit`,
@@ -64,6 +69,15 @@ lib.mkMerge [
       end
 
       set -U hydro_color_prompt blue
+      function fish_mode_prompt; end;
+      function update_nshell_indicator --on-variable IN_NIX_SHELL
+        if test -n "$IN_NIX_SHELL";
+          set -g hydro_symbol_start "impure "
+        else
+          set -g hydro_symbol_start
+        end
+      end
+      update_nshell_indicator
     '';
   })
 ]

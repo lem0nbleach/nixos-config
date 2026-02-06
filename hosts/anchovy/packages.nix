@@ -33,7 +33,6 @@ in
     openscad-lsp
     marksman
     bitwarden-cli
-    bws
     talosctl
     kubectl
 

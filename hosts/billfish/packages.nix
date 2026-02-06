@@ -17,7 +17,6 @@
     ripgrep
     python3Minimal # for ansible to work on this machine
     rclone
-    bws
     bitwarden-cli
   ];
 }

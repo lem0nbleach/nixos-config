@@ -1,5 +1,9 @@
-{ lib, config, pkgs, ... }:
+{ lib, config, pkgs, inputs, ... }:
 
+let
+  nix-index-databasePKG = inputs.nix-index-database.packages.x86_64-linux.default;
+
+in
 lib.mkMerge [
   {
     documentation.man.generateCaches = false;
@@ -25,6 +29,7 @@ lib.mkMerge [
 
     environment.systemPackages = [
       pkgs.fishPlugins.hydro
+      nix-index-databasePKG
     ];
   }
 

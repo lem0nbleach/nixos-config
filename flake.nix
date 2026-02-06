@@ -30,6 +30,10 @@
       url = "github:demenik/librepods";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-index-database = {
+      url = "github:nix-community/nix-index-database";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -41,6 +45,7 @@
     watt,
     stash,
     librepods,
+    nix-index-database,
     ...
   }@inputs:
 
@@ -52,6 +57,7 @@
         ./hosts/billfish/${hostname}/hardware-configuration.nix
         hjem.nixosModules.default
         watt.nixosModules.default
+        nix-index-database.nixosModules.default
         { networking.hostName = hostname; }
       ];
       specialArgs = { inherit inputs; };

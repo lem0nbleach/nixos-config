@@ -68,7 +68,7 @@ lib.mkMerge [
   (lib.mkIf config.marlin {
     programs.fish.interactiveShellInit = ''
       function fish_greeting
-        random choice "Hello mate!" "Hi there!" "G'day!" "Howdy!" "How ja doing matey?" "How is it going my dude?" "Good work mate" "Good on ya mate"
+        random choice "Hello mate!" "Hi there!" "G'day!" "Howdy!"
       end
 
       set -U hydro_color_prompt blue

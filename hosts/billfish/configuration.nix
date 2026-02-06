@@ -71,7 +71,7 @@
       isNormalUser = true;
       description = "Feiyang Wu";
       extraGroups = [ "networkmanager" "wheel" "video" ];
-      shell = pkgs.bash;
+      shell = pkgs.fish;
     };
 
     nixpkgs.config.allowUnfree = true;

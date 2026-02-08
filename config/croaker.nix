@@ -19,6 +19,7 @@
       ".config/helix/config.toml".source = ./dots/helix/config.toml;
       ".config/helix/languages.toml".source = ./dots/helix/languages.toml;
       ".config/fish/config.fish".source = ./dots/fish/config.fish;
+      ".config/zellij/config.kdl".source = ./dots/zellij/config.kdl;
     };
   };
 }

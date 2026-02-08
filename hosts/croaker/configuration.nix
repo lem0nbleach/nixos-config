@@ -49,6 +49,7 @@
       isNormalUser = true;
       description = "It's me aye";
       extraGroups = [ "networkmanager" "wheel" ];
+      shell = pkgs.fish;
     };
 
     system.stateVersion = "24.05";

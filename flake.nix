@@ -34,6 +34,22 @@
       url = "github:nix-community/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    hyprshutdown = {
+      url = "github:hyprwm/hyprshutdown";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    hyprpwcenter = {
+      url = "github:hyprwm/hyprpwcenter";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    hyprqt6engine = {
+      url = "github:hyprwm/hyprqt6engine";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    hyprlauncher = {
+      url = "github:hyprwm/hyprlauncher";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -46,6 +62,10 @@
     stash,
     librepods,
     nix-index-database,
+    hyprshutdown,
+    hyprpwcenter,
+    hyprqt6engine,
+    hyprlauncher,
     ...
   }@inputs:
 

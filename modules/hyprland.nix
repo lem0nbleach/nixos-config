@@ -8,6 +8,11 @@
 
 let
   stashPKG = inputs.stash.packages.x86_64-linux.default;
+  hyprshutdownPKG = inputs.hyprshutdown.packages.x86_64-linux.default;
+  hyprqt6enginePKG = inputs.hyprqt6engine.packages.x86_64-linux.default;
+  hyprpwcenterPKG = inputs.hyprpwcenter.packages.x86_64-linux.default;
+  hyprlauncherPKG = inputs.hyprlauncher.packages.x86_64-linux.default;
+  quickshellPKG = inputs.quickshell.packages.x86_64-linux.default;
   hyprsunsetScript = pkgs.writeShellApplication {
     name = "sunset-checker";
     runtimeInputs = [
@@ -49,6 +54,11 @@ lib.mkMerge [
     services.playerctld.enable = true;
 
     environment.systemPackages = [
+      hyprqt6enginePKG
+      hyprpwcenterPKG
+      hyprlauncherPKG
+      hyprshutdownPKG
+      quickshellPKG
       pkgs.hyprpaper
       pkgs.hyprcursor
       pkgs.hyprsunset
@@ -61,7 +71,6 @@ lib.mkMerge [
       stashPKG
       # for the systemd service below
       pkgs.killall
-      inputs.quickshell.packages.x86_64-linux.default
     ];
 
     environment.variables = {
@@ -79,6 +88,15 @@ lib.mkMerge [
         end
       '';
 
+    systemd.user.services.hyprshutdown = {
+      description = "hyprshutdown before poweroff for graceful shutdown";
+      serviceConfig = {
+        Type = "oneshot";
+        ExecStop = lib.getExe hyprshutdownPKG;
+        RemainAfterExit = true;
+      };
+      wantedBy = ["multi-user.target"];
+    };
     systemd.user.services.hyprsunset = {
       description = "Run hyprsunset check";
       serviceConfig = {

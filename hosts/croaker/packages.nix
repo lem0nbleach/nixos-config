@@ -115,6 +115,5 @@ in
     font-awesome
     jetbrains-mono
     texlivePackages.alfaslabone
-    powerline-fonts
   ];
 }

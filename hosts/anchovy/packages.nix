@@ -75,8 +75,14 @@ in
   fonts.packages = with pkgs; [
     noto-fonts
     noto-fonts-cjk-sans
+    noto-fonts-cjk-serif
     noto-fonts-color-emoji
     nerd-fonts.jetbrains-mono
+    nerd-fonts._0xproto
+    nerd-fonts.droid-sans-mono
+    font-awesome
+    jetbrains-mono
+    texlivePackages.alfaslabone
     dejavu_fonts
     liberation_ttf
   ];

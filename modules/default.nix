@@ -36,5 +36,6 @@
     ./downloads-cleanup.nix
     ./fwupd.nix
     ./talos.nix
+    ./printing.nix
   ];
 }

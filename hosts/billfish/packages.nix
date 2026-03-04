@@ -4,7 +4,6 @@
   environment.systemPackages = with pkgs; [
     wget
     zsh
-    neovim
     kitty
     lsof
     dig

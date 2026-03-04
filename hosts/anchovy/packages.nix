@@ -10,7 +10,6 @@ in
   environment.systemPackages = with pkgs; [
     # CLI Tools
     neovim
-    git
     dig
     ripgrep
     fd

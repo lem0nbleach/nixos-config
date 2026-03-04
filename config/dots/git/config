@@ -1,0 +1,9 @@
+[init]
+	defaultBranch = "main"
+
+[user]
+	name = "Feiyang Wu"
+	email = "feiyang.wu@fishstall.net"
+
+[credential]
+	helper = store

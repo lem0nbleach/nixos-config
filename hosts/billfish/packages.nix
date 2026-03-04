@@ -5,7 +5,6 @@
     wget
     zsh
     neovim
-    git
     kitty
     lsof
     dig

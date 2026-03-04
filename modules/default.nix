@@ -37,5 +37,6 @@
     ./fwupd.nix
     ./talos.nix
     ./printing.nix
+    ./git.nix
   ];
 }

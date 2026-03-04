@@ -4,6 +4,7 @@
   hjem.users.lem0nbleach = {
     clobberFiles = lib.mkForce true;
     files = {
+      ".config/git/config".source = ./dots/git/config;
       ".config/MangoHud/MangoHud.conf".source = ./dots/MangoHud/MangoHud.conf;
       ".config/hypr/hyprland.conf".source = ./dots/hypr/hyprland.conf;
       ".config/hypr/hypridle.conf".source = ./dots/hypr/hypridle.conf;

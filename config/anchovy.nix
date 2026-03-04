@@ -5,6 +5,7 @@
     clobberByDefault = true;
     users.lem0nbleach = {
       files = {
+        ".config/git/config".source = ./dots/git/config;
         ".config/hypr/hyprland.conf".source = ./dots/hypr/anchovy-hyprland.conf;
         ".config/hypr/hypridle.conf".source = ./dots/hypr/hypridle.conf;
         ".config/hypr/hyprlock.conf".source = ./dots/hypr/hyprlock.conf;

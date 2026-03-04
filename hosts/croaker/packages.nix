@@ -33,7 +33,6 @@ in
     xdg-utils
     hyprutils
     home-manager
-    git
     mangohud
     goverlay
     lm_sensors

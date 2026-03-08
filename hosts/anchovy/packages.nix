@@ -47,6 +47,7 @@ in
     todoist-electron
     todoist
     librepodsPKG
+    slack
 
     # Games
     prismlauncher

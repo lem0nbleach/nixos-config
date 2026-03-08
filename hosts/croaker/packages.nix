@@ -96,6 +96,7 @@ in
     onlyoffice-desktopeditors
     librepodsPKG
     todoist-electron
+    slack
   ];
 
   programs.nix-ld.enable = true;

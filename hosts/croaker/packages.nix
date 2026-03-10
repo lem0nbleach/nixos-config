@@ -97,6 +97,7 @@ in
     librepodsPKG
     todoist-electron
     slack
+    presenterm
   ];
 
   programs.nix-ld.enable = true;

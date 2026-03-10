@@ -35,6 +35,7 @@ in
     kubectl
 
     # GUI Apps
+    presenterm
     thunderbird
     obsidian
     vesktop

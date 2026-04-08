@@ -1,6 +1,7 @@
-{ lib, config, ... }:
+{ lib, config, pkgs, ... }:
 
 lib.mkIf (config.anchovy || config.croaker) {
+  environment.systemPackages = [ pkgs.pwvucontrol ];
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;

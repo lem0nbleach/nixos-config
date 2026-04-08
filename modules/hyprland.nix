@@ -55,7 +55,6 @@ lib.mkMerge [
 
     environment.systemPackages = [
       hyprqt6enginePKG
-      hyprpwcenterPKG
       hyprlauncherPKG
       hyprshutdownPKG
       quickshellPKG

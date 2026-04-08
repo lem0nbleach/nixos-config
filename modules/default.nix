@@ -38,5 +38,6 @@
     ./talos.nix
     ./printing.nix
     ./git.nix
+    ./java.nix
   ];
 }

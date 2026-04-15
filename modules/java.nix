@@ -3,6 +3,6 @@
 lib.mkIf config.anchovy {
   programs.java = {
     enable = true;
-    package = pkgs.jdk25.override { enableJavaFX = true; };
+    package = pkgs.javaPackages.compiler.openjdk21.override { enableJavaFX = true; };
   };
 }

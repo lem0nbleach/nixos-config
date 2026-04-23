@@ -13,6 +13,8 @@ lib.mkMerge [
         enable = true;
         shellAbbrs = {
           ns = "nix-shell --run fish -p";
+          tu = "sudo tailscale up --exit-node=infrastructure --accept-routes --exit-node-allow-lan-access";
+          td = "sudo tailscale down";
         };
       };
       zoxide.enable = true;

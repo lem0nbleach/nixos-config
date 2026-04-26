@@ -39,5 +39,6 @@
     ./printing.nix
     ./git.nix
     ./java.nix
+    ./wacom.nix
   ];
 }

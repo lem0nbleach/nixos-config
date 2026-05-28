@@ -98,6 +98,7 @@ in
     todoist-electron
     slack
     presenterm
+    jellyfin-desktop
   ];
 
   programs.nix-ld.enable = true;

@@ -99,6 +99,7 @@ in
     slack
     presenterm
     jellyfin-desktop
+    easyeffects
   ];
 
   programs.nix-ld.enable = true;

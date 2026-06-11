@@ -53,6 +53,8 @@ lib.mkMerge [
     services.getty.autologinUser = "lem0nbleach";
     services.playerctld.enable = true;
 
+    services.elephant.enable = true;
+
     environment.systemPackages = [
       hyprqt6enginePKG
       hyprlauncherPKG

@@ -15,10 +15,10 @@ lib.mkIf (config.anchovy || config.croaker) {
   # Gamescope fix from https://wiki.nixos.org/wiki/Steam#Gamescope_fails_to_launch_when_used_within_Steam
   programs.steam.package = pkgs.steam.override {
     extraPkgs = pkgs': with pkgs'; [
-      xorg.libXcursor
-      xorg.libXi
-      xorg.libXinerama
-      xorg.libXScrnSaver
+      libXcursor
+      libXi
+      libXinerama
+      libXScrnSaver
       libpng
       libpulseaudio
       libvorbis

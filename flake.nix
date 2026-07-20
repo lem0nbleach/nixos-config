@@ -3,7 +3,7 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-25.05";
     lanzaboote = {
-      url = "github:nix-community/lanzaboote/v0.4.3";
+      url = "github:nix-community/lanzaboote/v1.1.0";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hjem = {
@@ -19,7 +19,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     stash = {
-      url = "github:NotAShelf/stash/65a8eebd46e1c95be1135721addbe1331def0a71";
+      url = "github:NotAShelf/stash";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     narnia = {

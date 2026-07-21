@@ -17,7 +17,8 @@
   imports = [
     ./fish.nix
     ./steam.nix
-    ./hyprland.nix
+    # ./hyprland.nix
+    ./sway.nix
     ./nh.nix
     ./watt.nix
     ./tailscale.nix

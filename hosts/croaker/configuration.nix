@@ -16,11 +16,12 @@
       loader.efi.canTouchEfiVariables = true;
 
       kernel.sysctl = { "kernel.split_lock_mitigate" = 0; };
+      kernelParams = [
+        "video=DP-1:2560x1440@60"
+        "video=HDMI-A-1:2560x1440@60"
+      ];
 
-      lanzaboote = {
-        enable = true;
-        pkiBundle = "/var/lib/sbctl";
-      };
+      loader.systemd-boot.enable = true;
     };
     
     networking.hostName = "croaker";
@@ -48,7 +49,7 @@
     users.users.lem0nbleach = {
       isNormalUser = true;
       description = "It's me aye";
-      extraGroups = [ "networkmanager" "wheel" ];
+      extraGroups = [ "networkmanager" "wheel" "video" ];
       shell = pkgs.fish;
     };
 

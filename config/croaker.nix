@@ -14,6 +14,7 @@
         ".config/hypr/hyprpaper.conf".source = ./dots/hypr/hyprpaper.conf;
         ".config/hypr/hyprsunset.conf".source = ./dots/hypr/hyprsunset.conf;
         ".zshrc".source = ./dots/zsh/zshrc;
+        ".config/sway/config".source = ./dots/sway/config;
         ".config/foot/foot.ini".source = ./dots/foot/foot.ini;
         ".config/gtk-3.0/settings.ini".source = ./dots/gtk-3.0/desktop.settings.ini;
         ".gtkrc-2.0".source = ./dots/gtkrc-2.0/desktop-gtkrc-2.0;

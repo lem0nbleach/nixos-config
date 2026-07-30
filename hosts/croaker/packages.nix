@@ -1,6 +1,12 @@
-{ config, pkgs, pkgsStable, inputs, ... }:
+{
+  config,
+  pkgs,
+  pkgsStable,
+  inputs,
+  ...
+}:
 
-let 
+let
   librepodsPKG = inputs.librepods.packages.x86_64-linux.default;
 
 in
@@ -9,11 +15,14 @@ in
   nixpkgs.config.allowUnfree = true;
 
   _module.args.pkgsStable = import inputs.nixpkgs-stable {
-  inherit (pkgs.stdenv.hostPlatform) system;
-  inherit (config.nixpkgs) config;
+    inherit (pkgs.stdenv.hostPlatform) system;
+    inherit (config.nixpkgs) config;
   };
 
-  
+  nixpkgs.config.permittedInsecurePackages = [
+    "openclaw-2026.6.5"
+  ];
+
   environment.systemPackages = with pkgs; [
     ripgrep
     gcc
@@ -27,7 +36,6 @@ in
     ffmpeg-full
     yt-dlp
     vesktop
-    xdg-desktop-portal-hyprland
     xdg-desktop-portal-gtk
     xdg-utils
     hyprutils
@@ -100,11 +108,12 @@ in
     presenterm
     jellyfin-desktop
     easyeffects
+    openclaw
   ];
 
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
-    
+
   ];
 
   fonts.packages = with pkgs; [

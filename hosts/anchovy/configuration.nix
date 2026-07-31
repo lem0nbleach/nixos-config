@@ -44,15 +44,6 @@
       SSH_AUTH_SOCK="$HOME/.bitwarden-ssh-agent.sock";
     };
 
-    programs.uwsm.enable = true;
-    services.getty.autologinUser = "lem0nbleach";
-
-    programs.fish.loginShellInit = ''
-      if uwsm check may-start
-        exec uwsm start sway.desktop
-      end
-    '';
-
     users.users.lem0nbleach = {
       isNormalUser = true;
       description = "Feiyang Wu";

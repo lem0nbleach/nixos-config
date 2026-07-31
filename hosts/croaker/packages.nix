@@ -64,10 +64,10 @@ in
     egl-wayland
     appimage-run
     xdotool
-    xorg.xprop
+    xprop
     xxd
-    xorg.xwininfo
-    xorg.xrandr
+    xwininfo
+    xrandr
     yad
     orca-slicer
     mumble

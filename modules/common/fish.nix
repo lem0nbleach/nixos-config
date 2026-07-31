@@ -6,7 +6,7 @@ let
 in
 lib.mkMerge [
   {
-    documentation.man.generateCaches = false;
+    documentation.man.cache.enable = false;
 
     programs = {
       fish = {

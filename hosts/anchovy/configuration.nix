@@ -34,8 +34,8 @@
     environment.sessionVariables = {
       BROWSER = "firefox";
       NIXOS_OZONE_WL = "1";
-      XDG_CURRENT_DESKTOP = "Hyprland";
-      XDG_SESSION_DESKTOP = "Hyprland";
+      XDG_CURRENT_DESKTOP = "sway";
+      XDG_SESSION_DESKTOP = "sway";
       XDG_SESSION_TYPE = "wayland";
       GTK_USE_PORTAL = "1";
       ELECTRON_OZONE_PLATFORM_HINT = "auto";
@@ -43,6 +43,15 @@
       XCURSOR_THEME="Bibata-Modern-Ice";
       SSH_AUTH_SOCK="$HOME/.bitwarden-ssh-agent.sock";
     };
+
+    programs.uwsm.enable = true;
+    services.getty.autologinUser = "lem0nbleach";
+
+    programs.fish.loginShellInit = ''
+      if uwsm check may-start
+        exec uwsm start sway.desktop
+      end
+    '';
 
     users.users.lem0nbleach = {
       isNormalUser = true;

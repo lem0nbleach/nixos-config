@@ -15,31 +15,9 @@
   };
 
   imports = [
-    ./fish.nix
-    ./steam.nix
-    # ./hyprland.nix
-    ./sway.nix
-    ./nh.nix
-    ./watt.nix
-    ./tailscale.nix
-    ./sound.nix
-    ./ssh.nix
-    ./network-tools.nix
-    ./mozilla.nix
-    ./input.nix
-    ./docker.nix
-    ./battery-notification.nix
-    ./helix.nix
-    ./bluetooth.nix
-    ./winbox.nix
-    ./qemuguest.nix
-    ./qmkUdev.nix
-    ./downloads-cleanup.nix
-    ./fwupd.nix
-    ./talos.nix
-    ./printing.nix
-    ./git.nix
-    ./java.nix
-    ./wacom.nix
+    ./common
+    ./desktop
+    ./server
+    ./hardware
   ];
 }

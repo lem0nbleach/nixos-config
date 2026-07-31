@@ -21,7 +21,7 @@ set $menu wmenu-run
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /run/current-system/sw/share/backgrounds/sway/)
-output * bg ~/nixos/config/dots/hypr/background.png fill
+output * bg ~/nixos/hjem/dots/hypr/background.png fill
 
 # Example configuration:
 #

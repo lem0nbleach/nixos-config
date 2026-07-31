@@ -41,7 +41,7 @@ let
 
 in
 lib.mkMerge [
-  (lib.mkIf (config.anchovy || config.croaker) {
+  (lib.mkIf config.anchovy {
     programs.hyprland = {
       enable = true;
       withUWSM = true;

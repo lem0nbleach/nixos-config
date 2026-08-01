@@ -13,7 +13,6 @@
     boot.loader = {
       systemd-boot.enable = true;
       efi.canTouchEfiVariables = true;
-      timeout = 1;
     };
     boot.kernelPackages = pkgs.linuxPackages_latest;
     boot.kernelParams = [

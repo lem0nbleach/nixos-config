@@ -2,7 +2,6 @@
 let
   wattPKG = inputs.watt.packages.x86_64-linux.default;
   stashPKG = inputs.stash.packages.x86_64-linux.default;
-  narniaPKG = inputs.narnia.packages.x86_64-linux.default;
   librepodsPKG = inputs.librepods.packages.x86_64-linux.default;
 
 in
@@ -27,7 +26,6 @@ in
     stashPKG
     typst
     nix-tree
-    narniaPKG
     openscad-lsp
     marksman
     bitwarden-cli

@@ -2,10 +2,6 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-25.05";
-    lanzaboote = {
-      url = "github:nix-community/lanzaboote/v1.1.0";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     hjem = {
       url = "github:feel-co/hjem";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -20,10 +16,6 @@
     };
     stash = {
       url = "github:NotAShelf/stash";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    narnia = {
-      url = "github:NotAShelf/narnia";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     librepods = {
@@ -55,7 +47,6 @@
   outputs = {
     nixpkgs,
     nixpkgs-stable,
-    lanzaboote,
     hjem,
     quickshell,
     watt,
@@ -88,7 +79,6 @@
         system = "x86_64-linux";
         modules = [
           ./hosts/croaker/configuration.nix
-          lanzaboote.nixosModules.lanzaboote
           hjem.nixosModules.default
           watt.nixosModules.default
         ];
@@ -98,7 +88,6 @@
         system = "x86_64-linux";
         modules = [
           ./hosts/anchovy/configuration.nix
-          lanzaboote.nixosModules.lanzaboote
           hjem.nixosModules.default
           watt.nixosModules.default
         ];

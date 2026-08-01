@@ -13,7 +13,7 @@
         ".config/hypr/hyprlock.conf".source = ./dots/hypr/hyprlock.conf;
         ".config/hypr/hyprpaper.conf".source = ./dots/hypr/hyprpaper.conf;
         ".config/hypr/hyprsunset.conf".source = ./dots/hypr/hyprsunset.conf;
-        ".config/sway/config".source = ./dots/sway/config;
+        ".config/sway/config".source = ./dots/sway/croaker.conf;
         ".config/foot/foot.ini".source = ./dots/foot/foot.ini;
         ".config/gtk-3.0/settings.ini".source = ./dots/gtk-3.0/desktop.settings.ini;
         ".gtkrc-2.0".source = ./dots/gtkrc-2.0/gtkrc-2.0;

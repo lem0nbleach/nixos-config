@@ -18,7 +18,6 @@
         ".config/fish/config.fish".source = ./dots/fish/config.fish;
         ".config/watt.toml".source = ./dots/watt/watt.toml;
         ".config/zellij/config.kdl".source = ./dots/zellij/config.kdl;
-        ".config/fish/config.fish".source = ./dots/fish/config.fish;
       };
     };
   };

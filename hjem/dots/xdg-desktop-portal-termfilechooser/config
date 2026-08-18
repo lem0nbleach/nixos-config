@@ -1,0 +1,8 @@
+[filechooser]
+cmd=/home/lem0nbleach/.config/xdg-desktop-portal-termfilechooser/yazi-wrapper.sh
+default_dir=$HOME/downloads
+env=PATH="$PATH:/run/current-system/sw/bin"
+env=TERMCMD='foot -T "terminal filechooser"'
+create_help_file=1
+open_mode=suggested
+save_mode=last

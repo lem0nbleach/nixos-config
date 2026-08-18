@@ -50,6 +50,7 @@ in
 
     # Games
     prismlauncher
+    opentrack
 
     # Rice
     nwg-look

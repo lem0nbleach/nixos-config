@@ -5,12 +5,12 @@ lib.mkIf (config.anchovy || config.croaker) {
     enable = true;
     protontricks.enable = true;
     extraCompatPackages = [ pkgs.proton-ge-bin ];
+    gamescopeSession.enable = true;
   };
 
   programs.gamemode.enable = true;
   programs.gamescope = {
     enable = true;
-    capSysNice = true;
   };
   # Gamescope fix from https://wiki.nixos.org/wiki/Steam#Gamescope_fails_to_launch_when_used_within_Steam
   programs.steam.package = pkgs.steam.override {

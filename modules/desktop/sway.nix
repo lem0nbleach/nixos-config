@@ -1,4 +1,9 @@
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
 lib.mkIf (config.croaker || config.anchovy) {
   environment.systemPackages = [
@@ -9,6 +14,7 @@ lib.mkIf (config.croaker || config.anchovy) {
   ];
 
   services.gnome.gnome-keyring.enable = true;
+  services.dbus.enable = true;
 
   programs.sway = {
     enable = true;
@@ -21,11 +27,13 @@ lib.mkIf (config.croaker || config.anchovy) {
     NIXOS_OZONE_WL = "1";
     XDG_SESSION_TYPE = "wayland";
     GTK_USE_PORTAL = "1";
+    GTK_USE_PORTAL_FILE_CHOOSER = "1";
     ELECTRON_OZONE_PLATFORM_HINT = "auto";
   };
 
   xdg.portal = {
     enable = true;
+    xdgOpenUsePortal = true;
     wlr = {
       enable = true;
       settings = {
@@ -35,6 +43,21 @@ lib.mkIf (config.croaker || config.anchovy) {
         };
       };
     };
-    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    config = {
+      common = {
+        default = [
+          "wlr"
+          "gtk"
+        ];
+        "org.freedesktop.impl.portal.FileChooser" = [ "termfilechooser" ];
+      };
+      sway = {
+        "org.freedesktop.impl.portal.FileChooser" = [ "termfilechooser" ];
+      };
+    };
+    extraPortals = [
+      pkgs.xdg-desktop-portal-gtk
+      pkgs.xdg-desktop-portal-termfilechooser
+    ];
   };
 }

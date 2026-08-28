@@ -10,10 +10,6 @@
       url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    watt = {
-      url = "github:NotAShelf/watt";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     stash = {
       url = "github:NotAShelf/stash";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -49,7 +45,6 @@
     nixpkgs-stable,
     hjem,
     quickshell,
-    watt,
     stash,
     librepods,
     nix-index-database,
@@ -67,7 +62,6 @@
         ./hosts/billfish/configuration.nix  # Shared configuration
         ./hosts/billfish/${hostname}/hardware-configuration.nix
         hjem.nixosModules.default
-        watt.nixosModules.default
         nix-index-database.nixosModules.default
         { networking.hostName = hostname; }
       ];
@@ -80,7 +74,6 @@
         modules = [
           ./hosts/croaker/configuration.nix
           hjem.nixosModules.default
-          watt.nixosModules.default
         ];
         specialArgs = { inherit inputs; };
       };
@@ -89,7 +82,6 @@
         modules = [
           ./hosts/anchovy/configuration.nix
           hjem.nixosModules.default
-          watt.nixosModules.default
         ];
         specialArgs = { inherit inputs; };
       };

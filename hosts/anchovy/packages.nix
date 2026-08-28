@@ -1,6 +1,5 @@
 { pkgs, inputs, ... }:
 let
-  wattPKG = inputs.watt.packages.x86_64-linux.default;
   stashPKG = inputs.stash.packages.x86_64-linux.default;
   librepodsPKG = inputs.librepods.packages.x86_64-linux.default;
 
@@ -19,7 +18,6 @@ in
     dust
     lm_sensors
     microfetch
-    wattPKG
     bat
     zellij
     ansible
@@ -56,7 +54,6 @@ in
     nwg-look
     bibata-cursors
     candy-icons
-    sweet
 
     # Media/Audio
     pavucontrol

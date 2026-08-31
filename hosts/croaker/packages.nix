@@ -20,7 +20,7 @@ in
   };
 
   nixpkgs.config.permittedInsecurePackages = [
-    "openclaw-2026.6.5"
+    "openclaw-2026.6.33"
   ];
 
   environment.systemPackages = with pkgs; [

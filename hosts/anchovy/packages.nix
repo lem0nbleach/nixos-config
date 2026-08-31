@@ -59,7 +59,7 @@ in
     pavucontrol
     easyeffects
     pamixer
-    
+
     # System Management
     libnotify
 
@@ -83,8 +83,8 @@ in
     liberation_ttf
   ];
 
-  # For Logseq
   nixpkgs.config.permittedInsecurePackages = [
     "electron-27.3.11"
+    "openclaw-2026.6.33"
   ];
 }

@@ -5,3 +5,11 @@ soft-wrap.enable = true
 [[language]]
 name = "markdown"
 soft-wrap.enable = true
+
+[language-server.typos]
+command = "typos-lsp"
+config.diagnosticSeverity = "Info"
+
+[[language]]
+name = "html"
+language-servers = [ "superhtml", "typos"]

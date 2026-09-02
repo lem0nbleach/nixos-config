@@ -22,6 +22,7 @@
     anchovy = true;
     networking.hostName = "anchovy";
     networking.networkmanager.enable = true;
+    networking.networkmanager.wifi.powersave = false;
     networking.nameservers = [ "192.168.88.50" ];
 
     nix.settings.experimental-features = [ "nix-command" "flakes" ];

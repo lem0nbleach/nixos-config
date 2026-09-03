@@ -11,6 +11,7 @@ lib.mkIf (config.croaker || config.anchovy) {
     pkgs.mako
     pkgs.slurp
     pkgs.grim
+    pkgs.wluma
   ];
 
   services.gnome.gnome-keyring.enable = true;
@@ -60,4 +61,28 @@ lib.mkIf (config.croaker || config.anchovy) {
       pkgs.xdg-desktop-portal-termfilechooser
     ];
   };
+
+  # Wluma
+
+  systemd.user.services.wluma = {
+    description = "Adjusting screen brightness based on screen contents and amount of ambient light";
+    partOf = [ "graphical-session.target" ];
+    after = [ "graphical-session.target" ];
+    wantedBy = [ "graphical-session.target" ];
+    serviceConfig = {
+      ExecStart = lib.getExe pkgs.wluma;
+      Restart = "always";
+      RestartSec = "5s";
+      EnvironmentFile = "-%E/wluma/service.conf";
+      PrivateNetwork = "true";
+      PrivateMounts = "false";
+    };
+  };
+
+  services.udev.extraRules = ''
+    ACTION=="add", SUBSYSTEM=="backlight", RUN+="${pkgs.coreutils}/bin/chgrp video /sys/class/backlight/%k/brightness"
+    ACTION=="add", SUBSYSTEM=="backlight", RUN+="${pkgs.coreutils}/bin/chmod g+w /sys/class/backlight/%k/brightness"
+    ACTION=="add", SUBSYSTEM=="leds", RUN+="${pkgs.coreutils}/bin/chgrp video /sys/class/leds/%k/brightness"
+    ACTION=="add", SUBSYSTEM=="leds", RUN+="${pkgs.coreutils}/bin/chmod g+w /sys/class/leds/%k/brightness"
+  '';
 }

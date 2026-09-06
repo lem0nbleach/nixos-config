@@ -109,6 +109,7 @@ in
     jellyfin-desktop
     easyeffects
     openclaw
+    sshpass
   ];
 
   programs.nix-ld.enable = true;

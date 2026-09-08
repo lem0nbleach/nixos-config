@@ -52,6 +52,7 @@ in
     fzf
     zsh-autocomplete
     unzip
+    zip
     prismlauncher
     jdk
     lemurs

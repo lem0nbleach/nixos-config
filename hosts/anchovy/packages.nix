@@ -12,6 +12,7 @@ in
     fd
     zsh
     unzip
+    zip
     gzip
     foot
     yazi

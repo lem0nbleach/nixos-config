@@ -1,7 +1,6 @@
 {
   config,
   pkgs,
-  pkgsStable,
   inputs,
   ...
 }:
@@ -14,13 +13,8 @@ in
   # Allowing unfree software
   nixpkgs.config.allowUnfree = true;
 
-  _module.args.pkgsStable = import inputs.nixpkgs-stable {
-    inherit (pkgs.stdenv.hostPlatform) system;
-    inherit (config.nixpkgs) config;
-  };
-
   nixpkgs.config.permittedInsecurePackages = [
-    "openclaw-2026.6.33"
+    "openclaw-2026.5.7"
   ];
 
   environment.systemPackages = with pkgs; [

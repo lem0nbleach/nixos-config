@@ -15,6 +15,7 @@ lib.mkIf (config.croaker || config.anchovy) {
   ];
 
   services.gnome.gnome-keyring.enable = true;
+  services.gnome.gcr-ssh-agent.enable = false;
   services.dbus.enable = true;
 
   programs.sway = {

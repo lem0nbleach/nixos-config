@@ -41,7 +41,6 @@
       ELECTRON_OZONE_PLATFORM_HINT = "auto";
       MOZ_ENABLE_WAYLAND=1;
       XCURSOR_THEME="Bibata-Modern-Ice";
-      SSH_AUTH_SOCK="$HOME/.bitwarden-ssh-agent.sock";
     };
 
     users.users.lem0nbleach = {

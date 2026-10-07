@@ -23,6 +23,11 @@
         ".config/helix/languages.toml".source = ./dots/helix/languages.toml;
         ".config/fish/config.fish".source = ./dots/fish/config.fish;
         ".config/zellij/config.kdl".source = ./dots/zellij/config.kdl;
+        ".config/xdg-desktop-portal-termfilechooser/config".source = ./dots/xdg-desktop-portal-termfilechooser/config;
+        ".config/xdg-desktop-portal-termfilechooser/yazi-wrapper.sh" = {
+          source = ./dots/xdg-desktop-portal-termfilechooser/yazi-wrapper.sh;
+          executable = true;
+        };
       };
     };
   };

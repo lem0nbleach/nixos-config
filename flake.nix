@@ -14,6 +14,10 @@
       url = "github:NotAShelf/stash";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    watt = {
+      url = "github:NotAShelf/watt";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     librepods = {
       url = "github:demenik/librepods";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -46,6 +50,7 @@
     hjem,
     quickshell,
     stash,
+    watt,
     librepods,
     nix-index-database,
     hyprshutdown,
@@ -82,6 +87,7 @@
         modules = [
           ./hosts/anchovy/configuration.nix
           hjem.nixosModules.default
+          watt.nixosModules.default
         ];
         specialArgs = { inherit inputs; };
       };

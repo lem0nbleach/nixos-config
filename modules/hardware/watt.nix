@@ -5,16 +5,10 @@
   ...
 }:
 
-{
-  imports = [
-    "${inputs.nixpkgs-unstable}/nixos/modules/services/hardware/watt.nix"
-  ];
+lib.mkIf config.anchovy {
+  services.watt.enable = true;
 
-  config = lib.mkIf config.anchovy {
-    services.watt.enable = true;
-
-    environment.sessionVariables = {
-      WATT_CONFIG = "/home/lem0nbleach/.config/watt.toml";
-    };
+  environment.sessionVariables = {
+    WATT_CONFIG = "/home/lem0nbleach/.config/watt.toml";
   };
 }

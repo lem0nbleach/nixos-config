@@ -5,10 +5,12 @@
   ...
 }:
 
-lib.mkIf config.anchovy {
-  services.watt.enable = true;
+{
+  imports = [ inputs.watt.nixosModules.default ];
 
-  environment.sessionVariables = {
+  services.watt.enable = lib.mkIf config.anchovy true;
+
+  environment.sessionVariables = lib.mkIf config.anchovy {
     WATT_CONFIG = "/home/lem0nbleach/.config/watt.toml";
   };
 }

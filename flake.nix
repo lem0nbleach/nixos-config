@@ -87,7 +87,6 @@
         modules = [
           ./hosts/anchovy/configuration.nix
           hjem.nixosModules.default
-          watt.nixosModules.default
         ];
         specialArgs = { inherit inputs; };
       };

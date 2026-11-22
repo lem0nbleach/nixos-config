@@ -13,9 +13,6 @@ in
   # Allowing unfree software
   nixpkgs.config.allowUnfree = true;
 
-  nixpkgs.config.permittedInsecurePackages = [
-    "openclaw-2026.5.7"
-  ];
 
   environment.systemPackages = with pkgs; [
     ripgrep
@@ -103,7 +100,8 @@ in
     presenterm
     jellyfin-desktop
     easyeffects
-    openclaw
+    openconnect
+    networkmanager-openconnect
     sshpass
   ];
 

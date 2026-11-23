@@ -72,16 +72,24 @@ lib.mkMerge [
     services.displayManager.ly.settings.waylandsessions =
       let
         desktops = config.services.displayManager.sessionData.desktops;
-      in
-      toString (pkgs.runCommand "ly-wayland-sessions" { } ''
+        lySessions = pkgs.runCommand "ly-wayland-sessions" { } ''
         mkdir -p $out/share/wayland-sessions
+        n=0
         for f in ${desktops}/share/wayland-sessions/*.desktop; do
           case "$f" in
-            *hyprland-uwsm.desktop) ;;
-            *) ln -s "$f" $out/share/wayland-sessions/ ;;
+            *hyprland-uwsm.desktop) continue ;;
           esac
+          # copy through symlinks: ly's crawl opens each entry directly and a
+          # broken/relocated link silently empties the whole session list
+          cp -Lf "$f" $out/share/wayland-sessions/ && n=$((n + 1))
         done
-      '');
+        if [ "$n" -lt 2 ]; then
+          echo "ly-wayland-sessions: only $n session entries, refusing" >&2
+          exit 1
+        fi
+        '';
+      in
+      "${lySessions}/share/wayland-sessions";
 
     environment.systemPackages = [
       hyprqt6enginePKG

@@ -157,6 +157,10 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("fcitx5 -d -r")
     hl.exec_cmd("fcitx5-remote -r")
     hl.exec_cmd("easyeffects -w")
+    -- Session apps: Todoist on the HDMI output, Vesktop + Jellyfin in the scratchpad
+    hl.exec_cmd("todoist-electron")
+    hl.exec_cmd("vesktop")
+    hl.exec_cmd("jellyfin-desktop")
 end)
 
 -----------------
@@ -202,6 +206,25 @@ hl.window_rule({
     name  = "fullscreen-no-idle",
     match = { fullscreen_state_client = 2 },
     idle_inhibit = "always",
+})
+
+-- Startup placement
+hl.window_rule({
+    name  = "todoist-on-hdmi",
+    match = { class = "[Tt]odoist" },
+    workspace = "name:Secondary silent",
+})
+
+hl.window_rule({
+    name  = "vesktop-in-scratchpad",
+    match = { class = "[Vv]esktop" },
+    workspace = "special:scratchPad silent",
+})
+
+hl.window_rule({
+    name  = "jellyfin-in-scratchpad",
+    match = { class = "org\\.jellyfin\\.JellyfinDesktop|[Jj]ellyfin" },
+    workspace = "special:scratchPad silent",
 })
 
 hl.window_rule({

@@ -8,11 +8,13 @@
 
 let
   stashPKG = inputs.stash.packages.x86_64-linux.default;
-  hyprshutdownPKG = inputs.hyprshutdown.packages.x86_64-linux.default;
+  # Use nixpkgs' hyprshutdown/hyprlauncher/quickshell: the pinned nixpkgs revision
+  # cannot build the git versions' hyprtoolkit -> hyprlang chain (libstdc++ ABI
+  # mismatch in hyprlang-0.6.8's fuzz test link).
+  hyprshutdownPKG = pkgs.hyprshutdown;
   hyprqt6enginePKG = inputs.hyprqt6engine.packages.x86_64-linux.default;
-  hyprpwcenterPKG = inputs.hyprpwcenter.packages.x86_64-linux.default;
-  hyprlauncherPKG = inputs.hyprlauncher.packages.x86_64-linux.default;
-  quickshellPKG = inputs.quickshell.packages.x86_64-linux.default;
+  hyprlauncherPKG = pkgs.hyprlauncher;
+  quickshellPKG = pkgs.quickshell;
   hyprsunsetScript = pkgs.writeShellApplication {
     name = "sunset-checker";
     runtimeInputs = [
@@ -41,19 +43,45 @@ let
 
 in
 lib.mkMerge [
-  (lib.mkIf false {
+  {
     programs.hyprland = {
       enable = true;
-      withUWSM = true;
+      # Hyprland starts hyprland-session.target / graphical-session.target itself;
+      # UWSM is no longer needed (and upstream calls it a niche, quirky path).
+      withUWSM = false;
     };
     programs.hyprlock.enable = true;
-    programs.uwsm.enable = true;
-    services.displayManager.defaultSession = "hyprland-uwsm";
-    # Let lem0nbleach automatically be loggedin at boot up
-    services.getty.autologinUser = "lem0nbleach";
+
     services.playerctld.enable = true;
 
     services.elephant.enable = true;
+
+    # sway.nix pins common.default to the wlr portal; give Hyprland its own
+    # section so screen sharing / screencopy uses xdg-desktop-portal-hyprland.
+    xdg.portal.config.hyprland = {
+      default = [
+        "hyprland"
+        "gtk"
+      ];
+      "org.freedesktop.impl.portal.FileChooser" = [ "termfilechooser" ];
+    };
+
+    # ly enumerates every .desktop in the aggregated session directory. The
+    # Hyprland package ships an "uwsm-managed" entry that is dead here because
+    # uwsm is not installed; hand ly a filtered directory instead.
+    services.displayManager.ly.settings.waylandsessions =
+      let
+        desktops = config.services.displayManager.sessionData.desktops;
+      in
+      toString (pkgs.runCommand "ly-wayland-sessions" { } ''
+        mkdir -p $out/share/wayland-sessions
+        for f in ${desktops}/share/wayland-sessions/*.desktop; do
+          case "$f" in
+            *hyprland-uwsm.desktop) ;;
+            *) ln -s "$f" $out/share/wayland-sessions/ ;;
+          esac
+        done
+      '');
 
     environment.systemPackages = [
       hyprqt6enginePKG
@@ -74,20 +102,17 @@ lib.mkMerge [
       pkgs.killall
     ];
 
-    environment.variables = {
-      NIXOS_OZONE_WL = "1";
-      XDG_CURRENT_DESKTOP = "Hyprland";
-      XDG_SESSION_DESKTOP = "Hyprland";
-      XDG_SESSION_TYPE = "wayland";
-      GTK_USE_PORTAL = "1";
-      ELECTRON_OZONE_PLATFORM_HINT = "auto";
+    # Hyprland 0.55.4 ships no session unit and does not start
+    # graphical-session.target itself (that landed later upstream). Recreate the
+    # documented hyprland-session.target so graphical-session.target is started
+    # as a dependency (it refuses manual starts), pulling in hypridle,
+    # elephant, wluma and the hyprsunset timer.
+    systemd.user.targets.hyprland-session = {
+      description = "Hyprland compositor session";
+      bindsTo = [ "graphical-session.target" ];
+      wants = [ "graphical-session.target" ];
+      after = [ "graphical-session.target" ];
     };
-
-    programs.fish.loginShellInit = ''
-        if uwsm check may-start
-            exec uwsm start hyprland-uwsm.desktop
-        end
-      '';
 
     systemd.user.services.hyprshutdown = {
       description = "hyprshutdown before poweroff for graceful shutdown";
@@ -96,7 +121,7 @@ lib.mkMerge [
         ExecStop = lib.getExe hyprshutdownPKG;
         RemainAfterExit = true;
       };
-      wantedBy = ["multi-user.target"];
+      wantedBy = [ "multi-user.target" ];
     };
     systemd.user.services.hyprsunset = {
       description = "Run hyprsunset check";
@@ -115,7 +140,7 @@ lib.mkMerge [
         OnCalendar = "*:0/1"; # Every minute
       };
     };
-  })
+  }
 
   (lib.mkIf config.anchovy {
     services.fprintd.enable = true;
@@ -126,7 +151,7 @@ lib.mkMerge [
     };
     systemd.services.kill-printd = {
       description = "Kill fprintd before sleep";
-      before = [ "sleep.target" ]; 
+      before = [ "sleep.target" ];
       wantedBy = [ "sleep.target" ];
       serviceConfig = {
         ExecStart = "${lib.getExe pkgs.killall} fprintd";

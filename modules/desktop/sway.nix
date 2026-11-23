@@ -65,7 +65,9 @@ lib.mkIf (config.croaker || config.anchovy) {
 
   # Wluma
 
-  systemd.user.services.wluma = {
+  # wluma adjusts panel brightness from ambient light; croaker is a desktop
+  # with no backlight (`/sys/class/backlight` is empty), so it only errors there.
+  systemd.user.services.wluma = lib.mkIf config.anchovy {
     description = "Adjusting screen brightness based on screen contents and amount of ambient light";
     partOf = [ "graphical-session.target" ];
     after = [ "graphical-session.target" ];

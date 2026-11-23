@@ -5,6 +5,7 @@
     [
       ../../hjem/croaker.nix
       ../../modules
+      ../../modules/desktop/hyprland.nix
       ./packages.nix
       ./hardware-configuration.nix
     ];

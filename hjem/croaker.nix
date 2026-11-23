@@ -8,7 +8,7 @@
       files = {
         ".config/git/config".source = ./dots/git/config;
         ".config/MangoHud/MangoHud.conf".source = ./dots/MangoHud/MangoHud.conf;
-        ".config/hypr/hyprland.conf".source = ./dots/hypr/hyprland.conf;
+        ".config/hypr/hyprland.lua".source = ./dots/hypr/hyprland.lua;
         ".config/hypr/hypridle.conf".source = ./dots/hypr/hypridle.conf;
         ".config/hypr/hyprlock.conf".source = ./dots/hypr/hyprlock.conf;
         ".config/hypr/hyprpaper.conf".source = ./dots/hypr/hyprpaper.conf;

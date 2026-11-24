@@ -10,7 +10,6 @@
         ".config/MangoHud/MangoHud.conf".source = ./dots/MangoHud/MangoHud.conf;
         ".config/hypr/hyprland.lua".source = ./dots/hypr/hyprland.lua;
         ".config/hypr/hypridle.conf".source = ./dots/hypr/hypridle.conf;
-        ".config/hypr/hyprlock.conf".source = ./dots/hypr/hyprlock.conf;
         ".config/hypr/hyprpaper.conf".source = ./dots/hypr/hyprpaper.conf;
         ".config/hypr/hyprsunset.conf".source = ./dots/hypr/hyprsunset.conf;
         ".config/sway/config".source = ./dots/sway/croaker.conf;

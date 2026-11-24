@@ -4,8 +4,14 @@ lib.mkIf config.anchovy {
   services.fprintd.enable = true;
   security.pam.services.swaylock.fprintAuth = true;
 
+  # Closing the lid must actually suspend. It used to be "lock", which logind
+  # only turns into a lock-session request; with no locker installed that was a
+  # no-op, so the laptop stayed awake with the session open.
   services.logind.settings.Login = {
-    HandleLidSwitch = "lock";
+    HandleLidSwitch = "suspend";
+    HandleLidSwitchExternalPower = "suspend";
+    HandleLidSwitchDocked = "ignore";
+    HandleSuspendKey = "suspend";
     KillUserProcesses = false;
   };
 

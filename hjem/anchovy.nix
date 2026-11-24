@@ -7,6 +7,10 @@
       files = {
         ".config/git/config".source = ./dots/git/config;
         ".config/sway/config".source = ./dots/sway/anchovy.conf;
+        ".config/hypr/hyprland.lua".source = ./dots/hypr/anchovy-hyprland.lua;
+        ".config/hypr/hypridle.conf".source = ./dots/hypr/hypridle.conf;
+        ".config/hypr/hyprpaper.conf".source = ./dots/hypr/hyprpaper.conf;
+        ".config/hypr/hyprsunset.conf".source = ./dots/hypr/hyprsunset.conf;
         ".config/foot/foot.ini".source = ./dots/foot/foot.ini;
         ".config/helix/config.toml".source = ./dots/helix/config.toml;
         ".config/helix/languages.toml".source = ./dots/helix/languages.toml;

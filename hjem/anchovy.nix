@@ -20,7 +20,6 @@
         ".icons/default/index.theme".source = ./dots/icons/default/index.theme;
         ".config/xsettingsd/xsettingsd.conf".source = ./dots/xsettingsd/xsettingsd.conf;
         ".config/fish/config.fish".source = ./dots/fish/config.fish;
-        ".config/watt.toml".source = ./dots/watt/watt.toml;
         ".config/zellij/config.kdl".source = ./dots/zellij/config.kdl;
         ".config/xdg-desktop-portal-termfilechooser/config".source = ./dots/xdg-desktop-portal-termfilechooser/config;
         ".config/xdg-desktop-portal-termfilechooser/yazi-wrapper.sh" = {

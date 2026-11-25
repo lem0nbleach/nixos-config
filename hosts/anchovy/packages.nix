@@ -46,6 +46,7 @@ in
     todoist
     librepodsPKG
     slack
+    jellyfin-desktop
 
     # Games
     prismlauncher
